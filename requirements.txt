@@ -1,0 +1,10 @@
+# GDGM N-Body Graviton Simulation dependencies
+# Designed for Google Colab or local Python 3.8+
+
+numpy>=1.21,<2.0
+matplotlib>=3.5,<4.0
+
+# IPython is used for HTML display in Colab/Jupyter notebooks.
+# It comes pre-installed in Colab/Jupyter environments.
+# Uncomment if running outside those environments:
+# ipython>=7.0,<9.0
