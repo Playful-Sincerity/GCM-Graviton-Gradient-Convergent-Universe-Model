@@ -13,6 +13,7 @@ Unified physics theory project attempting to derive all fundamental forces from 
 GCM/
 ├── CLAUDE.md                    # This file
 ├── GDGM.code-workspace         # VSCode workspace
+├── test_smoke.py                # Smoke tests (syntax, functions, energy, clusters)
 └── gdgm/
     ├── README.md                # Comprehensive project guide
     ├── roadmap.md               # Phase-by-phase development plan
@@ -50,6 +51,12 @@ Two research agents support the theory development:
 - `simulation/gdgm_nbody.py` — Python N-body simulation implementing graviton density gradient mechanics
 - Run with: `python3 gdgm/simulation/gdgm_nbody.py`
 - No external dependencies declared yet (likely needs numpy — check imports before running)
+
+## Tests
+- Smoke tests: `python3 -m pytest test_smoke.py -v` (or `python3 test_smoke.py -v`)
+- Tests validate: syntax, core function shapes/outputs, energy conservation, cluster detection, requirements.txt
+- Tests extract functions from the simulation file without running the full simulation
+- Dependencies: numpy (same as simulation)
 
 ## Working Conventions
 - Distinguish clearly between philosophical intuition and mathematical claim
