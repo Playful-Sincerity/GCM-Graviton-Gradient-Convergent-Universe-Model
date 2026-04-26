@@ -1,0 +1,29 @@
+# Check: 04 — Planck-density limit (honesty check)
+# Claim: M1-graviton-mass
+# Run: 2026-04-24 02:38
+# Tool: python3 3.14.4 / mpmath 1.3.0
+# Script: verification/check_04_limit_planck_density.py
+# M1 Check 4 — Planck-density limit (honesty check)
+
+rho_Planck                  = 5.154848506403407583457872543934815118988e+96 kg/m^3
+m_g(rho_Planck) = rho*V_P   = 0.00000002176434342051126668645876760458364139797 kg
+sqrt(hbar*c/G) [Planck mass]= 0.00000002176434342051126668645876760458364139797 kg
+  relative difference       = 0.0
+
+LIGO bound                  = 1.782661921e-59 kg
+m_g(Planck) vs LIGO         = 1.22089012863989181976018478068919504328e+51 times above bound
+log10 ratio                 = 51.08667658231308689034232201812240303968
+
+Reinterpreted as constraint on rho_bound:
+  rho_bound must be <= LIGO_kg / V_P = 4.222205082570422004240486386605579688331e+45 kg/m^3
+  rho_nuclear = 1000000000000000000.0 kg/m^3
+  margin:     log10(4.222205082570422004240486386605579688331e+45 / 1000000000000000000.0) = 27.62553932420270205124221348478155185284 orders
+
+# Two readings:
+  Literal (brief framing): m_g(rho_Planck) vs LIGO -> FAIL
+    (formula at Planck density yields Planck mass, far above LIGO)
+  Reframed (physical claim): rho_nuclear vs rho_max_LIGO -> PASS
+    (nuclear density satisfies LIGO by 27 orders)
+
+STATUS: INCONCLUSIVE (framing-dependent; see verification.md)
+# Exit: 0

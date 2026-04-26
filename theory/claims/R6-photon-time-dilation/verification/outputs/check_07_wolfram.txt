@@ -1,0 +1,58 @@
+# Check: 07 — Wolfram Language independent verification (symbolic + 60-dp numeric)
+# Claim: R6-photon-time-dilation
+# Run: 2026-04-24 04:07
+# Tool: WolframScript 1.13.0 for Mac OS X ARM (64-bit)
+# Script: verification/check_07_wolfram.wls
+# Status: PASS
+# ----
+
+R6 â Check 07: Wolfram independent verification
+==============================================================
+
+Part A: Symbolic redshift cascade (L3 + redshift + info propagation)
+--------------------------------------------------------------
+Ît_emit = d_emit / v_emit = lambdaEmit/(N*vEmit)
+Ît_obs  = d_obs  / v_obs  = (lambdaEmit*(1 + z))/(N*vObs)
+Ît_obs / Ît_emit = (vEmit*(1 + z))/vObs
+
+Massless/leading limit (v_emit = v_obs): 1 + z
+  Expected: (1 + z). Match? True
+
+Massive-photon full dilation: (1+z)Â·(v_emit/v_obs) = (Sqrt[1 - x^2]*(1 + z))/Sqrt[1 - x^2*(1 + z)^2]
+
+Series around x = 0 (massless limit), to O(x^4):
+  1 + z + (x^2*z*(1 + z)*(2 + z))/2 + (x^4*z*(1 + z)*(8 + 16*z + 12*z^2 + 3*z^3))/8
+  Leading term: (1 + z). Next correction: O(x^2).
+
+Part B: High-precision numeric v_emit/v_obs (60 digits)
+--------------------------------------------------------------
+m_gamma (eV/cÂ²) = 5.609588603804451466943879855325754341156`20.*^-19
+
+z = 0.1`6.
+  v_emit < c? True
+  v_obs  < c? True
+  v_emit/v_obs - 1 = 3.30408585191294139294630405925785130963`15.*^-38
+  (1+z)Â·(v_emit/v_obs) = 1.1000000000000000000000000000000000000363449443710423553224`40.
+  Leading (1+z)        = 1.1000000000000000000000000000000000000000000000000000000001`40.
+  Correction from v    = 3.634494437104235532240934465183636440593`15.*^-38
+
+z = 1.`6.
+  v_emit < c? True
+  v_obs  < c? True
+  v_emit/v_obs - 1 = 4.7201226455899162756375772275112161597222`15.*^-37
+  (1+z)Â·(v_emit/v_obs) = 2.0000000000000000000000000000000000009440245291179832551275`40.
+  Leading (1+z)        = 2.`40.
+  Correction from v    = 9.4402452911798325512751544550224323194444`15.*^-37
+
+z = 10.`6.
+  v_emit < c? True
+  v_obs  < c? True
+  v_emit/v_obs - 1 = 1.88804905823596651025503089100448651602303`15.*^-35
+  (1+z)Â·(v_emit/v_obs) = 11.0000000000000000000000000000000002076853964059563161280533`40.
+  Leading (1+z)        = 11.`40.
+  Correction from v    = 2.0768539640595631612805339801049351676253333`15.*^-34
+
+Status: PASS â both parts.
+  Part A: symbolic cascade confirms (1+z) leading + O((m cÂ²/E)Â²) correction.
+  Part B: 60-digit numeric shows correction ~10â»Â³â·, consistent with mpmath Check 06.
+  Speed-of-causality principle honored (v < c everywhere).

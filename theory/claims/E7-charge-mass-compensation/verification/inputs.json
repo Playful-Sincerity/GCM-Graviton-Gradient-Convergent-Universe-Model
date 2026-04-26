@@ -1,0 +1,51 @@
+{
+  "_claim": "E7 — Charge-mass compensation constraint (Delta m_e/m_e = -4 Delta e/e)",
+  "_generated": "2026-04-24",
+  "constants": {
+    "m_e": {
+      "value": 9.1093837015e-31,
+      "units": "kg",
+      "source": "CODATA 2018 (electron mass)"
+    },
+    "e": {
+      "value": 1.602176634e-19,
+      "units": "C",
+      "source": "SI 2019 definition (elementary charge; exact)"
+    },
+    "k_e": {
+      "value": 8.9875517873681764e9,
+      "units": "N*m^2/C^2",
+      "source": "CODATA 2018 / 1/(4*pi*eps_0) — Coulomb constant"
+    },
+    "hbar": {
+      "value": 1.054571817e-34,
+      "units": "J*s",
+      "source": "CODATA 2018"
+    },
+    "J_per_eV": {
+      "value": 1.602176634e-19,
+      "units": "J per eV",
+      "source": "SI 2019 definition (exact)"
+    }
+  },
+  "derived": {
+    "E1_Bohr_expected": {
+      "formula": "-m_e * k_e^2 * e^4 / (2 * hbar^2)",
+      "expected_value_J": -2.179873e-18,
+      "expected_value_eV": -13.6057,
+      "source": "Bohr hydrogen ground-state energy"
+    }
+  },
+  "perturbation_example": {
+    "Delta_e": {
+      "value": 1.0e-35,
+      "units": "C",
+      "source": "session brief — illustrative example"
+    },
+    "Delta_m_e_expected": {
+      "value": -2.27e-46,
+      "units": "kg",
+      "source": "session brief — rounded; exact computation yields -2.274e-46"
+    }
+  }
+}

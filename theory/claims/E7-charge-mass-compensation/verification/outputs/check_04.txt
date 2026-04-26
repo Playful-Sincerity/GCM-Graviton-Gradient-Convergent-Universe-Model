@@ -1,0 +1,20 @@
+# Check: 04 — limit zero
+# Claim: E7-charge-mass-compensation
+# Run: 2026-04-24 03:21
+# Tool: python3 3.14.4 / mpmath 1.3.0
+# Script: verification/check_04_limit_zero.py
+# E7 Check 4 — Limit Delta_e -> 0
+
+Delta_e = 10^-10 C  =>  Delta_m_e = -2.27425204142628883202150107002e-21 kg
+Delta_e = 10^-15 C  =>  Delta_m_e = -2.27425204142628883202150107002e-26 kg
+Delta_e = 10^-20 C  =>  Delta_m_e = -2.27425204142628883202150107002e-31 kg
+Delta_e = 10^-25 C  =>  Delta_m_e = -2.27425204142628883202150107003e-36 kg
+Delta_e = 10^-30 C  =>  Delta_m_e = -2.27425204142628883202150107003e-41 kg
+Delta_e = 10^-35 C  =>  Delta_m_e = -2.27425204142628883202150107003e-46 kg
+
+Delta_e = 1e-100 C  =>  Delta_m_e = -2.27425204142628883202150107003e-111 kg
+
+Limiting slope Delta_m / Delta_e  = -2.27425204142628883202150107002e-11  (= -4 m_e / e)
+
+STATUS: PASS — formula is continuous at (0,0) and reduces smoothly.
+# Exit: 0

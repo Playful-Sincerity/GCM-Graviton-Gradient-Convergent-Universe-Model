@@ -1,0 +1,37 @@
+# Check: 02 — graviton number density and cross-section
+# Claim: R1-space-friction
+# Run: 2026-04-24 02:38
+# Tool: Python 3.14.4 / stdlib decimal prec=50
+# Script: verification/check_02_graviton_density_and_cross_section.py
+# ----
+
+R_obs (observable universe radius): 4.400E+26 m
+V_obs = (4/3) pi R^3:               3.568E+80 m^3
+V_Planck = ell_P^3:                 4.222E-105 m^3
+N_Planck_cells = V_obs / V_P:       8.451E+184
+
+Claim: N_gravitons_universe = 10^185
+Implied n_g = 10^185 / V_obs = 2.803E+104 m^-3
+  claimed in plausibility.md:  1e106 m^-3
+  ratio computed/claim:        0.02803
+
+Alt: n_g from Planck-filling (1/V_P) = 2.368E+104 m^-3
+     (this is what a graviton-per-Planck-volume picture would give)
+
+Cross-section back-solve sigma = alpha / n_g:
+  (using claimed alpha=2.3e-27 and claimed n_g=1e106): sigma = 2.300E-133 m^2
+    claimed in plausibility.md:                        1e-133 m^2
+    ratio: 2.3
+
+  (using alpha=H0/c=7.57e-27 and n_g from 10^185/V_obs = 2.80E+104):
+    sigma = 2.700E-131 m^2
+
+FINDINGS:
+  * n_g from 10^185/V_obs is ~2.8E+104 m^-3, which is 10^104, not 10^106.
+    The plausibility.md claim 'n_g ~ 10^106 m^-3' is off by ~2 orders of magnitude.
+  * Using the self-consistent alpha=H0/c and n_g=N/V_obs, the implied
+    cross-section is ~2.7E-131 m^2, about 2-3 orders larger than the claimed 1e-133.
+  * The structural claim 'sigma_g is an extraordinarily small per-graviton cross-section' is
+    correct regardless of the specific exponent; the specific 10^-133 value is unreliable.
+
+STATUS: INCONCLUSIVE (arithmetic errors in plausibility.md numerics; structural claims stand).

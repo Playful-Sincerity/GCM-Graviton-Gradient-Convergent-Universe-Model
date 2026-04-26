@@ -1,0 +1,15 @@
+# Check: 05 — Wolfram Language independent verification
+# Claim: S1-AX-1-F
+# Run:   2026-04-24 02:39
+# Tool:  Wolfram Engine / Wolfram MCP (UNAVAILABLE)
+# Script: verification/indivisibility-formal/check_05_wolfram_todo.wls
+# ----
+
+STATUS: PENDING — Wolfram MCP is not connected in the 2026-04-24 session.
+The .wls script is archived; expected invocation and expected output are
+documented in the script header. When a Wolfram-capable session runs it,
+the expected result is SatisfiableQ[formula] == False (UNSAT), matching
+the SymPy result from check_01.
+
+Cross-tool redundancy is intentionally left open as a TODO rather than
+fabricated output.

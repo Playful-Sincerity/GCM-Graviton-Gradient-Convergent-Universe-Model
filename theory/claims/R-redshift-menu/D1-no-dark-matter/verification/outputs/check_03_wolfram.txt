@@ -1,0 +1,30 @@
+# Check: 03 â Wolfram independent cross-check
+# Claim: D1-no-dark-matter
+# Run:   Fri 24 Apr 2026 04:04:55
+# Tool:  Wolfram Engine via wolframscript
+# ----
+Hawking T (M=10^17 kg): ScientificForm[1.2269006698422716*^6] K
+
+N::precsm: Requested precision 10 is smaller than $MinPrecision. Using $MinPrecision instead.
+Hawking T (M=M_sun):    ScientificForm[6.168677824358303*^-8] K (textbook ~6.17e-8 K)
+
+N::precsm: Requested precision 10 is smaller than $MinPrecision. Using $MinPrecision instead.
+Schwarzschild r_s:      ScientificForm[1.4852320538237331*^-10] m
+
+N::precsm: Requested precision 10 is smaller than $MinPrecision. Using $MinPrecision instead.
+
+General::stop: Further output of N::precsm will be suppressed during this calculation.
+Area A = 4 pi r_s^2:    ScientificForm[2.7720336055560394*^-19] m^2
+Luminosity L = sigma T^4 A: ScientificForm[0.035616221359335565] W
+
+Ratio T_H / T_CMB:      450238.7779237694
+Ratio T_H / T_claim(6e-7 K): ScientificForm[2.0448344497371194*^12]
+
+FINDING (Wolfram concurs with Python):
+  T_H at 10^17 kg is ~1.23 million K (not 6e-7 K).
+  This is ~5e5 times the CMB temperature, NOT below it.
+  The plausibility.md / claim.md Hawking-T claim is false by 12 orders.
+  Observational invisibility is actually due to tiny luminosity (~36 mW),
+  not low temperature.
+
+STATUS: FAIL â same as Python. Cross-tool agreement on the error.

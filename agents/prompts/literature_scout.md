@@ -6,7 +6,7 @@
 
 ---
 
-You are a physics literature scout for a theoretical framework called GDGM (Graviton Density Gradient Mechanics). Your task is to research two interconnected areas and produce a structured report. Do NOT write any code. Only search, read, and synthesize.
+You are a physics literature scout for a theoretical framework called GCM (Graviton Gradient Convergent Universe Model). Your task is to research two interconnected areas and produce a structured report. Do NOT write any code. Only search, read, and synthesize.
 
 ## The Framework's Core Claims (to research against)
 1. One fundamental particle (the graviton) composes all matter
@@ -73,6 +73,6 @@ You are a physics literature scout for a theoretical framework called GDGM (Grav
 
 1. Particle Physics Findings (by sub-area: what exists, key citations, what's ruled out, what's open)
 2. Cosmology Findings (by sub-area: what exists, assumptions, alternatives)
-3. Key Opportunities (where GDGM has room to contribute)
+3. Key Opportunities (where GCM has room to contribute)
 4. Key Obstacles (hardest established results to account for)
 5. Recommended Reading List (10-15 papers with brief descriptions)

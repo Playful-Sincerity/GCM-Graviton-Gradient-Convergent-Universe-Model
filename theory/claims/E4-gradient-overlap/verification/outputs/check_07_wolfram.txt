@@ -1,0 +1,34 @@
+# Check 07 -- Wolfram Engine cross-check
+# Tool: 14.3.0 for Mac OS X ARM (64-bit) (July 31, 2025)
+# Script: check_07_wolfram.wls
+# ---
+U(R) = -((G*m^2*Erf[R/(2*sigma)])/R)
+
+Limit U(R -> 0)        = -((G*m^2)/(Sqrt[Pi]*sigma))
+Expected                = -((G*m^2)/(Sqrt[Pi]*sigma))
+Match: True
+
+Limit R*U(R -> inf)    = -(G*m^2)
+Expected               = -(G*m^2)
+Match: True
+
+F(R) = dU/dR = (G*m^2*(-(R/(E^(R^2/(4*sigma^2))*Sqrt[Pi]*sigma)) + Erf[R/(2*sigma)]))/R^2
+
+Limit F(R -> 0)        = 0  (expect: 0)
+Match zero: True
+
+Limit R^2 F(R -> inf)  = G*m^2
+Expected               = G*m^2
+Match: True
+
+Numerical sweep (G=m=sigma=1, Wolfram high-precision):
+R/sigma    F_overlap              F_point               ratio
+0.01        ScientificForm[0.0009403018679634556, 16]    ScientificForm[10000., 16]    ScientificForm[9.403018679634557*^-8, 16]
+0.1        ScientificForm[0.009389067571565768, 16]    ScientificForm[99.99999999999999, 16]    ScientificForm[0.0000938906757156577, 16]
+0.5        ScientificForm[0.04529143129683333, 16]    ScientificForm[4., 16]    ScientificForm[0.011322857824208332, 16]
+1.        ScientificForm[0.08110858834532414, 16]    ScientificForm[1., 16]    ScientificForm[0.08110858834532414, 16]
+2.        ScientificForm[0.10689832388228002, 16]    ScientificForm[0.25, 16]    ScientificForm[0.42759329552912007, 16]
+5.        ScientificForm[0.039765893496266934, 16]    ScientificForm[0.04, 16]    ScientificForm[0.9941473374066734, 16]
+10.        ScientificForm[0.009999999999201082, 16]    ScientificForm[0.01, 16]    ScientificForm[0.9999999999201082, 16]
+
+# Status: PASS -- Wolfram reproduces U(R), limits, F(R), numerical sweep.

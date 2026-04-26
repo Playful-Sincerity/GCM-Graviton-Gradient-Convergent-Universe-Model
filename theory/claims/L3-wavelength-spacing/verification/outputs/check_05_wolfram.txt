@@ -1,0 +1,35 @@
+# Check: 05 — Wolfram Language independent symbolic check
+# Claim: L3-wavelength-spacing
+# Run: 2026-04-24 04:04
+# Tool: WolframScript 1.13.0 for Mac OS X ARM (64-bit)
+# Script: verification/check_05_wolfram.wls
+# Status: PASS
+# ----
+
+L3 â Check 05: Wolfram independent symbolic check
+==============================================================
+
+Premises:
+  (1) lambdaObs = (1 + z) * lambdaEmit   [redshift definition]
+  (2) lambda = N * d                      [L3 identification]
+  (3) NEmit = NObs = N                    [N constant, L3 Case A]
+
+dEmit = lambdaEmit/N
+dObs  = (lambdaEmit*(1 + z))/N
+
+dObs / dEmit = 1 + z
+
+Target: (1 + z) = 1 + z
+ratio == target ? True
+
+Worked example (numerical spot check):
+  z = 1
+  lambdaEmit = 5.*^-7 m (500 nm)
+  N = 1
+  dEmit = 5.*^-7 m
+  dObs  = 1.*^-6 m
+  dObs / dEmit = 2.
+  (1 + z) = 2
+  Match? True
+
+Status: PASS â Wolfram symbolic: d_obs/d_emit = (1+z). Confirms SymPy Check 02.

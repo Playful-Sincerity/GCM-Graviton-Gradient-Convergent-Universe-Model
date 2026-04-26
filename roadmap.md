@@ -1,4 +1,4 @@
-# GDGM Development Roadmap
+# GCM Development Roadmap
 
 ## North Star
 A fully rigorous, mathematically consistent, experimentally predictive unified physics theory — publishable in a peer-reviewed journal — derived from three core tenets.
@@ -10,7 +10,7 @@ A fully rigorous, mathematically consistent, experimentally predictive unified p
 
 **Deliverables**:
 - [ ] Core tenets document (canonical, versioned)
-- [ ] Glossary of GDGM-specific terms
+- [ ] Glossary of GCM-specific terms
 - [ ] Map of what is claimed vs. what is still open
 - [ ] Statement of what "emergence" means in this context
 
@@ -25,7 +25,7 @@ A fully rigorous, mathematically consistent, experimentally predictive unified p
 - [ ] Dimensionally consistent equation system
 - [ ] Derivation or sketch of: Coulomb scaling, Van der Waals, Pauli exclusion, energy quantization
 - [ ] Cosmological model explaining redshift without accelerating expansion
-- [ ] Statement of what GDGM predicts differently from Standard Model + ΛCDM
+- [ ] Statement of what GCM predicts differently from Standard Model + ΛCDM
 
 **Blocking question**: What mechanism produces the different symmetries of the four forces from one substrate?
 

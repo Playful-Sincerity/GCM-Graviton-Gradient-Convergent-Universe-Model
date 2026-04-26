@@ -1,0 +1,38 @@
+# Check: 06 — Wolfram Language independent verification
+# Claim: L1-photon-mass
+# Run: 2026-04-24 03:49
+# Tool: WolframScript 1.13.0 for Mac OS X ARM (64-bit)
+# Script: verification/check_06_wolfram.wls
+# Status: PASS
+# ----
+
+L1 â Check 06: Wolfram Language independent verification
+==============================================================
+Input: m_gamma = 10^-54 kg (GCM estimate)
+
+Method A (Wolfram UnitConvert):
+  m_gamma * c^2 = Quantity[5.609588603804451*^-19, Electronvolts]
+  m_gamma in eV/c^2 = 5.609588603804451*^-19
+
+Method B (explicit arithmetic with exact c):
+  m_gamma in eV/c^2 = 5.609588603804451*^-19
+
+Relative agreement between methods: 0.
+
+Hand calc (5.61e-19) relative error: 0.0000733326551781692
+
+Bounds comparison:
+  vs Wang 2023 (2.1e-15):
+    bound / GCM = 3743.5900354185865
+    orders below = 3.5732882826130496
+    Passes? True
+
+  vs PDG 2022 approx (1.0e-18):
+    bound / GCM = 1.7826619216278983
+    orders below = 0.25106898787913084
+    Passes? True
+
+Plan claims '4 orders below Wang'. Actual: 3.5732882826130496
+Drift: 0.42671171738695035 orders (minor overstatement, corrected in derivation.md)
+
+Status: PASS â Wolfram independent check confirms the kg -> eV/c^2 conversion and bounds comparison.

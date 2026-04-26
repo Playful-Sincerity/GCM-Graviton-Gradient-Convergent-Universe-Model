@@ -1,0 +1,33 @@
+{
+  "_note": "L3 is a dimensional reframing rather than a numerical prediction. Most checks are symbolic/dimensional. Inputs below are the minimal set for the scripts.",
+  "c": {
+    "value": 2.99792458e8,
+    "units": "m/s",
+    "source": "Exact, SI 2019. Causality limit in GCM (see theory/speed-of-causality-principle.md).",
+    "notes": "Used in Step 4 (EM phenomenology) where E = hc/λ is referenced."
+  },
+  "h": {
+    "value": 6.62607015e-34,
+    "units": "J·s",
+    "source": "Exact, SI 2019 redefinition.",
+    "notes": "Planck's constant. Used in EM-phenomenology consistency check."
+  },
+  "example_N": {
+    "value": 1,
+    "units": "dimensionless",
+    "source": "Simplest illustrative case (one cluster per wavelength).",
+    "notes": "L3 leaves N undetermined. N=1 used for worked examples; all scaling arguments hold for any constant N."
+  },
+  "example_z": {
+    "value": 1.0,
+    "units": "dimensionless",
+    "source": "Illustrative cosmological redshift value.",
+    "notes": "Used in Step 2 (redshift scaling) worked example."
+  },
+  "example_lambda_emit_m": {
+    "value": 5.0e-7,
+    "units": "m",
+    "source": "500 nm, reference visible-light wavelength.",
+    "notes": "For the worked redshift example."
+  }
+}

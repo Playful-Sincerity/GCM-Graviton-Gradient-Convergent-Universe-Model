@@ -1,0 +1,22 @@
+# Check: 03 — Wolfram Engine independent cross-check
+# Claim: H1-toroidal-magnetism
+# Run: 2026-04-24 04:05
+# Tool: Wolfram Language Engine 14.3.0 (wolframscript)
+# Script: verification/check_03_wolfram.wls
+# ----
+--- Dimensional algebra ---
+(âÂ·J_g)Â·v exponents   = {-2, 1, -2, 0}
+Tesla exponents         = {0, 1, -2, -1}
+Coupling needed         = {2, 0, 0, -1}  (expected {2, 0, 0, -1} = mÂ²/A)
+Dimensional match (a): PASS
+
+--- Curl of F_radial + F_uniform ---
+Curl of F_total = {0, 0, 0}
+Curl is zero (b): PASS
+
+--- Stagnation point on -z axis ---
+Solutions for F_z = 0 on the -z axis:  {{z -> -(Sqrt[q]/Sqrt[v0])}, {z -> Sqrt[q]/Sqrt[v0]}}
+Roots squared satisfy zÂ² = q/vâ? {True, True}
+Negative root matches -â(q/vâ): True
+
+Status: PASS

@@ -1,0 +1,16 @@
+# Check 01 — Dimensional analysis of U(R) and F(R)
+# Python: 3.14.4
+# Tool: Pint 0.25.3
+# ---
+erf(R/(2 sigma)):  arg dimensionality = dimensionless
+  PASS — erf argument dimensionless.
+exp(-R^2/(4 sigma^2)): arg dimensionality = dimensionless
+  PASS — exp argument dimensionless.
+U(R):  [G m^2 / R] has dimensionality [length] ** 2 * [mass] / [time] ** 2
+  target (joule):                   [mass] * [length] ** 2 / [time] ** 2
+  PASS — U(R) has units of energy.
+F(R):  [G m^2 / R^2] has dimensionality [length] * [mass] / [time] ** 2
+  target (newton):                     [mass] * [length] / [time] ** 2
+  PASS — F(R) has units of force.
+
+# Status: PASS — all four dimensional checks passed via Pint.

@@ -1,0 +1,22 @@
+# Check: 03 (Wolfram symbolic)
+# Claim: R1-space-friction
+# Run:   Fri 24 Apr 2026 03:19:16
+# Tool:  Wolfram Engine via wolframscript
+# ----
+
+dE/dr = -alpha E, E(0) = E0  =>  E(r) = E0/E^(alpha*r)
+1 + z = E0/E(r) = E^(alpha*r)
+z = -1 + E^(alpha*r)
+
+Taylor series of z in small alpha (up to O(alpha^3)):
+  z â alpha*r + (alpha^2*r^2)/2 + (alpha^3*r^3)/6
+
+Leading term: z â alpha r   (linear Hubble-like law for small alpha r)
+
+Sanity at alpha*r = 0.1:
+  exact z = exp(0.1) - 1 = 0.10517091807564771
+  linear z = 0.1
+  relative error: 0.04916680552249578
+
+STATUS: PASS â symbolic derivation confirms exp(alpha r) - 1 collapses to
+        alpha r in the small-alpha-r limit. Cross-tool with Python check_03.

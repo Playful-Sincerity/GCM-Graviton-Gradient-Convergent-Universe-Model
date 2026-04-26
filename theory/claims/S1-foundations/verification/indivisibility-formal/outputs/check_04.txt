@@ -1,0 +1,21 @@
+# Check: 04 — Lean 4 stub type-check
+# Claim: S1-AX-1-F — Indivisibility Axiom — Formal Derivation
+# Run:   2026-04-24 02:38
+# Tool:  Lean 4 (elan)
+# Script: verification/indivisibility-formal/check_04_lean_stub.lean
+# ----
+
+Lean version:
+Lean (version 4.16.0, arm64-apple-darwin23.6.0, commit 128a1e6b0a82, Release)
+
+Type-check output:
+check_04_lean_stub.lean:46:8: warning: declaration uses 'sorry'
+
+Interpretation:
+  The stub compiles. The only diagnostic is the expected 'declaration
+  uses sorry' warning — the theorem is declared with the correct type
+  signature but the proof body is a future-direction placeholder.
+  The premises P2-P5 are axioms; P1 is the theorem hypothesis.
+  This verifies the formalization target is syntactically well-formed.
+
+STATUS: PASS (stub type-checks; proof body is intentionally sorry — future work)

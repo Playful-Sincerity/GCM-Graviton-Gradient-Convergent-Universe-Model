@@ -1,0 +1,26 @@
+# Check: 02 — High-precision numerical (mpmath, 50 dps)
+# Claim: L1-photon-mass
+# Run: 2026-04-24 04:19
+# Tool: Python 3.14.4 / SymPy 1.14.0 / mpmath 1.3.0
+# Script: verification/check_02_numerical_mpmath.py
+# Status: PASS
+# ----
+
+L1 — Check 02: Numerical conversion (mpmath, 50 dps)
+============================================================
+Inputs:
+  m_gamma = 1.0e-54 kg
+  c       = 299792458.0 m/s
+  eV->J   = 1.602176634e-19 J/eV
+
+Computation:
+  c^2           = 8.98755178736818e+16 m^2/s^2
+  m_gamma * c^2 = 8.98755178736818e-38 J
+  / eV_to_J     = 5.60958860380445e-19 eV
+
+Result: m_gamma = 5.60958860380445e-19 eV/c^2
+
+Hand-calc value (from derivation.md): 5.61e-19 eV/c^2
+Relative error vs. high-precision: 7.3333e-5
+
+Status: PASS

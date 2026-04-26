@@ -1,0 +1,50 @@
+# Check: 06 — High-precision v_emit/v_obs (mpmath 60 dps)
+# Claim: R6-photon-time-dilation
+# Run: 2026-04-24 04:20
+# Tool: Python 3.14.4 / SymPy 1.14.0 / mpmath 1.3.0
+# Script: verification/check_06_velocity_ratio_mpmath.py
+# Status: PASS
+# ----
+
+R6 — Check 06: v_emit / v_obs ratio (mpmath, 60 dps)
+============================================================
+Speed-of-causality principle: photons at v < c strictly.
+  m_gamma = 5.60959e-19 eV/c^2
+  c (causality limit) = 299792458.0 m/s (exact)
+
+At z = 0.1:
+  E_emit = 1.0 eV
+  E_obs  = 0.90909091 eV
+  v_emit = 299792457.9999999999999999999999999999528 m/s
+  v_obs  = 299792457.9999999999999999999999999999429 m/s
+  v_emit < c? True
+  v_obs  < c? True
+  v_emit / v_obs = 1 + 3.3040859e-38
+
+At z = 1.0:
+  E_emit = 1.0 eV
+  E_obs  = 0.5 eV
+  v_emit = 299792457.9999999999999999999999999999528 m/s
+  v_obs  = 299792457.9999999999999999999999999998113 m/s
+  v_emit < c? True
+  v_obs  < c? True
+  v_emit / v_obs = 1 + 4.7201226e-37
+
+At z = 10.0:
+  E_emit = 1.0 eV
+  E_obs  = 0.090909091 eV
+  v_emit = 299792457.9999999999999999999999999999528 m/s
+  v_obs  = 299792457.9999999999999999999999999942926 m/s
+  v_emit < c? True
+  v_obs  < c? True
+  v_emit / v_obs = 1 + 1.8880491e-35
+
+R6 full dilation at z = 1 (including v_emit/v_obs correction):
+  (1+z) * (v_emit/v_obs) = 2.000000000000000000000000000000000000944
+  Leading R6 (v_emit = v_obs) = 2.0
+  Correction from v ratio    = 9.4402453e-37
+
+Conclusion: v < c strictly; correction to (1+z) leading result is ~10^-37.
+Speed-of-causality principle honored; R6 structural result intact.
+
+Status: PASS.

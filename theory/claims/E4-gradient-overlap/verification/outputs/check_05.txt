@@ -1,0 +1,17 @@
+# Check 05 — Cross-check single-Gaussian potential against Gauss-law derivation
+# SymPy: 1.14.0
+# mpmath: 15 digits
+# ---
+   r/sigma                    Phi_textbook                       Phi_gauss        rel_error
+------------------------------------------------------------------------------------------
+       0.5             -0.7658498450960524             -0.7658498450960524      1.98991e-24
+       1.0             -0.6826894921370859             -0.6826894921370859       2.2323e-24
+       2.0             -0.4772498680518208             -0.4772498680518208      3.19323e-24
+       3.0             -0.3324334013122466             -0.3324334013122466      4.58429e-24
+       5.0             -0.1999998853393712             -0.1999998853393712      7.61986e-24
+
+Max relative error across sweep: 7.61986e-24
+# Status: PASS — Gauss-law derivation matches textbook Phi(r) numerically.
+
+M_enclosed(10 sigma) = 1.0 (expect: m = 1)
+  PASS — total mass recovered within Gaussian tail.

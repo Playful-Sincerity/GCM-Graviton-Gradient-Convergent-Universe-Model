@@ -1,0 +1,22 @@
+# Check: 01 — Dimensional analysis of F = G*m1*m2/r^2
+# Claim: S5_5-classical-limits (sub-claim a — Newtonian limit)
+# Run: 2026-04-24 02:39
+# Tool: python3 3.14.4 / SymPy.physics.units
+# Script: verification/check_01_dimensional.py
+# ----
+SymPy dimension arithmetic:
+  dim(G) * dim(m)^2 / dim(r)^2 = {Dimension(length, L): 1, Dimension(mass, M): 1, Dimension(time, T): -2}
+  dim(force)                   = {Dimension(mass): 1, Dimension(length): 1, Dimension(time): -2}
+  Match: PASS
+
+Manual exponent tracking (m, kg, s):
+  G        : {'m': 3, 'kg': -1, 's': -2}
+  m1 * m2  : {'m': 0, 'kg': 2, 's': 0}
+  1 / r^2  : {'m': -2, 'kg': 0, 's': 0}
+  product  : {'m': 1, 'kg': 1, 's': -2}
+  Newton   : {'m': 1, 'kg': 1, 's': -2}
+  Match: PASS
+
+Both methods agree: YES
+
+# Status: PASS

@@ -1,5 +1,5 @@
 """
-GDGM N-Body Graviton Simulation
+GCM N-Body Graviton Simulation
 ================================
 Paste this entire file into a Google Colab cell and run it.
 Or run cell by cell by splitting at the # --- CELL --- markers.
@@ -146,7 +146,7 @@ show_indices = [0,
                 n_snaps - 1]
 
 fig, axes = plt.subplots(1, 5, figsize=(20, 4))
-fig.suptitle("GDGM Graviton Simulation — XY Projection", fontsize=14)
+fig.suptitle("GCM Graviton Simulation — XY Projection", fontsize=14)
 
 for ax, idx in zip(axes, show_indices):
     snap = snapshots_pos[idx]
@@ -169,9 +169,9 @@ for ax, idx in zip(axes, show_indices):
             'gray', lw=0.5, ls='--', alpha=0.3)
 
 plt.tight_layout()
-plt.savefig('gdgm_snapshots.png', dpi=150, bbox_inches='tight')
+plt.savefig('gcm_snapshots.png', dpi=150, bbox_inches='tight')
 plt.show()
-print("Saved: gdgm_snapshots.png")
+print("Saved: gcm_snapshots.png")
 
 # --- CELL 8: Energy Conservation Check ---
 
@@ -200,9 +200,9 @@ ax2.set_title('Energy Conservation (should stay near 0%)')
 ax2.grid(alpha=0.3)
 
 plt.tight_layout()
-plt.savefig('gdgm_energy.png', dpi=150, bbox_inches='tight')
+plt.savefig('gcm_energy.png', dpi=150, bbox_inches='tight')
 plt.show()
-print("Saved: gdgm_energy.png")
+print("Saved: gcm_energy.png")
 
 # --- CELL 9: Cluster Detection ---
 
@@ -300,9 +300,9 @@ for ci, cluster in enumerate(clusters[:5]):
                 color=colors[ci % len(colors)])
 
 plt.tight_layout()
-plt.savefig('gdgm_clusters.png', dpi=150, bbox_inches='tight')
+plt.savefig('gcm_clusters.png', dpi=150, bbox_inches='tight')
 plt.show()
-print("Saved: gdgm_clusters.png")
+print("Saved: gcm_clusters.png")
 
 # --- CELL 11 (Optional): Animated View ---
 # Uncomment to generate an animation (takes ~1 min in Colab)

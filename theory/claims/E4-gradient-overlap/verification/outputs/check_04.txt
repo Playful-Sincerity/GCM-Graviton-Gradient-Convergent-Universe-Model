@@ -1,0 +1,26 @@
+# Check 04 — Symbolic limits
+# SymPy: 1.14.0
+# Python: 3.14.4
+# ---
+lim U(R->0) = -G*m**2/(sqrt(pi)*sigma)
+  expected  = -G*m**2/(sqrt(pi)*sigma)
+  PASS
+
+lim F(R->0) = 0
+  expected  = 0
+  PASS (regularized, no 1/R^2 divergence)
+
+lim R*U(R -> inf) = -G*m**2
+  expected        = -G m^2
+  PASS (point-mass potential recovered)
+
+lim R^2 * F(R -> inf) = G*m**2
+  expected            = G m^2
+  PASS (Newton's law recovered in the far field)
+
+Small-R series F(R) = G*R*m**2*(-3*R**2 + 20*sigma**2)/(120*sqrt(pi)*sigma**5)
+  Coefficient of R^0 = 0
+  Coefficient of R^1 = G*m**2/(6*sqrt(pi)*sigma**3)
+  PASS — F(R) is linear in R near origin (spring-like)
+
+# Status: PASS — all four limits match the derivation.md claims.

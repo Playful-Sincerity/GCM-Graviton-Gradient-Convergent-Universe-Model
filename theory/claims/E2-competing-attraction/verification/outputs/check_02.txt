@@ -1,0 +1,37 @@
+# Check 02 — Asymmetric-config toy model (Python + mpmath)
+# mpmath precision: 30 digits
+# Python: 3.14.4
+# ---
+Forces on E1 (+x positive):
+  From proton: -3.6320396e-47 N  (expect toward P, -x)
+  From E2:     1.9775403e-50 N  (expect toward E2, +x)
+  Net E1:      -3.6300621e-47 N
+
+Forces on E2:
+  From proton: -9.0800991e-48 N
+  From E1:     -1.9775403e-50 N
+  Net E2:      -9.0998745e-48 N
+
+a_E1 = -3.9851379e-17 m/s^2
+a_E2 = -9.9899819e-18 m/s^2
+ddot(r) = a_E2 - a_E1 = 2.9861397e-17 m/s^2
+  sign: POSITIVE (apparent repulsion)
+
+Effective repulsive force: F_eff = mu * ddot(r) = 1.3600373e-47 N
+Coulomb reference (two e at r=a_0): 8.2373178e-8 N
+Ratio F_eff / F_Coulomb = 1.6510682e-40  (expect ~1.65e-40)
+So competing attraction is 6.05669e+39 times WEAKER than Coulomb.
+
+--- Comparison to reference values (from Session C derivation.md) ---
+  F_E1 from proton: computed=-3.6320396e-47, expected=-3.63203960599999999465613533452e-47, rel_err=8.625e-9 PASS
+  F_E1 from E2: computed=1.9775403e-50, expected=1.97754030500000011496718045767e-50, rel_err=7.443e-9 PASS
+  a_E1: computed=-3.9851379e-17, expected=-3.98513788199999988467587250341e-17, rel_err=8.899e-11 PASS
+  a_E2: computed=-9.9899819e-18, expected=-9.98998188200000056333206576559e-18, rel_err=1.024e-11 PASS
+  ddot(r): computed=2.9861397e-17, expected=2.98613969400000010342189837222e-17, rel_err=5.521e-11 PASS
+  F_effective: computed=1.3600373e-47, expected=1.36003732399999995501375237705e-47, rel_err=2.152e-10 PASS
+  F_Coulomb: computed=8.2373178e-8, expected=0.0000000823731779400000006326383345662, rel_err=5.894e-11 PASS
+  ratio: computed=1.6510682e-40, expected=1.65106817199999997420881047084e-40, rel_err=2.904e-10 PASS
+
+Sign check: ddot(r) > 0 ✓ (apparent repulsion confirmed)
+
+# Status: PASS — all numerical values match Session C reference to <1e-4 rel. err.

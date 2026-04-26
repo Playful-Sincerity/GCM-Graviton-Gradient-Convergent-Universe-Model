@@ -1,4 +1,4 @@
-# GDGM Core Tenets — Philosophical Framework
+# GCM Core Tenets — Philosophical Framework
 **Version**: 0.1 (Pre-formal)
 **Date**: 2026-03-21
 

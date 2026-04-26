@@ -1,0 +1,22 @@
+# Check: 02 — Earth-Moon Newtonian force numerical
+# Claim: S5_5-classical-limits (sub-claim a — Newtonian limit)
+# Run: 2026-04-24 02:39
+# Tool: python3 3.14.4 / mpmath (dps=50)
+# Script: verification/check_02_earth_moon_numerical.py
+# ----
+Inputs (from inputs.json):
+  G   = 0.000000000066742999999999993790012436692643364721799770222788 m^3/(kg*s^2)
+  M_E = 5972200000000000224395264.0 kg
+  M_M = 73419999999999996854272.0 kg
+  r   = 384400000.0 m
+  reference F = 198000000000000000000.0 N
+
+Computed F = G M_E M_M / r^2 = 198055856502802840452.15111478514963738186224546704 N
+Computed F (scientific) = 1.98056e+20 N
+
+Absolute error vs reference: 5.586e+16 N
+Relative error vs reference: 0.02821 %
+
+Tolerance: 1.0%
+
+# Status: PASS

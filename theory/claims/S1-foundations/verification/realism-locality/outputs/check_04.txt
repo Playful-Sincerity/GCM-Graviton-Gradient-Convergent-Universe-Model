@@ -1,0 +1,64 @@
+# Check: 04 — Citation cross-reference against claim markdown
+# Claim: S1-RL-1
+# Run:   2026-04-24 03:49
+# Tool:  python3 3.14.4 (stdlib only)
+# Script: verification/realism-locality/check_04_citation_crossref.py
+# ----
+
+Citation: tHooft2016
+  cited_text: Gerard 't Hooft's Cellular Automaton Interpretation of Quantum Mechanics (Springer, 2016)
+  full normalized hit:   False
+  key-token hit (9/9): True
+    key tokens: ['gerard', 'hooft', 'cellular', 'automaton', 'interpretation', 'quantum', 'mechanics', 'springer', '2016']
+    tokens present: ['gerard', 'hooft', 'cellular', 'automaton', 'interpretation', 'quantum', 'mechanics', 'springer', '2016']
+  author+year fallback: False  ("'t hooft", '2016')
+  RESULT: PASS
+
+Citation: Bell1964
+  cited_text: Bell's theorem (1964)
+  full normalized hit:   True
+  key-token hit (3/3): True
+    key tokens: ['bell', 'theorem', '1964']
+    tokens present: ['bell', 'theorem', '1964']
+  author+year fallback: True  ('bell', '1964')
+  RESULT: PASS
+
+Citation: HossenfelderPalmer2020
+  cited_text: Hossenfelder and Palmer, 'Rethinking Superdeterminism,' Frontiers in Physics, 2020
+  full normalized hit:   False
+  key-token hit (7/7): True
+    key tokens: ['hossenfelder', 'palmer', 'rethinking', 'superdeterminism', 'frontiers', 'physics', '2020']
+    tokens present: ['hossenfelder', 'palmer', 'rethinking', 'superdeterminism', 'frontiers', 'physics', '2020']
+  author+year fallback: True  ('hossenfelder', '2020')
+  RESULT: PASS
+
+Citation: Aspect1982
+  cited_text: experiment has confirmed quantum mechanics on this point (Aspect 1982; Hensen et al. 2015 loophole-free)
+  full normalized hit:   True
+  key-token hit (12/12): True
+    key tokens: ['experiment', 'confirmed', 'quantum', 'mechanics', 'this', 'point', 'aspect', '1982', 'hensen', '2015', 'loophole', 'free']
+    tokens present: ['experiment', 'confirmed', 'quantum', 'mechanics', 'this', 'point', 'aspect', '1982', 'hensen', '2015', 'loophole', 'free']
+  author+year fallback: True  ('aspect', '1982')
+  RESULT: PASS
+
+Citation: Hensen2015
+  cited_text: Hensen et al. 2015 loophole-free
+  full normalized hit:   True
+  key-token hit (4/4): True
+    key tokens: ['hensen', '2015', 'loophole', 'free']
+    tokens present: ['hensen', '2015', 'loophole', 'free']
+  author+year fallback: True  ('hensen', '2015')
+  RESULT: PASS
+
+Citation: Bell1987
+  cited_text: Bell 1987 Speakable and Unspeakable in QM
+  full normalized hit:   False
+  key-token hit (4/4): True
+    key tokens: ['bell', '1987', 'speakable', 'unspeakable']
+    tokens present: ['bell', '1987', 'speakable', 'unspeakable']
+  author+year fallback: True  ('bell', '1987')
+  RESULT: PASS
+
+Summary: 6/6 citations cross-referenced into the markdown.
+
+STATUS: PASS

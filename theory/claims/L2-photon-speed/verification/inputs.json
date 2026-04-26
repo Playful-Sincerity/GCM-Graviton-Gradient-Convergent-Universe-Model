@@ -1,0 +1,49 @@
+{
+  "_claim": "L2 — Photon speed from small rest mass: v = c_causality * sqrt(1 - (m_γ*c^2/E)^2)",
+  "_convention": "Per theory/speed-of-causality-principle.md: c is the causality limit; photons have nonzero rest mass and travel at v < c strictly. Do NOT write v_photon = c anywhere.",
+  "_generated": "2026-04-24",
+  "constants": {
+    "c_causality": {
+      "value": 2.99792458e8,
+      "units": "m / s",
+      "source": "SI definition — speed of causality (exact). NOT to be called 'speed of light'."
+    },
+    "m_gamma_GCM": {
+      "value": 1.0e-54,
+      "units": "kg",
+      "source": "gcm_v2.md §L-family (provisional; placeholder consistent with L1 bound)"
+    },
+    "eV_per_kg": {
+      "value": 1.782661921e-36,
+      "units": "kg per (eV/c_causality^2)",
+      "source": "CODATA 2018 (derived from 1 eV = 1.602176634e-19 J and c_causality)"
+    },
+    "J_per_eV": {
+      "value": 1.602176634e-19,
+      "units": "J per eV",
+      "source": "SI 2019 definition (exact)"
+    },
+    "E_photon_example": {
+      "value": 1.0,
+      "units": "eV",
+      "source": "session brief — illustrative visible-light energy"
+    },
+    "FRB_photon_mass_bound_eVc2": {
+      "value": 2.1e-15,
+      "units": "eV / c_causality^2",
+      "source": "Wang et al. 2023 JCAP — FRB dispersion bound on photon mass"
+    }
+  },
+  "expected": {
+    "Delta_v_from_brief": {
+      "value": 4.74e-29,
+      "units": "m / s",
+      "source": "session brief — approximation using 2-sig-fig inputs; precise computation yields ~4.72e-29"
+    },
+    "m_gamma_in_eVc2": {
+      "formula": "m_gamma_GCM / eV_per_kg",
+      "expected_value": 5.6e-19,
+      "units": "eV / c_causality^2"
+    }
+  }
+}

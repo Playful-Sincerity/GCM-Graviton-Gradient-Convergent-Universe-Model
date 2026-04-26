@@ -1,0 +1,78 @@
+{
+  "claim_id": "S1-AX-1-F",
+  "claim_name": "Indivisibility Axiom — Formal Derivation",
+  "claim_file": "../../indivisibility-formal.md",
+  "kind": "logical",
+  "note": "This claim is deductive/philosophical, not numerical. 'Inputs' are the predicates, premises, and mereological axioms that ground the derivation. No physical constants are involved; the Speed-of-Causality Principle does not apply here.",
+
+  "predicates": {
+    "Ind": "Ind(x): x is indivisible — has no proper parts.",
+    "Part": "Part(y, x): y is a proper part of x.",
+    "Prop_intrinsic": "Prop(P, x): P is an intrinsic (non-relational) property of x.",
+    "Reduce": "Reduce(P, x): P reduces to the proper parts of x.",
+    "Brute": "Brute(P, x): P is a brute primitive of x — no structural reduction.",
+    "Physical": "Physical(P): P is a physical property (requires geometric/algebraic structure).",
+    "Rel": "Rel(P, x): P is a relational property of x."
+  },
+
+  "premises": [
+    {
+      "id": "P1",
+      "statement": "Ind(g)",
+      "reading": "The graviton g is indivisible.",
+      "source": "GCM Tenet T1 — one fundamental particle.",
+      "source_file": "../../../core_tenets.md"
+    },
+    {
+      "id": "P2",
+      "statement": "forall x. Ind(x) -> not (exists y. Part(y, x))",
+      "reading": "Indivisibility entails no proper parts.",
+      "source": "Definition of 'indivisible' (classical mereology, Leonard & Goodman 1940; Simons 1987)."
+    },
+    {
+      "id": "P3",
+      "statement": "forall x, P. Prop_intrinsic(P, x) -> (Reduce(P, x) or Brute(P, x))",
+      "reading": "Any intrinsic (non-relational) property either reduces to an entity's parts or is a brute primitive.",
+      "source": "Property-grounding principle; standard in analytic metaphysics."
+    },
+    {
+      "id": "P4",
+      "statement": "forall x, P. Reduce(P, x) -> (exists y. Part(y, x))",
+      "reading": "Reduction to parts requires parts to reduce to.",
+      "source": "Analytic of 'reduction'; Simons 1987 §3.3."
+    },
+    {
+      "id": "P5",
+      "statement": "forall P. Brute(P, x) -> not Physical(P)",
+      "reading": "A brute primitive lacks the geometric/algebraic structure required of a physical property (spin, chirality, charge).",
+      "source": "Philosophy-of-physics convention; the most contestable premise (see caveats in indivisibility-formal.md)."
+    }
+  ],
+
+  "mereological_axioms": [
+    {"id": "AM1", "statement": "x <= x", "name": "Reflexivity", "source": "Simons 1987 §1.1"},
+    {"id": "AM2", "statement": "(x <= y) and (y <= x) -> x = y", "name": "Antisymmetry", "source": "Simons 1987 §1.1"},
+    {"id": "AM3", "statement": "(x <= y) and (y <= z) -> (x <= z)", "name": "Transitivity", "source": "Simons 1987 §1.1"},
+    {"id": "AM4", "statement": "x < y -> exists z. (z <= y) and not Overlap(z, x)", "name": "Weak Supplementation", "source": "Simons 1987 §1.1"},
+    {"id": "AM5", "statement": "Atom(g)", "name": "Atom axiom (instantiated at g)", "source": "GCM T1 via Axiom of Indivisibility."}
+  ],
+
+  "target_theorem": {
+    "id": "T",
+    "statement": "Ind(g) -> forall P. (not Prop_intrinsic(P, g)) or Rel(P, g)",
+    "reading": "Every property an indivisible entity possesses must be relational; no intrinsic physical property can be attributed to it.",
+    "verification_method": "Propositional instantiation at (g, P), then test unsatisfiability of the reductio conjunction."
+  },
+
+  "citations": [],
+
+  "tools_available_in_session": {
+    "python3": "3.14.4",
+    "sympy": "1.14.0 (via /tmp/gcm-verify-venv)",
+    "mpmath": "1.3.0 (via /tmp/gcm-verify-venv, not used — no numerics)",
+    "lean4": "installed at ~/.elan/bin/lean (stub archived; not fully verified)",
+    "wolfram_mcp": "UNAVAILABLE — see check_05_wolfram_todo.wls"
+  },
+
+  "last_updated": "2026-04-24"
+}

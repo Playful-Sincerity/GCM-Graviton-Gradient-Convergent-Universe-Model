@@ -1,0 +1,21 @@
+# Check: 05 — OEIS A005901 cross-reference (n=1..10)
+# Claim: Q2-tetrahedral-shells
+# Run: 2026-04-24 02:37
+# Tool: python3 3.14.4
+# Script: verification/check_05_oeis_cross_reference.py
+# Status: PASS
+# ----
+  n    P(n)  OEIS A005901  status
+----------------------------------
+  1      12            12  PASS
+  2      42            42  PASS
+  3      92            92  PASS
+  4     162           162  PASS
+  5     252           252  PASS
+  6     362           362  PASS
+  7     492           492  PASS
+  8     642           642  PASS
+  9     812           812  PASS
+ 10    1002          1002  PASS
+
+OVERALL: PASS (10/10 match OEIS A005901)

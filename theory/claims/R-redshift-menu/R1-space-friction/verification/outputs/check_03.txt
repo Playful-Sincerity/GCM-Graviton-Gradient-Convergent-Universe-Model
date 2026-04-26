@@ -1,0 +1,31 @@
+# Check: 03 — exponential-to-linear redshift limit
+# Claim: R1-space-friction
+# Run: 2026-04-24 02:39
+# Tool: Python 3.14.4 / stdlib decimal prec=50
+# Script: verification/check_03_exponential_to_linear.py
+# ----
+
+Model: E(r) = E_0 exp(-alpha r); observed z = exp(alpha r) - 1.
+
+     alpha*r      z_exact = exp(x)-1    z_linear = x    err (exact-linear)/exact
+       0.001             1.000500E-3          0.0010                     0.0500%
+        0.01             1.005017E-2          0.0100                     0.4992%
+         0.1             1.051709E-1          0.1000                     4.9167%
+         0.3             3.498588E-1          0.3000                    14.2511%
+         0.5             6.487213E-1          0.5000                    22.9253%
+         1.0             1.718282E+0          1.0000                    41.8023%
+         2.0             6.389056E+0          2.0000                    68.6965%
+
+Interpretation:
+  * For alpha*r < 0.01, linear approximation is good to ~0.5%.
+  * For alpha*r ~ 0.3 (a plausible 'small-z' cosmological distance), error is ~15%.
+  * For z > 1, fully exponential expression must be used; linear approx invalid.
+
+At alpha=1/R_observable = 2.3e-27 m^-1 and z=1, alpha*r = ln(2) ~ 0.693.
+That is NOT small — the linear approximation is ~37% off.
+So R1's story z = alpha * r is a LOW-z APPROXIMATION only.
+At cosmological redshifts >= 1, the exponential form must be used; fit to
+Pantheon+ data requires fitting exp(alpha r), not alpha r.
+
+STATUS: PASS — the exponential-to-linear mapping is elementary and confirmed.
+        Caveat named: R1 must use the exp form (not linear) for z >= ~0.1.

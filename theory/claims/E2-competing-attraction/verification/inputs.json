@@ -1,0 +1,36 @@
+{
+  "_about": "Inputs for E2 (competing-attraction toy model) verification. SI constants drive the physical toy model (proton + two electrons). Geometry: proton at origin, electron E1 at +d, electron E2 at +d+r (both on the same side).",
+  "_last_updated": "2026-04-24",
+  "constants": {
+    "G":   {"value": 6.674e-11,  "units": "m^3 kg^-1 s^-2", "source": "CODATA 2018 (Newton's G)"},
+    "m_e": {"value": 9.109e-31,  "units": "kg",             "source": "CODATA 2018 (electron rest mass)"},
+    "m_p": {"value": 1.673e-27,  "units": "kg",             "source": "CODATA 2018 (proton rest mass)"},
+    "e":   {"value": 1.602e-19,  "units": "C",              "source": "CODATA 2018 (elementary charge)"},
+    "k_C": {"value": 8.988e9,    "units": "N m^2 C^-2",     "source": "Coulomb constant = 1/(4 pi eps_0)"},
+    "a_0": {"value": 5.29177210903e-11, "units": "m",       "source": "CODATA 2018 (Bohr radius)"}
+  },
+  "geometry_asymmetric": {
+    "_about": "Config A — proton at origin, both electrons on +x side. The load-bearing config for sign-correct apparent repulsion.",
+    "x_P":      {"value": 0,         "units": "m", "source": "toy choice"},
+    "x_E1":     {"value": "a_0",     "units": "m", "source": "choose d = Bohr radius (natural length scale)"},
+    "x_E2":     {"value": "a_0 + r", "units": "m", "source": "E2 offset from E1 by r"},
+    "r_E1E2":   {"value": "a_0",     "units": "m", "source": "inter-electron separation = Bohr radius"}
+  },
+  "geometry_symmetric_control": {
+    "_about": "Config B — proton at origin between the electrons; control case. Expected: apparent *attraction*, opposite sign.",
+    "x_P":   {"value": 0,      "units": "m"},
+    "x_E1":  {"value": "-a_0", "units": "m"},
+    "x_E2":  {"value": "+a_0", "units": "m"}
+  },
+  "reference_values": {
+    "_provenance_note": "Values re-computed 2026-04-24 with CODATA-precision a_0 = 5.29177210903e-11 m. Session C derivation.md used truncated a_0 = 5.29e-11 m, which shifts all absolute values by ~0.07% (the ratio is unchanged). Higher-precision values below are verified by both Python/mpmath@30dps and Wolfram Engine to 15+ digits agreement.",
+    "F_E1_from_proton_expected":  {"value": -3.632039606e-47, "units": "N",  "source": "Recomputed 2026-04-24 with CODATA a_0; Session C derivation.md had -3.634473e-47 with truncated a_0"},
+    "F_E1_from_E2_expected":      {"value":  1.977540305e-50, "units": "N",  "source": "Recomputed 2026-04-24; Session C had 1.978865e-50"},
+    "a_E1_expected":              {"value": -3.985137882e-17, "units": "m/s^2", "source": "Recomputed 2026-04-24; Session C had -3.987808e-17"},
+    "a_E2_expected":              {"value": -9.989981882e-18, "units": "m/s^2", "source": "Recomputed 2026-04-24; Session C had -9.996676e-18"},
+    "ddot_r_expected":            {"value":  2.986139694e-17, "units": "m/s^2", "source": "a_E2 - a_E1; recomputed 2026-04-24; Session C had 2.988141e-17"},
+    "F_effective_expected":       {"value":  1.360037324e-47, "units": "N",  "source": "F_eff = (m_e/2) * ddot_r; recomputed 2026-04-24; Session C had 1.360949e-47"},
+    "F_Coulomb_at_a0":            {"value":  8.237317794e-08, "units": "N",  "source": "k_C e^2 / a_0^2; recomputed 2026-04-24; Session C had 8.242838e-08"},
+    "ratio_F_competing_Coulomb":  {"value":  1.651068172e-40, "units": "dimensionless", "source": "F_effective / F_Coulomb; matches Session C to rel. err 1.0e-7 (ratio is insensitive to the a_0 truncation since it cancels)"}
+  }
+}

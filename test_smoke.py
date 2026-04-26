@@ -1,5 +1,5 @@
 """
-Smoke tests for GDGM N-Body Graviton Simulation.
+Smoke tests for GCM N-Body Graviton Simulation.
 
 Validates:
 - Python file has no syntax errors (compiles successfully)
@@ -25,7 +25,7 @@ import numpy as np
 # ---------------------------------------------------------------------------
 
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
-NBODY_PATH = os.path.join(PROJECT_ROOT, "gdgm", "simulation", "gdgm_nbody.py")
+NBODY_PATH = os.path.join(PROJECT_ROOT, "simulation", "gcm_nbody.py")
 
 
 def _load_functions_from_source(filepath):
@@ -63,7 +63,7 @@ def _load_functions_from_source(filepath):
     ast.fix_missing_locations(new_tree)
     code = compile(new_tree, filepath, "exec")
 
-    mod = types.ModuleType("gdgm_nbody")
+    mod = types.ModuleType("gcm_nbody")
     mod.__file__ = filepath
     # Provide a non-interactive matplotlib backend before exec
     import matplotlib

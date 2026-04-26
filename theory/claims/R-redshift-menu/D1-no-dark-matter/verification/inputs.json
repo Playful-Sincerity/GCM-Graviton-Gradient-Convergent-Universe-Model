@@ -1,0 +1,28 @@
+{
+  "_metadata": {
+    "claim": "D1-no-dark-matter",
+    "created": "2026-04-24",
+    "created_by": "Session G verification retrofit (Claude Opus 4.7, 1M context)",
+    "honesty_note": "D1 plausibility.md / claim.md numerical estimates (PBH count in Milky Way halo, mean inter-PBH spacing, Hawking temperature at asteroid-mass PBH) were mental arithmetic on 2026-04-23. Scripts added 2026-04-24 as new forward-verification."
+  },
+
+  "c": {"value": "2.99792458e8", "units": "m/s", "source": "SI 2019 exact"},
+  "G": {"value": "6.67430e-11", "units": "m^3 kg^-1 s^-2", "source": "CODATA 2018"},
+  "hbar": {"value": "1.054571817e-34", "units": "J s", "source": "CODATA 2018 (h exact, hbar = h/2pi)"},
+  "kB": {"value": "1.380649e-23", "units": "J/K", "source": "SI 2019 exact"},
+
+  "M_sun": {"value": "1.98892e30", "units": "kg", "source": "IAU 2015 nominal"},
+  "Mpc_m": {"value": "3.0856775814913673e22", "units": "m per Mpc", "source": "IAU 2015"},
+  "H0_km_per_s_per_Mpc": {"value": "70.0", "units": "km s^-1 Mpc^-1", "source": "round central value"},
+
+  "M_MW_halo_claim": {"value": "1e12", "units": "M_sun", "source": "claim.md; standard Milky Way halo total mass inference from rotation curves"},
+  "M_MW_visible_claim": {"value": "6e10", "units": "M_sun", "source": "claim.md; luminous baryonic Milky Way"},
+  "PBH_mass_claim": {"value": "1e20", "units": "g", "source": "claim.md; asteroid-mass window middle value 10^17-10^23 g"},
+
+  "N_PBH_MW_claim": {"value": "1e25", "units": "dimensionless", "source": "claim.md revision: N ~ M_halo / M_PBH. plausibility.md says 1e18 which is inconsistent with those masses — to be resolved by this check"},
+  "inter_PBH_spacing_claim_AU": {"value": "2000", "units": "AU", "source": "plausibility.md"},
+  "T_Hawking_claim": {"value": "6e-7", "units": "K", "source": "plausibility.md (claim.md says ~10^-5 K; discrepancy to be resolved by this check)"},
+
+  "Omega_DM": {"value": "0.26", "units": "dimensionless", "source": "Planck 2018 VI Omega_matter - Omega_baryons ~ 0.3 - 0.04; rounded to 0.26"},
+  "AU_m": {"value": "1.495978707e11", "units": "m per AU", "source": "IAU 2012 exact"}
+}

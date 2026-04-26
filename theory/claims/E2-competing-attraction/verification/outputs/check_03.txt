@@ -1,0 +1,13 @@
+# Check 03 — Symmetric-config control (apparent attraction expected)
+# Python: 3.14.4
+# ---
+E1 at x = -5.29177e-11 m, E2 at x = 5.29177e-11 m
+a_E1 = 3.9878516e-17 m/s^2  (expect POSITIVE, toward origin in +x)
+a_E2 = -3.9878516e-17 m/s^2  (expect NEGATIVE, toward origin in -x)
+ddot(r) = -7.9757032e-17 m/s^2
+  sign: NEGATIVE (apparent ATTRACTION)
+
+Geometry dependence confirmed: symmetric proton-between-electrons gives apparent ATTRACTION.
+Together with Check 02 (asymmetric → apparent repulsion), E2's sign is shown to be geometry-dependent.
+
+# Status: PASS — symmetric control yields opposite sign, confirming geometry-dependence.

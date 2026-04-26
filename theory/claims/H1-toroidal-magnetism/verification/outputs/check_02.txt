@@ -1,0 +1,34 @@
+# Check: 02 — Vector-calculus structure of radial+uniform superposition
+# Claim: H1-toroidal-magnetism
+# Run: 2026-04-24 04:04
+# Tool: python3 3.14.4 / SymPy 1.14.0 (sympy.vector)
+# Script: verification/check_02_streamlines_sympy.py
+# ----
+Combined field F = q * r̂/r² + v₀ * ẑ
+
+Curl of each piece:
+  curl(F_radial)  = 0
+  curl(F_uniform) = 0
+  curl(F_total)   = 0
+
+Both pieces irrotational: PASS
+Superposition curl-free : PASS
+
+Stagnation point on -ẑ axis (z<0):
+  F_z(z) = -q/z² + v₀
+  Solutions z = [-sqrt(q)/sqrt(v_0)]
+  Negative-axis stagnation point: z* = -sqrt(q)/sqrt(v_0)
+  r* = |z*| = sqrt(q)/sqrt(v_0)
+  Expected r* = √(q/v₀) = sqrt(q)/sqrt(v_0)
+  Stagnation point matches expected: PASS
+
+--- Honesty note ---
+Pure static superposition of radial source + uniform drift has ZERO curl.
+This means the 'toroidal streamlines' in H1 are topological (Rankine-half-body),
+NOT vortical. To produce a magnetic field with non-zero ∇×B (matching
+Ampère-Maxwell), the H1 mechanism must invoke time-dependent toroidal
+OSCILLATION of the graviton density — not just static superposition.
+The oscillation dynamics (not captured in this check) are exactly what
+UNSPEC-4 names as out of scope for the current claim.
+
+# Status: PASS

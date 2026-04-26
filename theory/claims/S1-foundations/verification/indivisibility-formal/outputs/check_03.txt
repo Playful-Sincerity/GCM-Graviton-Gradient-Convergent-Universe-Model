@@ -1,0 +1,34 @@
+# Check: 03 — Premise-dependency scan
+# Claim: S1-AX-1-F — Indivisibility Axiom — Formal Derivation
+# Run:   2026-04-24 02:37
+# Tool:  python3 3.14.4 + sympy 1.14.0
+# Script: verification/indivisibility-formal/check_03_premise_dependency_scan.py
+# ----
+
+Baseline (all premises + reductio): False
+  Expected: False (UNSAT).
+
+Remove P1 (Ind(g)):
+  satisfiable? {Ph: True, Pr: True, Re: True, Np: True, I: False, Br: False}
+  (OK — expected SAT; premise is load-bearing)
+
+Remove P2 (Ind -> not Np):
+  satisfiable? {I: True, Ph: True, Pr: True, Re: True, Np: True, Br: False}
+  (OK — expected SAT; premise is load-bearing)
+
+Remove P3 (Pr -> Re or Br):
+  satisfiable? {I: True, Ph: True, Pr: True, Re: False, Np: False, Br: False}
+  (OK — expected SAT; premise is load-bearing)
+
+Remove P4 (Re -> Np):
+  satisfiable? {I: True, Ph: True, Pr: True, Re: True, Np: False, Br: False}
+  (OK — expected SAT; premise is load-bearing)
+
+Remove P5 (Br -> not Ph):
+  satisfiable? {I: True, Ph: True, Br: True, Pr: True, Np: False, Re: False}
+  (OK — expected SAT; premise is load-bearing)
+
+All five premises are load-bearing — removing any one breaks the theorem.
+No redundancy in the premise set.
+
+STATUS: PASS

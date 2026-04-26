@@ -1,0 +1,17 @@
+# Check 02 — SymPy derivation of C(R)
+# SymPy: 1.14.0
+# Python: 3.14.4
+# ---
+Laplacian of exp(-R^2/(4 sigma^2)) = (R**2 - 6*sigma**2)*exp(-R**2/(4*sigma**2))/(4*sigma**4)
+
+C(R) = m**2*(-R**2 + 6*sigma**2)*exp(-R**2/(4*sigma**2))/(32*pi**(3/2)*sigma**7)
+
+Expected     = m**2*(-R**2 + 6*sigma**2)*exp(-R**2/(4*sigma**2))/(32*pi**(3/2)*sigma**7)
+Difference   = 0
+  PASS — closed form matches.
+
+Zero crossing predicted at R = sigma*sqrt(6) = sqrt(6)*sigma
+C(R = sigma sqrt(6)) = 0  (expect: 0)
+  PASS — zero crossing confirmed.
+
+# Status: PASS — closed form and zero crossing symbolically verified.

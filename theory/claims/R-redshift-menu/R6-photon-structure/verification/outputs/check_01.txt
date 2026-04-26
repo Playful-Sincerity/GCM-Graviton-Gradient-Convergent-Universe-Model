@@ -1,0 +1,33 @@
+# Check: 01 — photon mass conversion and comparison to FRB bound
+# Claim: R6-photon-structure
+# Run: 2026-04-24 03:47
+# Tool: Python 3.14.4 / stdlib decimal prec=50
+# Script: verification/check_01_photon_mass_kg_to_eV.py
+# ----
+
+GCM claim:  m_gamma = 1E-54 kg
+  c^2 = 89875517873681764 m^2/s^2
+  rest energy m c^2 = 8.987552E-38 J
+  in eV: 5.609589E-19 eV
+  (i.e., m = 5.6096E-19 eV/c^2)
+
+Claimed in plausibility.md: 5.6e-19 eV/c^2
+  ratio computed/claim:      1.002
+
+Wang et al. 2023 bound:     2.100E-15 eV/c^2
+  ratio Wang/GCM:            3.7436E+3
+  log10(Wang/GCM):           3.5733
+
+Claim in R6 brief: GCM is ~4 orders below Wang bound.
+Computed: 3.57 orders below.
+
+Within ~0.5 order of the '4 orders' claim. PASS (order-of-magnitude).
+
+STATUS: PASS
+
+Note on adjacent-programs file precision:
+  2026-04-23-adjacent-programs.md states '28 orders below' for graviton mass
+  vs LIGO bound, NOT for the photon mass. R6's '4 orders' is the correct claim
+  for the photon mass vs FRB bound. The Plan's M1 section (graviton mass)
+  cites 28 orders correctly. These two orders-below claims are for different
+  particles and should not be conflated.

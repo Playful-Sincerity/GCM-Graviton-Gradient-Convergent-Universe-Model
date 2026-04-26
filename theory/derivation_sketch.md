@@ -1,4 +1,4 @@
-# GDGM Derivation Sketch — From Axioms Up
+# GCM Derivation Sketch — From Axioms Up
 **Date**: 2026-03-21
 **Purpose**: Start from nothing but the two core axioms and ask what must logically follow. Keep it simple. Flag every fork where a choice must be made or an experiment is needed.
 
@@ -64,9 +64,9 @@ This is Newton's law applied at the graviton scale. It has one free parameter: G
 - Is there a minimum distance (quantization of space)?
 - Or does the force law soften at short range?
 
-The Planck length ℓP = 1.616 × 10⁻³⁵ m is the natural candidate for a minimum distance — it's the scale at which quantum gravitational effects become significant. In GDGM, it may simply be the physical size of a graviton's "exclusion zone."
+The Planck length ℓP = 1.616 × 10⁻³⁵ m is the natural candidate for a minimum distance — it's the scale at which quantum gravitational effects become significant. In GCM, it may simply be the physical size of a graviton's "exclusion zone."
 
-**Experiment needed**: Any measurement that constrains gravity at sub-micron scales (torsion balance experiments at short range) gives us the force law in the regime where GDGM differs from GR.
+**Experiment needed**: Any measurement that constrains gravity at sub-micron scales (torsion balance experiments at short range) gives us the force law in the regime where GCM differs from GR.
 
 ---
 
@@ -127,10 +127,10 @@ This gives inertia naturally. To accelerate a particle, you are asking all ξ gr
 Energy follows: `E = mg · ξ · c²`
 (This is just E = mc² where m = mg·ξ. No new assumption needed — c is the maximum speed at which the graviton field can propagate changes.)
 
-**Where does c come from in GDGM?**
+**Where does c come from in GCM?**
 If space = graviton distances, then the speed of light is the maximum rate at which a disturbance in graviton density can propagate. It's set by the local graviton density ρ₀ and the force law. c is not fundamental — it's an emergent property of the vacuum state.
 
-This is testable in principle: in regions of different graviton density (near massive objects), c should vary — which is exactly gravitational lensing and time dilation. GDGM gets this right automatically.
+This is testable in principle: in regions of different graviton density (near massive objects), c should vary — which is exactly gravitational lensing and time dilation. GCM gets this right automatically.
 
 ---
 
@@ -169,7 +169,7 @@ To show this, we need to:
 3. Calculate the force when their profiles approach each other
 4. Show the result matches the Coulomb force law at the right scale
 
-This is the key mathematical program of GDGM. It hasn't been done yet.
+This is the key mathematical program of GCM. It hasn't been done yet.
 
 ---
 

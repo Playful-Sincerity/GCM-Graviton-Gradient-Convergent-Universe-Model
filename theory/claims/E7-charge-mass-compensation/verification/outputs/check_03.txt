@@ -1,0 +1,21 @@
+# Check: 03 — numeric spot
+# Claim: E7-charge-mass-compensation
+# Run: 2026-04-24 03:21
+# Tool: python3 3.14.4 / mpmath 1.3.0
+# Script: verification/check_03_numeric_spot.py
+# E7 Check 3 — Numerical spot check
+
+Inputs from session brief:
+  Delta_e       = 1.0e-35 C
+  m_e           = 9.1093837015e-31 kg
+  e             = 1.602176634e-19 C
+
+Computed Delta_m_e = -4 * m_e * Delta_e / e = -2.27425204142628883202150107003e-46 kg
+Brief stated value                          = -2.27e-46 kg
+
+Relative difference = 0.00187314600277041058215906168511
+  (~0.187314600277041058215906168511 %)
+
+STATUS: PASS
+  Interpretation: 0.2% difference is rounding in the brief's stated value, not a computational error.
+# Exit: 0

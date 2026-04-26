@@ -1,0 +1,18 @@
+# Check: 04 — Wolfram Engine independent verification
+# Claim: S5_5-classical-limits (sub-claim a — Newtonian limit)
+# Run: 2026-04-24 02:41
+# Tool: Wolfram Language Engine (wolframscript) 14.3.0
+# Script: verification/check_04_wolfram.wls
+# ----
+F (numerical) = ScientificForm[1.9805585650280287*^20, 6] N
+F reference   = ScientificForm[1.98*^20, 6] N
+Relative error: 0.028210354950946655 %
+
+Symbolic limits:
+  Limit[F, r -> Infinity] = 0
+  Limit[F, m1 -> 0]       = 0
+  Limit[F, m2 -> 0]       = 0
+  With m1=mg*xA, m2=mg*xB: (Gs*mg^2*xA*xB)/r^2
+  Single-graviton (xA=xB=1): (Gs*mg^2)/r^2
+
+Status: PASS

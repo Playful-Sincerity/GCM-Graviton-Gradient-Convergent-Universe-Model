@@ -1,0 +1,26 @@
+# Check: 01 — derivation sympy
+# Claim: L2-photon-speed
+# Run: 2026-04-24 04:05
+# Tool: python3 3.14.4 / SymPy 1.14.0
+# Script: verification/check_01_derivation_sympy.py
+# L2 Check 1 — Symbolic derivation from E^2 = (pc)^2 + (m_gamma c^2)^2
+
+p(E, m_g, c)  = sqrt(E**2 - c_causality**4*m_gamma**2)/c_causality
+
+v = dE/dp       = c_causality*p/sqrt(c_causality**2*m_gamma**2 + p**2)
+
+v(E, m_g, c)    = c_causality*sqrt(E**2 - c_causality**4*m_gamma**2)/E
+
+Expected form   = c_causality*sqrt(1 - c_causality**4*m_gamma**2/E**2)
+Difference      = 0
+
+Taylor expansion in epsilon = m_g c^2 / E:
+  v ≈ c_causality*sqrt(1 - c_causality**4*m_gamma**2/E**2)
+  Δv = c - v ≈ c_causality*(E - sqrt(E**2 - c_causality**4*m_gamma**2))/E
+
+Key structural property (per speed-of-causality principle):
+  For m_g > 0 and finite E: sqrt(1 - (m_g c^2/E)^2) < 1
+  Therefore v_photon < c_causality, strictly.
+
+STATUS: PASS
+# Exit: 0

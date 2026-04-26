@@ -1,0 +1,37 @@
+{
+  "_comment": "Inputs for H2 (Release Theory of Heat) verification. H2 is a structural/symbolic claim — most 'inputs' are symbolic rather than numerical. A single numerical test uses a synthetic cooling curve to demonstrate the exponential decay.",
+  "_claim": "H2-release-heat",
+  "_last_updated": "2026-04-24",
+
+  "synthetic_cooling_demo": {
+    "_comment": "Illustrative numerical test of Newton's cooling solution dρ/dt = -λ(ρ-ρ₀). Values are synthetic/dimensionless for demo purposes.",
+    "rho_0": {
+      "value": 1.0,
+      "units": "arbitrary density units",
+      "source": "synthetic demo"
+    },
+    "rho_initial": {
+      "value": 5.0,
+      "units": "arbitrary density units",
+      "source": "synthetic demo — initial excess of 4 above background"
+    },
+    "lambda_decay": {
+      "value": 0.5,
+      "units": "1/time (arbitrary)",
+      "source": "synthetic demo"
+    },
+    "t_sample_points": {
+      "value": [0, 1, 2, 3, 5, 10],
+      "units": "time (arbitrary)",
+      "source": "synthetic demo"
+    }
+  },
+
+  "reference_physics": {
+    "_comment": "Standard-physics claims H2 is structurally consistent with (not reproduced numerically).",
+    "newtons_cooling_form": "dT/dt = -k (T - T_env)",
+    "fourier_heat_equation": "∂T/∂t = α ∇²T",
+    "planck_distribution": "B(ν,T) = (2hν³/c²) / (exp(hν/kT) - 1)",
+    "equipartition": "C_V = (3/2) k_B T for monatomic ideal gas"
+  }
+}

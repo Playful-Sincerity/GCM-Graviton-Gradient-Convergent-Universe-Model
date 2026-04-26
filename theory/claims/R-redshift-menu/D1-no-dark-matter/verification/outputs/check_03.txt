@@ -1,0 +1,44 @@
+# Check: 03 — Hawking temperature of asteroid-mass PBH
+# Claim: D1-no-dark-matter
+# Run: 2026-04-24 03:54
+# Tool: Python 3.14.4 / stdlib decimal prec=50
+# Script: verification/check_03_hawking_temperature.py
+# ----
+
+Inputs:
+  M = 1E+17 kg (= 10^20 g, asteroid-mass PBH)
+  hbar, c, G, k_B from CODATA
+
+Hawking T = hbar c^3 / (8 pi G M k_B)
+        = 1.227E+6 K
+        = 1226900.670 K
+
+Solar-mass calibration: T_H(M_sun) = 6.169E-8 K
+  (textbook value ~6.17e-8 K -- should agree at this precision)
+  ratio computed/textbook: 1.00
+
+Schwarzschild radius: r_s = 2GM/c^2 = 1.485E-10 m
+Surface area:          A = 4 pi r_s^2 = 2.772E-19 m^2
+Luminosity (SB): L = sigma_SB T^4 A = 3.562E-2 W  (~35.6 mW)
+
+Claimed in plausibility.md: T_H ~ 6e-7 K
+Computed: T_H ~ 1.227E+6 K
+Ratio computed/claim: 2.045E+12
+
+CMB temperature: 2.725 K
+T_H / T_CMB = 4.502E+5
+
+FINDING:
+  The claim 'T_H ~ 6e-7 K far below CMB' IS WRONG BY ~12 ORDERS OF MAGNITUDE.
+  The actual Hawking temperature at 10^17 kg is ~1.2e6 K, which is HUGE (million K).
+  The reason asteroid-mass PBHs are observationally hidden is NOT low temperature,
+  it is tiny emitting surface area (r_s ~ 1.5e-10 m) and therefore tiny luminosity
+  (~36 milliwatts per PBH). The individual radiation is high-energy but
+  the total power is small and the encounter rate is negligible.
+
+  The OBSERVATIONAL ARGUMENT that asteroid-mass PBHs are hard to detect stands.
+  The SPECIFIC TEMPERATURE CLAIM in plausibility.md and claim.md is false.
+
+STATUS: FAIL — plausibility.md and claim.md both have a 12-order-of-magnitude
+        error on the Hawking temperature. Need revision to 'T_H ~ 10^6 K,
+        but emitted luminosity ~ mW per PBH, undetectable at cosmic distances'.

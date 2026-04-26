@@ -1,0 +1,17 @@
+# Check 01 — Dimensional analysis of J_g and continuity
+# Python: 3.14.4
+# Tool: Pint 0.25.3
+# ---
+-D grad(rho_g) dim = [mass] / [length] ** 2 / [time]
+v_g * rho_g   dim = [mass] / [length] ** 2 / [time]
+J_g target    dim = [mass] / [length] ** 2 / [time]
+  PASS — both terms have units of mass flux (kg/m^2/s).
+
+d rho_g / dt dim = [mass] / [length] ** 3 / [time]
+div(J_g)     dim = [mass] / [length] ** 3 / [time]
+  PASS — continuity equation dimensionally closed.
+
+Surface flux Phi_g dim = [mass] / [time]  (expect kg/s)
+  PASS — Phi_g has units of mass flow rate (kg/s).
+
+# Status: PASS — flow equation, continuity, and flux are dimensionally consistent.

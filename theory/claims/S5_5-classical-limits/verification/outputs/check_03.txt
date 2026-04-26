@@ -1,0 +1,20 @@
+# Check: 03 — Symbolic limit cases
+# Claim: S5_5-classical-limits (sub-claim a — Newtonian limit)
+# Run: 2026-04-24 02:40
+# Tool: python3 3.14.4 / SymPy symbolic limits
+# Script: verification/check_03_limit_cases_sympy.py
+# ----
+lim r->oo  G*m1*m2/r^2       = 0
+lim m1->0  G*m1*m2/r^2       = 0
+lim m2->0  G*m1*m2/r^2       = 0
+
+Substitute m1=m_g*xi_A, m2=m_g*xi_B, then xi_A=xi_B=1:
+  Result   = G*m_g**2/r**2
+  Expected = G*m_g**2/r**2
+  Match: PASS
+
+Factorization: G*(m_g*xi_A)*(m_g*xi_B)/r^2 == G*xi_A*xi_B*m_g^2/r^2
+  Match: PASS
+  This is the step 'm_g^2 * xi_A * xi_B = m_A * m_B' used in the derivation.
+
+# Status: PASS

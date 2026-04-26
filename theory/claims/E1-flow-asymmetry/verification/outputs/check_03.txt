@@ -1,0 +1,15 @@
+# Check 03 — Symbolic divergence of J_g
+# SymPy: 1.14.0
+# Python: 3.14.4
+# ---
+grad(rho_g) = (Derivative(rho(N.x, N.y, N.z), N.x))*N.i + (Derivative(rho(N.x, N.y, N.z), N.y))*N.j + (Derivative(rho(N.x, N.y, N.z), N.z))*N.k
+
+div(J_g) == -D lap(rho) + rho div(v) + v.grad(rho) ?
+  Difference: 0
+  PASS — the identity holds symbolically.
+
+Continuity equation (steady state): div(J_g) = 0 everywhere in the bulk.
+Enclosing-surface flux Phi_g = integral(J_g . dA) can still be nonzero
+if the particle is represented as a delta-function source at r = 0.
+
+# Status: PASS — vector-calculus identity verified symbolically.

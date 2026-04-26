@@ -1,0 +1,39 @@
+# Check: 02 (Wolfram symbolic) â cascade exponent derivation
+# Claim: R6-photon-structure
+# Run:   Fri 24 Apr 2026 03:49:00
+# Tool:  Wolfram Engine via wolframscript
+# ----
+
+Structural cascade:
+  lambdaO / lambdaE   = 1 + z
+  dInternalO / dInternalE (L3) = 1 + z
+  tauO / tauE (prop. delay)    = 1 + z
+
+Exponent in (1+z)^n on tauO/tauE:
+  n = 1
+
+DES 2024 measurement: (1+z)^b, b = 1.003 Â± 0.005 (stat) Â± 0.010 (sys)
+R6 structural prediction: b = 1 (exact)
+
+N::precsm: Requested precision 6 is smaller than $MinPrecision. Using $MinPrecision instead.
+|b_obs - b_R6| / sigma_stat = 0.5999999999999783 sigma from stat uncertainty alone
+
+N::precsm: Requested precision 6 is smaller than $MinPrecision. Using $MinPrecision instead.
+|b_obs - b_R6| / sigma_sys  = 0.29999999999998916 sigma from sys uncertainty alone
+
+Combined (stat + sys in quadrature):
+
+N::precsm: Requested precision 6 is smaller than $MinPrecision. Using $MinPrecision instead.
+
+General::stop: Further output of N::precsm will be suppressed during this calculation.
+  sigma_tot = 0.011180339887498949
+  |b_obs - b_R6| / sigma_tot = 0.26832815729996506 sigma
+
+Prediction within 2 sigma of measurement. PASS.
+STATUS: PASS
+
+Caveat (flagged in plausibility.md): the cascade depends on
+  (a) L3 (wavelength â internal spacing) being exact, not just approximate,
+  (b) internal information-propagation speed being substrate-independent.
+Both are currently yellow-tier assumptions. Falsification of either
+would change the exponent away from 1.

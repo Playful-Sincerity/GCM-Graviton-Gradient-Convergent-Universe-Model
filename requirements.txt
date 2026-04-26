@@ -1,4 +1,4 @@
-# GDGM N-Body Graviton Simulation dependencies
+# GCM N-Body Graviton Simulation dependencies
 # Designed for Google Colab or local Python 3.8+
 
 numpy>=1.21,<2.0

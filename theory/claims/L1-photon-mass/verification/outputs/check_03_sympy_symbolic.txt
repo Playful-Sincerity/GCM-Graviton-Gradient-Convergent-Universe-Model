@@ -1,0 +1,21 @@
+# Check: 03 — SymPy symbolic derivation
+# Claim: L1-photon-mass
+# Run: 2026-04-24 04:19
+# Tool: Python 3.14.4 / SymPy 1.14.0 / mpmath 1.3.0
+# Script: verification/check_03_sympy_symbolic.py
+# Status: PASS
+# ----
+
+L1 — Check 03: SymPy symbolic derivation
+============================================================
+Symbolic expression: m * c^2 / eV_to_J
+  = c**2*m/eV_to_J
+
+After substitution of inputs:
+  Exact rational: 22468879468420441/40054415850000000000000000000000000
+  Numeric (20 sig figs): 5.6095886038044519379E-19
+
+Hand value (3 sig figs): 5.61e-19
+Relative error: 0.000073333
+
+Status: PASS

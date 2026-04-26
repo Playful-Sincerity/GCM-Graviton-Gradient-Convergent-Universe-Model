@@ -1,0 +1,29 @@
+{
+  "_about": "Inputs for E4 (density-gradient overlap integral) verification. Claim derives a symbolic result U(R) = -(G m^2 / R) erf(R/(2 sigma)); the natural-unit sweep (G=m=sigma=1) is what Session C actually ran. SI constants included for optional physical re-evaluation.",
+  "_last_updated": "2026-04-24",
+  "natural_units": {
+    "G": {"value": 1.0, "units": "dimensionless", "source": "Natural-units convention for the symbolic/numerical sweep used in derivation.md §Step 5"},
+    "m": {"value": 1.0, "units": "dimensionless", "source": "Natural-units convention (see derivation.md)"},
+    "sigma": {"value": 1.0, "units": "dimensionless", "source": "Natural-units convention; Gaussian width"}
+  },
+  "r_over_sigma_sweep": {
+    "value": [0.01, 0.1, 0.5, 1.0, 2.0, 5.0, 10.0],
+    "units": "dimensionless (R/sigma)",
+    "source": "Sweep chosen in Session C derivation.md to show the R<<sigma regularization and R>>sigma recovery"
+  },
+  "si_constants": {
+    "G_si":    {"value": 6.674e-11,  "units": "m^3 kg^-1 s^-2", "source": "CODATA 2018"},
+    "m_p":     {"value": 1.673e-27,  "units": "kg",             "source": "Proton rest mass, CODATA 2018"},
+    "m_e":     {"value": 9.109e-31,  "units": "kg",             "source": "Electron rest mass, CODATA 2018"},
+    "hbar":    {"value": 1.055e-34,  "units": "J s",            "source": "CODATA 2018"},
+    "c":       {"value": 299792458,  "units": "m s^-1 (causality limit; photons travel at v=c-0_x, see CLAUDE.md)", "source": "SI defined"},
+    "ell_P":   {"value": 1.616e-35,  "units": "m",              "source": "Planck length, CODATA 2018"},
+    "a_0":     {"value": 5.29177210903e-11, "units": "m",       "source": "Bohr radius, CODATA 2018"}
+  },
+  "limits_to_verify": {
+    "U_at_R_zero":   "-G m^2 / (sigma * sqrt(pi))",
+    "U_at_R_inf":    "-G m^2 / R (point-mass recovery)",
+    "F_at_R_zero":   "0 (linear in R, regularized — NOT 1/R^2 divergent)",
+    "F_at_R_inf":    "G m^2 / R^2 (Newton's law recovered)"
+  }
+}

@@ -1,0 +1,25 @@
+# Check: 01 — table exact
+# Claim: Q3-EP-invariant
+# Run: 2026-04-24 03:48
+# Tool: python3 3.14.4 / SymPy 1.14.0
+# Script: verification/check_01_table_exact.py
+# Q3 Check 1 — Exact-arithmetic tabulation via SymPy Rational
+
+Using Ry = 13.6 eV (session-brief convention):
+  n     P_n      |E_n| (eV)    |E_n|*P_n (eV)
+  1      12            68/5             816/5  (= 163.2000)
+  2      42            17/5             714/5  (= 142.8000)
+  3      92           68/45           6256/45  (= 139.0222)
+  4     162           17/20           1377/10  (= 137.7000)
+  5     252          68/125         17136/125  (= 137.0880)
+
+Symbolic asymptote lim_{n→∞} |E_n|*P_n = 136 eV
+Session brief's expected asymptote: 136.0 eV (= 10 * Ry)
+Match: True
+
+With CODATA Ry = 13.605693122994 eV, asymptote = 136.05693122994 eV
+
+Variation (max-min)/max across n=1..5: 16.00%
+
+STATUS: PASS
+# Exit: 0

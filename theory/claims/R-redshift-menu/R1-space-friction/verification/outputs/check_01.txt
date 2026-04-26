@@ -1,0 +1,40 @@
+# Check: 01 — Hubble radius and alpha = H0/c
+# Claim: R1-space-friction
+# Run: 2026-04-24 02:37
+# Tool: Python 3.14.4 / stdlib decimal prec=50
+# Script: verification/check_01_hubble_radius_and_alpha.py
+# Status: computed below; claim match decided by ratio vs claimed value
+# ----
+
+H0 input:                70.0 km/s/Mpc
+H0 in SI:                2.268546E-18 s^-1
+R_H = c/H0:              1.321518E+26 m
+  claimed (plausibility): 4.4e26 m
+  ratio (computed/claim): 0.300345
+
+alpha = H0/c:            7.567053E-27 m^-1
+alpha = 1/R_H:           7.567053E-27 m^-1  (identity)
+  claimed (plausibility): 2.3e-27 m^-1
+  ratio (computed/claim): 3.29002
+
+H0 tension sensitivity:
+  H0 = 67.4 (H0_planck18) -> R_H = 1.372E+26 m, alpha = 7.286E-27 m^-1
+  H0 = 73.0 (H0_sh0es) -> R_H = 1.267E+26 m, alpha = 7.891E-27 m^-1
+
+Interpretation check:
+  (A) Hubble radius = c/H0:         R = 1.322E+26 m  alpha = H0/c = 7.567E-27 m^-1
+  (B) Observable universe radius:   R = 4.400E+26 m  alpha = 1/R = 2.273E-27 m^-1
+  Ratio B/A for R: 3.33
+  Ratio B/A for alpha: 0.300
+
+FINDING: plausibility.md claims BOTH 'Hubble radius = 4.4e26 m' AND
+'alpha ~ H0/c ~ 2.3e-27 m^-1'. These are inconsistent by a factor of ~3.3.
+  - 4.4e26 m is the OBSERVABLE UNIVERSE RADIUS (particle horizon), not Hubble radius.
+  - The Hubble radius c/H0 at H0=70 is 1.32e26 m.
+  - If the claim uses R = 4.4e26 m, then alpha = 2.3e-27 m^-1 is consistent but
+    should be written as alpha ~ 1/R_observable, NOT alpha ~ H0/c.
+  - If the claim uses alpha = H0/c, then the numerical value at H0=70 is 7.57e-27 m^-1.
+
+STATUS: INCONCLUSIVE (labelling error in plausibility.md — see findings).
+        Structural claim 'alpha is of order the inverse cosmological length scale' is robust.
+        Specific numerical values have a factor-of-3.3 labeling ambiguity.

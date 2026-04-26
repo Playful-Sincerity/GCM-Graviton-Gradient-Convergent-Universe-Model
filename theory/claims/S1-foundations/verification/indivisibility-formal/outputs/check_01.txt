@@ -1,0 +1,25 @@
+# Check: 01 — FOL propositional encoding (indivisibility)
+# Claim: S1-AX-1-F — Indivisibility Axiom — Formal Derivation
+# Run:   2026-04-24 02:36
+# Tool:  python3 3.14.4 + sympy 1.14.0
+# Script: verification/indivisibility-formal/check_01_fol_propositional.py
+# ----
+
+Premises:
+  P1 (Ind(g)):                        I
+  P2 (Ind(x) -> not Np):              Implies(I, ~Np)
+  P3 (Pr -> Re or Br):                Implies(Pr, Br | Re)
+  P4 (Re -> Np):                      Implies(Re, Np)
+  P5 (Br -> not Ph):                  Implies(Br, ~Ph)
+Reductio assumption (Pr and Ph):      Ph & Pr
+Conjunction tested for SAT:           I & Ph & Pr & (Implies(Re, Np)) & (Implies(Br, ~Ph)) & (Implies(I, ~Np)) & (Implies(Pr, Br | Re))
+
+Result:  UNSAT (no satisfying assignment)
+
+Interpretation:
+  Under P1-P5, a graviton CANNOT host a property that is both
+  intrinsic (Pr) and physical (Ph). Therefore any property
+  attributed to g must be non-intrinsic, i.e. relational.
+  Theorem T holds.
+
+STATUS: PASS

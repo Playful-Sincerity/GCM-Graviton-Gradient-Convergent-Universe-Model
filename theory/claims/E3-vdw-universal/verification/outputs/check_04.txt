@@ -1,0 +1,15 @@
+# Check 04 — Direct 3D integration of C(R)
+# scipy: 1.17.1
+# numpy: 2.4.4
+# Python: 3.14.4
+# ---
+   R/sigma             C_numerical                C_closed          rel_err
+---------------------------------------------------------------------------
+       0.5        3.0314447129e-02        3.0314447141e-02       4.1397e-10
+       1.0        2.1853529853e-02        2.1853529897e-02       2.0202e-09
+       2.0        4.1291495496e-03        4.1291506331e-03       2.6238e-07
+       3.0       -1.7745427148e-03       -1.7745321950e-03       5.9282e-06
+       5.0       -2.0586115620e-04       -2.0584404224e-04       8.3140e-05
+
+Max relative error: 8.3140e-05
+# Status: PASS — closed form matches direct 3D integration to quadrature precision (gradient-gradient cancellation limits finer agreement).

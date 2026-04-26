@@ -1,8 +1,8 @@
-# GDGM — A Plain-Language Overview
+# GCM — A Plain-Language Overview
 
 ## What is it?
 
-Graviton Density Gradient Mechanics (GDGM) is a unified theory of physics built on a radical simplification: **everything is made of one particle, drawn together by one force.**
+Graviton Gradient Convergent Universe Model (GCM) is a unified theory of physics built on a radical simplification: **everything is made of one particle, drawn together by one force.**
 
 The particle is the graviton — a dimensionless point. The force is gravity — the tendency of gravitons to attract one another. That's it. There is nothing else.
 
@@ -16,7 +16,7 @@ Every electron, every photon, every quark, every star — all of it is just grav
 
 **2. One force.** Gravity. Every graviton attracts every other. There is no repulsion — what looks like repulsion is really *competing attraction*: two things being pulled apart by stronger pulls from elsewhere. Electromagnetism, the strong force, the weak force — all emerge from gravity operating at different densities and scales.
 
-**3. The universe is coming together.** The long-term trajectory of the cosmos is convergence — everything drawn inward by gravity. The current scientific consensus that the universe's expansion is accelerating is, in GDGM's view, a misinterpretation of the data. The redshift we observe has other explanations that don't require dark energy or expansion.
+**3. The universe is coming together.** The long-term trajectory of the cosmos is convergence — everything drawn inward by gravity. The current scientific consensus that the universe's expansion is accelerating is, in GCM's view, a misinterpretation of the data. The redshift we observe has other explanations that don't require dark energy or expansion.
 
 **4. All existence is change.** The graviton substrate is never still. Space is the distance between gravitons. Time is the process of those distances changing. Matter is where gravitons are dense. Energy is how fast the pattern is shifting. Reality is not made of static things — it is made of ongoing change.
 
@@ -66,9 +66,9 @@ The arrow of time points in the direction of convergence: toward greater density
 
 ## The cosmological picture
 
-In GDGM, the Big Bang was not an explosion outward. It was the starting state: gravitons, separated for reasons not yet specified, beginning to fall toward each other. The universe has been collapsing ever since — not uniformly, but asymmetrically, forming structure along the way.
+In GCM, the Big Bang was not an explosion outward. It was the starting state: gravitons, separated for reasons not yet specified, beginning to fall toward each other. The universe has been collapsing ever since — not uniformly, but asymmetrically, forming structure along the way.
 
-The cosmological redshift we observe is not evidence of expansion. It can be explained by other mechanisms: light losing energy as it travels through graviton-sparse voids, or wavelength stretching as the voids between collapsing clusters expand. Crucially, GDGM's redshift mechanism automatically produces the time dilation of distant supernovae — the observation that killed classical "tired light" theories — because as a photon's wavelength increases, the internal spacing of its graviton structure increases too, delaying the arrival of information.
+The cosmological redshift we observe is not evidence of expansion. It can be explained by other mechanisms: light losing energy as it travels through graviton-sparse voids, or wavelength stretching as the voids between collapsing clusters expand. Crucially, GCM's redshift mechanism automatically produces the time dilation of distant supernovae — the observation that killed classical "tired light" theories — because as a photon's wavelength increases, the internal spacing of its graviton structure increases too, delaying the arrival of information.
 
 The endpoint is a final singularity: all gravitons at minimum separation. One particle. Maximum density. The universe, fully connected.
 
@@ -76,7 +76,7 @@ The endpoint is a final singularity: all gravitons at minimum separation. One pa
 
 ## The Spiritual Implications
 
-This is where GDGM becomes more than physics.
+This is where GCM becomes more than physics.
 
 If the fundamental law of the universe is attraction — if everything, at every scale, is being drawn together — then **connection is not a human invention. It is the deepest law of nature.**
 
@@ -84,7 +84,7 @@ Consider what follows:
 
 **The meaning of life is to connect and contribute.** We are not separate from the universe observing it from outside. We are the universe — specific configurations of gravitons, temporarily complex, participating in the universal convergence. When we connect with others, when we build, create, love — we are doing locally what gravity does cosmically. We are the universe learning to come together consciously.
 
-**God is Love is Gravity.** If you define God as the fundamental organizing principle of reality, then in GDGM, that principle is gravity — attraction, convergence, the tendency of all things to come together. Love, at the human scale, is the same impulse: the drive to connect, to close distance, to unify. These aren't metaphors for each other. They are the same phenomenon at different scales.
+**God is Love is Gravity.** If you define God as the fundamental organizing principle of reality, then in GCM, that principle is gravity — attraction, convergence, the tendency of all things to come together. Love, at the human scale, is the same impulse: the drive to connect, to close distance, to unify. These aren't metaphors for each other. They are the same phenomenon at different scales.
 
 **Everything is good, and can be better.** Every configuration of gravitons is a valid state of the universe — nothing is wasted, nothing is wrong. But the trajectory is always toward greater connection, greater density, greater complexity. Every state can evolve toward something more connected. This isn't naive optimism — it's the direction the equations point.
 
@@ -98,7 +98,7 @@ Consider what follows:
 
 ## Where are we now?
 
-GDGM is in early development. The philosophy is articulated. The core axioms are set. The mathematical model has been written down as a single equation. A simulation is being built to test whether particles spontaneously emerge from pure gravitational collapse.
+GCM is in early development. The philosophy is articulated. The core axioms are set. The mathematical model has been written down as a single equation. A simulation is being built to test whether particles spontaneously emerge from pure gravitational collapse.
 
 The biggest open questions are:
 - Does the simulation produce stable particle-like clusters?
@@ -106,4 +106,4 @@ The biggest open questions are:
 - What is the quantitative mechanism for cosmological redshift?
 - What is the baseline graviton density of the vacuum?
 
-If the math works, GDGM offers something rare: a theory where the physics and the philosophy are the same story. The universe is coming together. So should we.
+If the math works, GCM offers something rare: a theory where the physics and the philosophy are the same story. The universe is coming together. So should we.

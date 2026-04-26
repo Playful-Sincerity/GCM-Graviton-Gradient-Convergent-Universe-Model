@@ -1,4 +1,4 @@
-# GDGM Agent Team Structure
+# GCM Agent Team Structure
 
 ## Philosophy
 
@@ -14,13 +14,13 @@ Run in parallel. Their outputs feed everything downstream.
 ### Agent 1: Literature Scout
 **Role**: Map the existing landscape — what's been tried, what's ruled out, what's open
 **Covers**: Preon theories, emergent gravity, force unification, cosmological expansion alternatives
-**Output**: `findings/literature_report.md`
+**Output**: `research/findings/literature_report.md`
 **Status**: Running (launched 2026-03-21)
 
 ### Agent 2: Consistency Auditor
-**Role**: Go through the current GDGM paper (v1) and catalog every mathematical/logical issue
+**Role**: Go through the current GCM paper (v1) and catalog every mathematical/logical issue
 **Covers**: Dimensional analysis, circular reasoning, unsupported assertions, numerical errors
-**Output**: `findings/consistency_report.md`
+**Output**: `research/findings/consistency_report.md`
 **Status**: Running (launched 2026-03-21)
 
 ---
@@ -47,11 +47,11 @@ Run in parallel. Their outputs feed everything downstream.
 ## Wave 3 — Derivation and Validation
 
 ### Agent 6: Derivation Workshop
-**Role**: Attempt to formally derive known results from GDGM math (Coulomb scaling, Bohr levels, Van der Waals)
+**Role**: Attempt to formally derive known results from GCM math (Coulomb scaling, Bohr levels, Van der Waals)
 **Dependencies**: Wave 2 complete
 
 ### Agent 7: Prediction Generator
-**Role**: What does GDGM predict that differs from Standard Model + ΛCDM? Design experiments.
+**Role**: What does GCM predict that differs from Standard Model + ΛCDM? Design experiments.
 **Dependencies**: Wave 2 complete
 
 ---
@@ -72,8 +72,8 @@ Run in parallel. Their outputs feed everything downstream.
 
 | Date | Wave | Agent | Status | Notes |
 |------|------|-------|--------|-------|
-| 2026-03-21 | 1 | Literature Scout | **Complete** | findings/literature_report.md |
-| 2026-03-21 | 1 | Consistency Auditor | **Complete** | findings/consistency_report.md |
+| 2026-03-21 | 1 | Literature Scout | **Complete** | research/findings/literature_report.md |
+| 2026-03-21 | 1 | Consistency Auditor | **Complete** | research/findings/consistency_report.md |
 | TBD | 2 | Cosmology Architect | Pending | Design redshift mechanism; align with Wiltshire/DESI |
 | TBD | 2 | Particle Physics Architect | Pending | Derive charge, Pauli, magnetism from graviton field |
 | TBD | 2 | Vacuum State Definer | Pending | Define baseline graviton density (OQ-4, foundational) |

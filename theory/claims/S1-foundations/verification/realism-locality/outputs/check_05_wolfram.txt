@@ -1,0 +1,17 @@
+# Check: 05 — Wolfram Language structural verification
+# Claim: S1-RL-1 — Realism and Locality via Superdeterminism
+# Run:   2026-04-24 03:52
+# Tool:  Wolfram Engine / Wolfram MCP (UNAVAILABLE)
+# Script: verification/realism-locality/check_05_wolfram_todo.wls
+# ----
+
+STATUS: PENDING — Wolfram MCP is not connected in the 2026-04-24 session.
+The .wls script is archived with expected invocations and expected results
+in the script header. When a Wolfram-capable session runs it, expected
+outcomes (matching SymPy check_01/check_02) are:
+  1. naive local realism: SatisfiableQ = False (UNSAT)
+  2. GCM superdeterministic: SatisfiableQ = True (SAT)
+  3. Bohmian: SatisfiableQ = True (SAT)
+  4. MI-denial with common-history: SAT; with FTL: UNSAT
+
+No Wolfram output fabricated. Cross-tool redundancy is the open TODO.

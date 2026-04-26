@@ -18,7 +18,7 @@ All postulations may be wrong — that's fine. But they must not contradict each
 - The current set of hypotheses (all revisable)
 
 ## Output
-Written to: `findings/consistency_report.md`
+Written to: `research/findings/consistency_report.md`
 
 ## Audit Checklist (apply to each hypothesis)
 1. Dimensional analysis — units consistent on both sides?

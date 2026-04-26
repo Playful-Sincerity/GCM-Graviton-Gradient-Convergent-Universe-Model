@@ -1,0 +1,43 @@
+# Check: 03 — Citation manifest structural validation
+# Claim: S1-RL-1
+# Run:   2026-04-24 03:49
+# Tool:  python3 3.14.4 (stdlib only)
+# Script: verification/realism-locality/check_03_citation_manifest.py
+# ----
+
+Found 6 citations in inputs.json.
+
+Citation 1: id=tHooft2016
+  't Hooft, Gerard (2016) — The Cellular Automaton Interpretation of Quantum Mechanics
+    DOI: 10.1007/978-3-319-41285-6
+    load-bearing for: Nearest-neighbor peer-reviewed precedent for GCM's superdeterministic commitment...
+
+Citation 2: id=Bell1964
+  Bell, J. S. (1964) — On the Einstein Podolsky Rosen paradox
+    DOI: 10.1103/PhysicsPhysiqueFizika.1.195
+    load-bearing for: Original proof that no local-hidden-variable theory with measurement independenc...
+
+Citation 3: id=HossenfelderPalmer2020
+  Hossenfelder, Sabine (2020) — Rethinking Superdeterminism
+    DOI: 10.3389/fphy.2020.00139
+    load-bearing for: Modern defence of superdeterminism; treats testability and conspiracy objections...
+
+Citation 4: id=Aspect1982
+  Aspect, Alain (1982) — Experimental Test of Bell's Inequalities Using Time-Varying Analyzers
+    DOI: 10.1103/PhysRevLett.49.1804
+    load-bearing for: Standard experimental confirmation of Bell-inequality violation....
+
+Citation 5: id=Hensen2015
+  Hensen, B. (2015) — Loophole-free Bell inequality violation using electron spins separated by 1.3 kilometres
+    DOI: 10.1038/nature15759
+    load-bearing for: Loophole-free confirmation — closes both locality and detection loopholes simult...
+
+Citation 6: id=Bell1987
+  Bell, J. S. (1987) — Speakable and Unspeakable in Quantum Mechanics
+    ISBN: 978-0-521-36869-8
+    load-bearing for: Canonical statement of the measurement-independence assumption....
+
+Unique ids:  6
+Errors:      0
+
+STATUS: PASS

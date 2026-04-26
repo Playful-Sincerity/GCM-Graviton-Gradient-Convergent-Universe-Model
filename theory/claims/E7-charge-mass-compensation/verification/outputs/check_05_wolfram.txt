@@ -1,0 +1,26 @@
+# Check: 05 — Wolfram Language independent
+# Claim: E7-charge-mass-compensation
+# Run: 2026-04-24 03:21
+# Tool: wolframscript / 14.3.0 for Mac OS X ARM (64-bit) (July 31, 2025)
+# Script: verification/check_05_wolfram.wls
+# E7 Check 5 â Wolfram independent run
+
+E_1               = -1/2*(e^4*k^2*me)/hbar^2
+dE_1/de           = (-2*e^3*k^2*me)/hbar^2
+dE_1/dm_e         = -1/2*(e^4*k^2)/hbar^2
+
+4*E_1/e           = (-2*e^3*k^2*me)/hbar^2
+E_1/m_e           = -1/2*(e^4*k^2)/hbar^2
+dE/de == 4E_1/e?  True
+dE/dm == E_1/m_e? True
+
+Solve perturb=0 for Dm: (-4*De*me)/e
+(Dm/m_e) / (De/e) = -4
+
+Numerical spot check (De = 1e-35 C):
+  Dm_computed  = -2.274252041426289*^-46 kg
+  brief stated = -2.27*10^-46 kg
+  relative diff = 0.0018731460027704013
+
+E_1 (Bohr)  = -2.1798723613839885*^-18 J = -13.605693124744377 eV (expected -13.6057 eV)
+# Exit: 0

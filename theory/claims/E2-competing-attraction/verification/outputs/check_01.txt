@@ -1,0 +1,13 @@
+# Check 01 — Dimensional analysis of E2 force expressions
+# Python: 3.14.4
+# Tool: Pint 0.25.3
+# ---
+F_gravity  dim = [length] * [mass] / [time] ** 2
+F_Coulomb  dim = [mass] * [length] / [time] ** 2
+F_effect.  dim = [length] * [mass] / [time] ** 2
+Newton     dim = [mass] * [length] / [time] ** 2
+  PASS — F_gravity is in newtons.
+  PASS — F_Coulomb is in newtons.
+  PASS — F_effective is in newtons.
+
+# Status: PASS — all three force expressions have units of N.

@@ -1,0 +1,23 @@
+# Check 04 — Fokker-Planck vs Vlasov consistency
+# SymPy: 1.14.0
+# Python: 3.14.4
+# ---
+J_FP(D=0) - J_V = 0   (expect 0)
+  PASS — Vlasov is F-P with D=0.
+
+div(J_V) = rho(N.x, N.y, N.z)*Derivative(vx(N.x, N.y, N.z), N.x) + rho(N.x, N.y, N.z)*Derivative(vy(N.x, N.y, N.z), N.y) + rho(N.x, N.y, N.z)*Derivative(vz(N.x, N.y, N.z), N.z) + vx(N.x, N.y, N.z)*Derivative(rho(N.x, N.y, N.z), N.x) + vy(N.x, N.y, N.z)*Derivative(rho(N.x, N.y, N.z), N.y) + vz(N.x, N.y, N.z)*Derivative(rho(N.x, N.y, N.z), N.z)
+Expected                       = rho_g div(v_g) + v_g.grad(rho_g)
+Difference (should be 0): 0
+  PASS — Vlasov divergence identity holds.
+
+Div difference (F-P - Vlasov) = D*(-Derivative(rho(N.x, N.y, N.z), (N.x, 2)) - Derivative(rho(N.x, N.y, N.z), (N.y, 2)) - Derivative(rho(N.x, N.y, N.z), (N.z, 2)))
+  Equals -D * Laplacian(rho_g) as expected: this is the only formal distinction.
+
+Interpretation for E1:
+  - Sign-level hypothesis (electron: div J_g > 0, proton: <0, neutron: 0)
+    is preserved under either form. The drift field v_g alone can set the
+    sign of the divergence if the particle's density pattern is appropriate.
+  - For GCM's deterministic substrate, the Vlasov form is cleaner and
+    more defensible. Recommend updating the canonical flow equation.
+
+# Status: PASS — Vlasov form is a clean specialization; E1's sign claim is unchanged.

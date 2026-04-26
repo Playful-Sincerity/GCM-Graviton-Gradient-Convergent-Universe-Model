@@ -1,0 +1,18 @@
+# Check: 01 — Dimensional analysis (SymPy)
+# Claim: L3-wavelength-spacing
+# Run: 2026-04-24 04:19
+# Tool: Python 3.14.4 / SymPy 1.14.0 / mpmath 1.3.0
+# Script: verification/check_01_dimensional.py
+# Status: PASS
+# ----
+
+L3 — Check 01: Dimensional analysis of λ = N · d
+============================================================
+[λ] = Dimension(length)
+[N] = Dimension(1)
+[d] = Dimension(length)
+[N · d] = Dimension(length)
+
+[λ] equivalent to [N · d]? True
+
+Status: PASS

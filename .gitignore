@@ -3,3 +3,9 @@ __pycache__/
 *.pyc
 .env
 *.egg-info/
+
+# Verification venv — large, should not be committed
+theory/claims/_verification-env/
+
+# Internal — not for public push
+outreach/

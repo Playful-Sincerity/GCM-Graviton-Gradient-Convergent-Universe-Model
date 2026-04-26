@@ -1,0 +1,17 @@
+# Check: 04 — limit case P_0
+# Claim: Q2-tetrahedral-shells
+# Run: 2026-04-24 02:37
+# Tool: python3 3.14.4
+# Script: verification/check_04_limit_case_p0.py
+# Status: NOTED
+# ----
+P(-1) = 12  (formula artifact; no geometric meaning)
+P(0)  = 2   (formula artifact; physical center is 1 graviton, not 2)
+P(1)  = 12  (first shell; cuboctahedral or icosahedral)
+P(2)  = 42  (second shell)
+
+Check: does P(0) = 2 correspond to a 'center + inversion partner'? NO.
+Reason: an inversion partner at the same site would be coincident, not a
+separate site. Formula's n=0 output is pure algebraic artifact.
+
+Status: NOTED (not a failure; boundary condition stated explicitly).

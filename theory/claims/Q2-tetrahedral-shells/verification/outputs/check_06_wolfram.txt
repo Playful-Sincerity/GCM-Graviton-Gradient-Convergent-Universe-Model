@@ -1,0 +1,35 @@
+# Check: 06 — Wolfram Language independent verification
+# Claim: Q2-tetrahedral-shells
+# Run: 2026-04-24 02:37
+# Tool: WolframScript 1.13.0 for Mac OS X ARM (64-bit)
+# Script: verification/check_06_wolfram.wls
+# Status: PASS
+# ----
+=== Q2 Verification â Wolfram Language ===
+
+Cuboctahedral decomposition: 12 + 24*(-1 + n) + 4*(-2 + n)*(-1 + n) + 6*(-1 + n)^2
+  Expanded: 2 + 10*n^2
+
+Mackay icosahedral decomposition: 12 + 30*(-1 + n) + 10*(-2 + n)*(-1 + n)
+  Expanded: 2 + 10*n^2
+
+Closed-form formula: 2 + 10*n^2
+
+=== Symbolic equivalence ===
+Cuboctahedral == Formula: True
+Mackay       == Formula: True
+Cuboctahedral == Mackay: True
+
+=== Numerical table (n = 1..5) ===
+  n    cubocta  mackay  formula
+  1      12      12      12
+  2      42      42      42
+  3      92      92      92
+  4      162      162      162
+  5      252      252      252
+
+=== Boundary ===
+formula[0] = 2  (artifact; central site is 1 graviton, not 2)
+
+=== OEIS A005901 cross-check (n = 1..10) ===
+All 10 values match OEIS A005901: True

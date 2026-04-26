@@ -1,0 +1,28 @@
+# Check 05 -- Wolfram Engine cross-check of E3 C(R) closed form
+# Tool: 14.3.0 for Mac OS X ARM (64-bit) (July 31, 2025)
+# ---
+Laplacian of exp(-R^2/(4 sigma^2)) = (R^2 - 6*sigma^2)/(4*E^(R^2/(4*sigma^2))*sigma^4)
+
+C(R) = -Laplacian[rho_conv] = -1/32*(m^2*(R^2 - 6*sigma^2))/(E^(R^2/(4*sigma^2))*Pi^(3/2)*sigma^7)
+Expected                      = (m^2*(-R^2 + 6*sigma^2))/(32*E^(R^2/(4*sigma^2))*Pi^(3/2)*sigma^7)
+Difference (should be 0): 0
+Match: True
+
+C(R = sigma sqrt(6)) = 0  (expect: 0)
+Zero match: True
+
+Numerical sweep (m=sigma=1):
+R/sigma       C(R)                       1/R^6                      ratio
+0.5            0.030314447141106173     64.                      0.00047366323657978396
+1.             0.021853529896971834     1.                       0.021853529896971834
+2.             0.004129150633062115     0.015625                 0.26426564051597534
+5.             -0.0002058440422398566   0.000064                 -3.21631315999776
+10.            -7.326406620900207e-12   1.e-6                    -7.326406620900207e-6
+20.            -8.225707156765548e-44   1.5625e-8                -5.264452580329951e-36
+
+Asymptotic shape check:
+  R=5     R^6 * C(R) = CForm[-3.21631315999775995002357266597684823987`20.]  (-> 0 exponentially if not power-law)
+  R=10     R^6 * C(R) = CForm[-7.32640662090020686929189931269097`20.*^-6]  (-> 0 exponentially if not power-law)
+  R=20     R^6 * C(R) = CForm[-5.26445258032995024669018794361257688034034`20.*^-36]  (-> 0 exponentially if not power-law)
+
+# Status: PASS -- Wolfram reproduces C(R), zero crossing, and exponential asymptotic.

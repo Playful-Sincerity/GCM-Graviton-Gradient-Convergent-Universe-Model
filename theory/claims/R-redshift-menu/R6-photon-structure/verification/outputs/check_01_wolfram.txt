@@ -1,0 +1,24 @@
+# Check: 01 â Wolfram independent cross-check
+# Claim: R6-photon-structure
+# Run:   Fri 24 Apr 2026 03:47:43
+# Tool:  Wolfram Engine via wolframscript
+# ----
+m c^2 (J):                ScientificForm[8.9875517873681764`30.*^-38]
+m (eV/c^2):               ScientificForm[5.609588603804452*^-19]
+plausibility.md claim:    5.6e-19
+
+N::precsm: Requested precision 6 is smaller than $MinPrecision. Using $MinPrecision instead.
+ratio computed/claim:     1.0017122506793665
+
+
+N::precsm: Requested precision 10 is smaller than $MinPrecision. Using $MinPrecision instead.
+Wang 2023 bound:          ScientificForm[2.1*^-15] eV/c^2
+
+N::precsm: Requested precision 10 is smaller than $MinPrecision. Using $MinPrecision instead.
+
+General::stop: Further output of N::precsm will be suppressed during this calculation.
+Wang / GCM:               ScientificForm[3743.590035418585]
+log10(Wang/GCM):          3.5732882826130496 orders below bound
+Claim 'approx 4 orders below':  |computed - 4| = 0.42671171738695035
+
+STATUS: PASS (order-of-magnitude). Cross-tool with Python check_01.

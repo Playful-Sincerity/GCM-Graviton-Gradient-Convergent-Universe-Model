@@ -1,0 +1,34 @@
+# Check: 04 — Wolfram Language independent
+# Claim: Q3-EP-invariant
+# Run: 2026-04-24 03:48
+# Tool: wolframscript / 14.3.0 for Mac OS X ARM (64-bit) (July 31, 2025)
+# Script: verification/check_04_wolfram.wls
+# Q3 Check 4 â Wolfram Language independent run
+
+Using Ry = 136/10 (rational, exact):
+
+n    P_n    |E_n| (eV)    |E_n|*P_n (eV)
+1    12    13.6`10.    816/5 = 163.2`10.
+2    42    3.4`10.    714/5 = 142.8`10.
+3    92    1.51111111111111111111111111111111111111`10.    6256/45 = 139.0222222222222222222`10.
+4    162    0.85`10.    1377/10 = 137.7`10.
+5    252    0.544`10.    17136/125 = 137.088`10.
+
+Symbolic asymptote Limit_{n->Infinity} |E_n|*P_n:
+  = 136 eV  (expected 136)
+
+Correction series (Ry*(10 + 2/n^2) form):
+  Prod[n] simplified = (136*(5 + n^(-2)))/5
+
+Variation across n=1..5:
+  values   = {163.2`10., 142.8`10., 139.0222222222222222222`10., 137.7`10., 137.088`10.}
+  max      = 163.2`10.
+  min      = 137.088`10.
+  fraction = 16.`4. %
+
+Large-n convergence:
+  n = 10  Prod = 136.272`15.  deviation from 136 = 0.272`6.
+  n = 100  Prod = 136.00272`15.  deviation from 136 = 0.00272`6.
+  n = 1000  Prod = 136.0000272`15.  deviation from 136 = 0.0000272`6.
+  n = 10000  Prod = 136.000000272`15.  deviation from 136 = 2.72`6.*^-7
+# Exit: 0

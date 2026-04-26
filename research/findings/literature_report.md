@@ -1,4 +1,4 @@
-# GDGM Literature Scout Report
+# GCM Literature Scout Report
 **Completed**: 2026-03-21
 **Agent**: Literature Scout (Wave 1)
 
@@ -12,7 +12,7 @@
 
 **Pati-Salam Model (1974):** SU(4) × SU(2)_L × SU(2)_R gauge group, treats leptons as a fourth "color" of quark. Technically a GUT rather than a preon model proper, but introduced sub-lepton compositeness into formal physics. Predicts proton decay in ranges still being tested.
 
-**Rishon Model (Harari 1979, Shupe 1979 — independently):** Two preons: T (charge +1/3) and V (charge 0), in ordered triplets. Electron = VVV, electron neutrino = TTT̄, up quarks = TTV permutations. Extended by Harari-Seiberg with hypercolor gauge interaction. Most minimal sub-lepton model in the literature. Closest prior work to GDGM's single-particle proposal.
+**Rishon Model (Harari 1979, Shupe 1979 — independently):** Two preons: T (charge +1/3) and V (charge 0), in ordered triplets. Electron = VVV, electron neutrino = TTT̄, up quarks = TTV permutations. Extended by Harari-Seiberg with hypercolor gauge interaction. Most minimal sub-lepton model in the literature. Closest prior work to GCM's single-particle proposal.
 
 ### Experimental Constraints
 
@@ -31,7 +31,7 @@
 
 - Compositeness above ~37 TeV formally consistent with all data. Future colliders (100 TeV FCC) could probe.
 - Generation problem (why 3 families?) is completely unresolved in SM. Genuine motivation for sub-structure.
-- GDGM's density gradient approach is structurally different from discrete preon models — doesn't face same spin-statistics objections. Must address equivalent questions about fermion quantum numbers emerging from bosonic density field.
+- GCM's density gradient approach is structurally different from discrete preon models — doesn't face same spin-statistics objections. Must address equivalent questions about fermion quantum numbers emerging from bosonic density field.
 
 **Key Citations:** Harari (1979) PLB 86:83; Shupe (1979) PLB 86:87; Pati & Salam (1974) PRD 10:275; PDG (2024).
 
@@ -47,7 +47,7 @@ Derived full Einstein field equations from:
 
 GR is the ONLY consistent equation of state if entropy-area relation holds locally for all causal horizons. Gravity is a thermodynamic phenomenon, not a fundamental force. Thousands of citations, never seriously challenged.
 
-**For GDGM:** Proof-of-concept that GR can emerge from something deeper. However, Jacobson's derivation requires quantum mechanics (Unruh temperature). A purely classical density gradient approach must derive the same result without invoking quantum Unruh radiation.
+**For GCM:** Proof-of-concept that GR can emerge from something deeper. However, Jacobson's derivation requires quantum mechanics (Unruh temperature). A purely classical density gradient approach must derive the same result without invoking quantum Unruh radiation.
 
 ### Verlinde's Entropic Gravity (2010, 2016)
 
@@ -90,7 +90,7 @@ Three SM couplings converge at ~10¹⁶ GeV if SUSY assumed — suggestive but n
 
 Weak force acts exclusively on left-handed particles. Confirmed since 1957 (Wu experiment). No accepted mechanism generates this from a symmetric starting point. Proposals: spontaneous parity breaking (L-R symmetric models), CP violation (CKM matrix). The observed matter-antimatter asymmetry is not explained by known CP violation — off by 10⁸.
 
-**Critical obstacle for GDGM:** A single symmetric gravitational substrate must produce maximal left-handedness as emergent phenomenon. No mechanism for this exists in the literature.
+**Critical obstacle for GCM:** A single symmetric gravitational substrate must produce maximal left-handedness as emergent phenomenon. No mechanism for this exists in the literature.
 
 ### Quantum Gravity Status (2025)
 
@@ -106,14 +106,14 @@ Quantum gravity landscape genuinely open. No approach accepted or empirically su
 
 **No major peer-reviewed framework has formally derived electromagnetic repulsion as a manifestation of differential attraction to a background gravitational or density field.**
 
-This is the most genuinely novel aspect of GDGM.
+This is the most genuinely novel aspect of GCM.
 
 Closest related concepts:
 - **Gravitoelectromagnetism (GEM):** Formal analogies between GR (weak-field) and Maxwell equations. Not a derivation of EM from gravity.
 - **QED Vacuum Screening:** Virtual e⁺e⁻ pairs partially screen bare charge. Physical picture: virtual particles attracted to charge, partially cancelling it. Structurally analogous to "competing attraction" — apparent charge depends on which way nearby fields are being pulled. However, purely quantum, no classical analog.
-- **Casimir Effect Repulsion:** Under certain dielectric conditions, Casimir force can be repulsive (Lifshitz 1956). Jaffe (2005) showed Casimir forces can be computed without zero-point energies — they arise from relativistic forces between real charges. Loose structural resonance with GDGM.
+- **Casimir Effect Repulsion:** Under certain dielectric conditions, Casimir force can be repulsive (Lifshitz 1956). Jaffe (2005) showed Casimir forces can be computed without zero-point energies — they arise from relativistic forces between real charges. Loose structural resonance with GCM.
 
-GDGM must navigate:
+GCM must navigate:
 1. Specific mathematical mechanism for like-charge repulsion from density gradient differentials
 2. Why mechanism produces exactly 1/r² scaling and U(1) gauge symmetry
 3. Why gravitational coupling is 10⁻³⁶ times weaker than electromagnetic coupling
@@ -158,7 +158,7 @@ Photons lose energy traveling through space, producing redshift without expansio
 3. **CMB spectrum:** Perfect blackbody — predicted by hot Big Bang, cannot be reproduced by tired light.
 4. **Image blurring:** Any scattering causing energy loss would blur distant images more than observed.
 
-**Tired light is not viable. GDGM cannot use this mechanism.**
+**Tired light is not viable. GCM cannot use this mechanism.**
 
 ### Timescape Cosmology (Wiltshire) — Most Rigorous Peer-Reviewed Alternative
 
@@ -168,7 +168,7 @@ Apparent acceleration is an artifact of misidentifying local gravitational time 
 
 **Limitation:** Has not yet produced a full CMB fit comparable to ΛCDM. ESA Euclid satellite (launched 2023) will provide definitive test.
 
-**GDGM alignment opportunity:** If GDGM can formally derive timescape-like phenomena from graviton density gradient dynamics, strong alignment with existing literature. Consider formal correspondence or collaboration with Wiltshire group.
+**GCM alignment opportunity:** If GCM can formally derive timescape-like phenomena from graviton density gradient dynamics, strong alignment with existing literature. Consider formal correspondence or collaboration with Wiltshire group.
 
 ### Void / Hubble Bubble Models
 
@@ -181,7 +181,7 @@ If our galaxy sits inside a local underdensity (~20% less dense, extending ~1 bi
 
 ### DESI 2024-2025 — Dark Energy May Be Evolving
 
-**Most important recent result for GDGM.**
+**Most important recent result for GCM.**
 
 - DESI DR2 (March 19, 2025): Preference for dynamical dark energy (evolving) over cosmological constant reached **4.2 sigma**.
 - Best-fit: w₀ = -0.909 ± 0.081, wₐ = -0.49 (combined DESI + CMB + SNe).
@@ -234,19 +234,19 @@ Discrepancy: >5 sigma. Not a statistical fluctuation. Either systematic errors e
 
 ---
 
-# PART 3 — KEY OPPORTUNITIES FOR GDGM
+# PART 3 — KEY OPPORTUNITIES FOR GCM
 
 1. **Quantum Gravity Vacuum:** String theory and LQG both stagnating as of 2025. A graviton-density-gradient model with testable predictions in 4D would fill this gap.
 
 2. **Cosmological Constant Problem:** Any mechanism naturally producing near-zero vacuum energy density from graviton density distributions would be highly significant.
 
-3. **DESI Evolving Dark Energy (March 2025):** 4.2 sigma signal creates window for models predicting eventual convergence. GDGM can derive a specific evolving dark energy equation of state from graviton density gradient dynamics.
+3. **DESI Evolving Dark Energy (March 2025):** 4.2 sigma signal creates window for models predicting eventual convergence. GCM can derive a specific evolving dark energy equation of state from graviton density gradient dynamics.
 
 4. **The Generation Problem:** Three fermion families unexplained in SM. Density gradient configurations could potentially produce families.
 
 5. **Force Unification Symmetry Structure:** If U(1), SU(2), SU(3) symmetries emerge as consequences of different density gradient topologies — major result.
 
-6. **Timescape Alignment:** Wiltshire's peer-reviewed model claiming apparent acceleration is misinterpretation. GDGM's graviton density gradient framework could provide more fundamental basis. Consider formal correspondence.
+6. **Timescape Alignment:** Wiltshire's peer-reviewed model claiming apparent acceleration is misinterpretation. GCM's graviton density gradient framework could provide more fundamental basis. Consider formal correspondence.
 
 7. **Repulsion as Competing Attraction:** Genuinely novel. No peer-reviewed paper makes this precise claim. Formalizing it mathematically — even as a toy model — is publishable as standalone theoretical paper.
 
@@ -254,9 +254,9 @@ Discrepancy: >5 sigma. Not a statistical fluctuation. Either systematic errors e
 
 # PART 4 — KEY OBSTACLES
 
-1. **Universal Cosmological Redshift:** All distant galaxies are redshifted. GDGM must either (a) accept current expansion with future convergence (consistent with DESI), or (b) provide alternative redshift mechanism that passes tired light tests (time dilation, surface brightness, CMB spectrum). No alternative has passed these tests.
+1. **Universal Cosmological Redshift:** All distant galaxies are redshifted. GCM must either (a) accept current expansion with future convergence (consistent with DESI), or (b) provide alternative redshift mechanism that passes tired light tests (time dilation, surface brightness, CMB spectrum). No alternative has passed these tests.
 
-2. **Compositeness Scale:** LHC constrains preon-like sub-structure to >37 TeV, electron radius <10⁻²² m. GDGM's graviton density distributions must be confined to scales far below anything visible at LHC energies. Must explain why no sub-structure signal appears.
+2. **Compositeness Scale:** LHC constrains preon-like sub-structure to >37 TeV, electron radius <10⁻²² m. GCM's graviton density distributions must be confined to scales far below anything visible at LHC energies. Must explain why no sub-structure signal appears.
 
 3. **CMB Power Spectrum:** One of the most precisely measured datasets in physics, matching ΛCDM to <1%. Any alternative cosmology must reproduce this in detail. Timescape cosmology has not yet cleared this bar.
 
@@ -266,14 +266,14 @@ Discrepancy: >5 sigma. Not a statistical fluctuation. Either systematic errors e
 
 6. **Quantum Mechanics as Probability:** Bell inequality violations, entanglement, spin — none have classical analogs in standard gravitational field theory. Must be reproduced.
 
-7. **GW Observations:** GW170817 confirmed gravitational waves travel at speed of light. Rules out many modified gravity theories. GDGM must reduce to GR in appropriate limit.
+7. **GW Observations:** GW170817 confirmed gravitational waves travel at speed of light. Rules out many modified gravity theories. GCM must reduce to GR in appropriate limit.
 
 ---
 
 # PART 5 — RECOMMENDED READING LIST
 
 1. **Jacobson (1995)** "Thermodynamics of Spacetime" PRL 75:1260. arXiv:gr-qc/9504004. *Foundational proof GR can emerge from entropy.*
-2. **Verlinde (2010)** "On the Origin of Gravity" arXiv:1001.0785. *Closest mainstream analog to GDGM's spirit.*
+2. **Verlinde (2010)** "On the Origin of Gravity" arXiv:1001.0785. *Closest mainstream analog to GCM's spirit.*
 3. **Verlinde (2016)** "Emergent Gravity and the Dark Universe" arXiv:1611.02269. *Extension to galactic dynamics; study failures.*
 4. **Harari (1979)** "A Schematic Model of Quarks and Leptons" PLB 86:83. *Original Rishon preon model.*
 5. **Brouwer et al. (2017)** "First test of Verlinde's Emergent Gravity" MNRAS 466:2547. *Methodology for testing emergent gravity.*

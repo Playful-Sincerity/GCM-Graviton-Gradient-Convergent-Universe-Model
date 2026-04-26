@@ -1,0 +1,27 @@
+# Check 02 — Sign consistency of E1 flow mapping with phenomenology
+# Python: 3.14.4
+# ---
+Particle     Observed charge    Posited div J_g    Derived charge     Consistent?
+--------------------------------------------------------------------------------
+electron     -                  >0                 -                  YES
+proton       +                  <0                 +                  YES
+neutron      0                  =0                 0                  YES
+positron     +                  <0                 +                  YES
+antiproton   -                  >0                 -                  YES
+
+  PASS — E1's sign mapping is self-consistent across 5 particle species.
+
+Toy model: J_g = (rho_0 * A / r^2) r_hat
+  div(J_g) = 0  (expect 0 for r>0)
+  PASS — divergence vanishes in the bulk (r > 0).
+
+  Surface flux Phi_g over sphere r=R = 4*pi*A*rho_0
+  Expected: 4 pi rho_0 A  (independent of R — source-like)
+  PASS — flux is R-independent (source-like).
+
+Key observation: div(J_g) = 0 everywhere except r = 0 (the particle center).
+The point-source is mathematically a delta function; physically, in GCM,
+the steady-state density pattern at the electron's core sources the outflow
+by internal graviton recycling (not by net creation).
+
+# Status: PASS — E1 sign mapping consistent with phenomenology; toy radial flow demonstrates the formal shape.

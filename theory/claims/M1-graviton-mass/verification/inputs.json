@@ -1,0 +1,67 @@
+{
+  "_claim": "M1 — Graviton mass from Planck scale and density bound",
+  "_generated": "2026-04-24",
+  "constants": {
+    "hbar": {
+      "value": 1.054571817e-34,
+      "units": "J*s",
+      "source": "CODATA 2018 (reduced Planck constant)"
+    },
+    "G": {
+      "value": 6.67430e-11,
+      "units": "m^3 / (kg * s^2)",
+      "source": "CODATA 2018 (Newtonian gravitational constant)"
+    },
+    "c": {
+      "value": 2.99792458e8,
+      "units": "m / s",
+      "source": "SI definition (speed of causality; exact)"
+    },
+    "m_neutron": {
+      "value": 1.67492749804e-27,
+      "units": "kg",
+      "source": "CODATA 2018 (neutron mass)"
+    },
+    "eV_per_kg": {
+      "value": 1.782661921e-36,
+      "units": "kg per (eV/c^2)",
+      "source": "CODATA 2018 (derived from 1 eV = 1.602176634e-19 J and c)"
+    },
+    "LIGO_graviton_mass_eVc2": {
+      "value": 1.0e-23,
+      "units": "eV / c^2",
+      "source": "Abbott et al. 2021, LIGO-Virgo GW dispersion bound (conservative)"
+    },
+    "rho_bound_nuclear": {
+      "value": 1.0e18,
+      "units": "kg / m^3",
+      "source": "session brief — round-number 'nuclear scale'; GCM convention per plan-coherence-case.md S2"
+    },
+    "rho_bound_neutron_density": {
+      "value": 4.0e17,
+      "units": "kg / m^3",
+      "source": "gcm_v2.md §H1 (alternative value; standard neutron-star-core density)"
+    }
+  },
+  "derived": {
+    "ell_P": {
+      "formula": "sqrt(hbar * G / c^3)",
+      "expected_value_m": 1.6163e-35,
+      "source": "Planck length, derivable from hbar, G, c"
+    },
+    "V_P": {
+      "formula": "ell_P^3",
+      "expected_value_m3": 4.2221e-105
+    },
+    "rho_Planck": {
+      "formula": "c^5 / (hbar * G^2)",
+      "expected_value_kg_m3": 5.155e96,
+      "source": "Planck density"
+    },
+    "m_g_nuclear": {
+      "formula": "rho_bound_nuclear * V_P",
+      "expected_value_kg": 4.22e-87,
+      "source": "M1 claim; see derivation.md"
+    }
+  }
+}

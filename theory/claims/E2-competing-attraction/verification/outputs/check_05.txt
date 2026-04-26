@@ -1,0 +1,19 @@
+# Check 05 — Symbolic derivation of ddot(r) via SymPy
+# SymPy: 1.14.0
+# Python: 3.14.4
+# ---
+ddot(r) = a_E2 - a_E1 = -2*G*m_e/r**2 - G*m_p/(d + r)**2 + G*m_p/d**2
+
+Expected form         = G m_p (1/d^2 - 1/(d+r)^2) - 2 G m_e / r^2
+Difference (should be 0): 0
+  PASS — ddot(r) matches derivation.md expected form.
+
+At d = r = a_0:  ddot(r) = G*(-8*m_e + 3*m_p)/(4*a_0**2)
+Isolated form: G*(-8*m_e + 3*m_p)/(4*a_0**2)
+  Match: True
+
+Ratio (proton-gradient term) / |inter-electron term| = 3*m_p/(8*m_e)
+  = 3 m_p / (8 m_e) (symbolic)
+  numerical = 6.887e+02   (expect ~688)
+
+# Status: PASS — ddot(r) symbolic form verified, and proton-gradient term dominates by ~688x.

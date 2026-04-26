@@ -1,0 +1,20 @@
+# Check: 01 — Dimensional analysis
+# Claim: M1-graviton-mass
+# Run: 2026-04-24 02:37
+# Tool: python3 3.14.4 / SymPy 1.14.0
+# Script: verification/check_01_dimensional.py
+# M1 Check 1 — Dimensional analysis via SymPy units
+# hbar  units (input JSON): J*s
+# G     units (input JSON): m^3 / (kg * s^2)
+# c     units (input JSON): m / s
+# rho   units (input JSON): kg / m^3
+
+ell_P   symbolic: 1.61625502392855e-35*meter
+V_P     symbolic: 4.22211116262202e-105*meter**3
+m_g     symbolic: 4.22211116262202e-87*kilogram
+
+m_g converted to kg: 4.22211116262202e-87*kilogram
+
+STATUS: PASS — result reduces to pure kilograms.
+ratio (m_g / kg) ≈ 4.222111e-87
+# Exit: 0

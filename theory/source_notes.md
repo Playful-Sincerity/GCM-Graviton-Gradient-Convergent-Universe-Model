@@ -1,4 +1,4 @@
-# GDGM Source Notes — Compiled from Original Documents
+# GCM Source Notes — Compiled from Original Documents
 **Compiled**: 2026-03-21
 **Sources**: Physics Proposal, 物理 Outline (2022), 物理 Compilation of Ideas, 物理 Raw Notes
 
@@ -19,7 +19,7 @@ These are Wisdom's original unedited ideas, preserved in full. The theory develo
 - "Gravitons don't move, their distances just adjust, and overall they are shrinking." — This is the core cosmological statement. Space itself is not expanding; the distances between gravitons are contracting.
 - "The universe is simply a process of shrinking sizes of spaces."
 - "An infinite universe would violate conservation of matter (you would have to make something out of nothing for it to keep growing)"
-- "All redshifting forces must also result in time dilation. As light red shifts the distance between the nuclei of the photons increases, thus increasing the delay of information, making it seem like time dilation." — IMPORTANT: this means GDGM's redshift mechanism automatically produces time dilation, which was the test that ruled out tired light!
+- "All redshifting forces must also result in time dilation. As light red shifts the distance between the nuclei of the photons increases, thus increasing the delay of information, making it seem like time dilation." — IMPORTANT: this means GCM's redshift mechanism automatically produces time dilation, which was the test that ruled out tired light!
 - "Brightness must decrease at a rate faster than simple inverse square from a distant body — because the light is overall not pulled to us?"
 - "Area of a black hole can only ever increase — provides proof for Big Crunch"
 - Black holes are existences at maximum density; they are often visible but we are too far and too small to receive their light

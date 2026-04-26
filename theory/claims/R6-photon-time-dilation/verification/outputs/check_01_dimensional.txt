@@ -1,0 +1,19 @@
+# Check: 01 — Dimensional consistency of Δt = d/v (SymPy)
+# Claim: R6-photon-time-dilation
+# Run: 2026-04-24 04:20
+# Tool: Python 3.14.4 / SymPy 1.14.0 / mpmath 1.3.0
+# Script: verification/check_01_dimensional.py
+# Status: PASS
+# ----
+
+R6 — Check 01: Dimensional consistency of Δt = d / v
+============================================================
+[d] = Dimension(length)
+[v] = Dimension(length/time) (photon speed, < c)
+[d / v] = Dimension(time)
+
+Δt has units of time? True
+Δt_obs/Δt_emit dimensionless? True
+(1 + z) dimensionless: yes by definition of redshift z.
+
+Status: PASS

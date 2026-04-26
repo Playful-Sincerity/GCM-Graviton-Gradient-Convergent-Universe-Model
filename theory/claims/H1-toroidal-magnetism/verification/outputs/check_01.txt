@@ -1,0 +1,36 @@
+# Check: 01 — Dimensional analysis of (div J_g)·v and Tesla coupling
+# Claim: H1-toroidal-magnetism
+# Run: 2026-04-24 03:52
+# Tool: python3 3.14.4 / SymPy 1.14.0 (physics.units)
+# Script: verification/check_01_dimensional_sympy.py
+# ----
+Manual SI-exponent tracking (m, kg, s, A):
+  J_g           : {'m': -2, 'kg': 1, 's': -1, 'A': 0}
+  ∇·J_g         : {'m': -3, 'kg': 1, 's': -1, 'A': 0}
+  v             : {'m': 1, 'kg': 0, 's': -1, 'A': 0}
+  (∇·J_g)·v     : {'m': -2, 'kg': 1, 's': -2, 'A': 0}   (expected kg m^-2 s^-2 = N/m^3)
+  Tesla         : {'m': 0, 'kg': 1, 's': -2, 'A': -1}     (kg A^-1 s^-2)
+  coupling      : {'m': 2, 'kg': 0, 's': 0, 'A': -1}   (expected m^2 / A = {m:2, kg:0, s:0, A:-1})
+
+  (∇·J_g)·v exponent match: PASS
+  coupling exponent match : PASS
+
+SymPy physics.units cross-check:
+  dim(J_g)           = {'mass': 1, 'length': -2, 'time': -1}
+  dim(∇·J_g)         = {'mass': 1, 'length': -3, 'time': -1}
+  dim(v)             = {'length': 1, 'time': -1}
+  dim((∇·J_g)·v)     = {'mass': 1, 'length': -2, 'time': -2}
+  dim(Tesla)         = {'mass': 1, 'current': -1, 'time': -2}
+  dim(coupling=T/product) = {'current': -1, 'length': 2}
+
+  SymPy product match    : PASS
+  SymPy Tesla match      : PASS
+  SymPy coupling match   : PASS
+
+Manual and SymPy agree: YES
+
+Sanity: the pre-audit error (coupling = m^2·A) would give:
+  (∇·J_g)·v * (m^2·A) = {'current': 1, 'mass': 1, 'time': -2}
+  which is Tesla? NO (confirms the audit fix was correct)
+
+# Status: PASS

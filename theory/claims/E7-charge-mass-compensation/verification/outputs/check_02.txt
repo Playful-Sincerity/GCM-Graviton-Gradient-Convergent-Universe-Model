@@ -1,0 +1,21 @@
+# Check: 02 — finite diff
+# Claim: E7-charge-mass-compensation
+# Run: 2026-04-24 03:21
+# Tool: python3 3.14.4 / mpmath 1.3.0
+# Script: verification/check_02_finite_diff.py
+# E7 Check 2 — Finite-difference derivatives (mpmath)
+
+E_1 base            = -2.179872361383989128517745536514646168681e-18 J
+E_1 base            = -13.60569312474437901781150015519853205324 eV
+Expected -13.60569 eV
+
+dE_1/de  numerical   = -54.4227724989775160717902283457848171383
+dE_1/de  analytical  = -54.42277249897751607124600062079412821297  (= 4*E_1/e)
+relative difference   = 1.000000000001679011515201534986432404289e-20
+
+dE_1/dm_e numerical   = -2392996532822.565865344283013035495778639
+dE_1/dm_e analytical  = -2392996532822.565865344283013035232797061  (= E_1/m_e)
+relative difference   = 1.098963471275382596511260080183819497971e-31
+
+STATUS: PASS
+# Exit: 0

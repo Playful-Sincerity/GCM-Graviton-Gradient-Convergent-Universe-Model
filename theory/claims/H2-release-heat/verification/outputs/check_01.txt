@@ -1,0 +1,25 @@
+# Check: 01 — Newton's cooling ODE solution via SymPy
+# Claim: H2-release-heat
+# Run: 2026-04-24 03:18
+# Tool: python3 3.14.4 / SymPy 1.14.0 (dsolve)
+# Script: verification/check_01_cooling_ode_sympy.py
+# ----
+ODE: Eq(Derivative(rho_g(t), t), -lambda*(-rho_0 + rho_g(t)))
+
+SymPy dsolve solution:
+  Eq(rho_g(t), rho_0 + (-rho_0 + rho_init)*exp(-lambda*t))
+
+Claimed form:
+  rho_g(t) = rho_0 + (-rho_0 + rho_init)*exp(-lambda*t)
+
+Difference (solution - claimed) simplified: 0
+ODE solution matches claimed exponential form: PASS
+
+Excess form ρ_g(t) - ρ_0 = (-rho_0 + rho_init)*exp(-lambda*t)
+Expected              = (-rho_0 + rho_init)*exp(-lambda*t)
+Exponential decay of excess: PASS
+
+lim t->∞ (ρ_g(t) - ρ_0) = 0
+Asymptotic equilibrium: PASS
+
+# Status: PASS

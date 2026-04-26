@@ -1,0 +1,22 @@
+# Check: 03 — frb bound
+# Claim: L2-photon-speed
+# Run: 2026-04-24 04:05
+# Tool: python3 3.14.4 / mpmath 1.3.0
+# Script: verification/check_03_frb_bound.py
+# L2 Check 3 — FRB photon-mass bound
+
+GCM m_gamma            = 1.0e-54 kg
+GCM m_gamma            = 5.60958860578028805047886586904e-19 eV/c^2
+
+Wang 2023 FRB bound    = 2.1e-15 eV/c^2
+FRB bound in kg        = 3.7435900341e-51 kg
+
+margin (FRB / GCM)     = 3743.5900341
+log10(margin)          = 3.57328828246008076372290148543
+orders of magnitude    = 3
+
+Note: session brief says '4 orders below'; precise value is ~3.6 orders.
+Both are order-of-magnitude consistent.
+
+STATUS: PASS
+# Exit: 0

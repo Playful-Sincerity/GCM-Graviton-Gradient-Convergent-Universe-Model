@@ -3,7 +3,7 @@ paths:
   - "**"
 ---
 
-# GDGM Physics Conventions
+# GCM Physics Conventions
 - Use SI units unless explicitly discussing Planck-scale phenomena
 - All simulation parameters must be documented with physical justification
 - Mathematical notation in markdown: use LaTeX-style inline (`$...$`) for equations

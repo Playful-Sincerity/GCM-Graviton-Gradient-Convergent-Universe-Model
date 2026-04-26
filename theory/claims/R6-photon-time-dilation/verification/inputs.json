@@ -1,0 +1,68 @@
+{
+  "_note": "R6 is a structural/symbolic result: Δt_obs/Δt_emit = (1+z). Most checks are symbolic. Numerical inputs below are used for (a) DES 2024 comparison and (b) the v_emit/v_obs high-precision check that exercises the speed-of-causality principle.",
+
+  "c": {
+    "value": 2.99792458e8,
+    "units": "m/s",
+    "source": "Exact, SI 2019. CAUSALITY LIMIT (see theory/speed-of-causality-principle.md).",
+    "notes": "Photons travel at v < c strictly. Scripts must NOT set v_photon = c."
+  },
+  "eV_to_J": {
+    "value": 1.602176634e-19,
+    "units": "J/eV",
+    "source": "Exact, SI 2019 redefinition.",
+    "notes": "Used to convert m_gamma between kg and eV/c^2."
+  },
+  "m_gamma_kg": {
+    "value": 1.0e-54,
+    "units": "kg",
+    "source": "GCM estimate (L1 claim). Used to compute v = c·sqrt(1 - (m c^2/E)^2).",
+    "notes": "See L1-photon-mass/claim.md."
+  },
+
+  "des_2024_alpha_central": {
+    "value": 1.003,
+    "units": "dimensionless (exponent)",
+    "source": "Dark Energy Survey 2024, arXiv:2406.05050 — SNe Ia light-curve time dilation scaling (1+z)^α.",
+    "notes": "Central value of measured exponent."
+  },
+  "des_2024_alpha_sigma": {
+    "value": 0.005,
+    "units": "dimensionless",
+    "source": "DES 2024, arXiv:2406.05050 — 1σ uncertainty on α.",
+    "notes": "Measurement constrains tired-light (α=0) at ~200σ."
+  },
+  "r6_alpha": {
+    "value": 1.000,
+    "units": "dimensionless",
+    "source": "R6 structural prediction (derivation.md step 3).",
+    "notes": "Exact consequence of L3 + redshift definition + information propagation at v."
+  },
+
+  "z_examples": {
+    "value": [0.0, 0.1, 1.0, 10.0, 100.0],
+    "units": "dimensionless",
+    "source": "Illustrative redshift values for limit-case checks.",
+    "notes": "z=0 (no dilation), z=0.1 (small), z=1 (SNe Ia scale), z=10/100 (high-z limit)."
+  },
+
+  "E_visible_photon_eV": {
+    "value": 1.0,
+    "units": "eV",
+    "source": "Reference energy for a visible-light photon.",
+    "notes": "Used in the v_emit/v_obs ratio calculation at 60-digit mpmath precision."
+  },
+
+  "hypothetical_future_alpha_central": {
+    "value": 1.010,
+    "units": "dimensionless",
+    "source": "Hypothetical future LSST-precision measurement.",
+    "notes": "Used in falsification-gate check to estimate when R6 would be excluded at >3σ."
+  },
+  "hypothetical_future_alpha_sigma": {
+    "value": 0.002,
+    "units": "dimensionless",
+    "source": "Hypothetical LSST-precision σ (~2.5x tighter than DES 2024).",
+    "notes": "With this σ and α=1.010, R6's α=1.000 would be excluded at 5σ."
+  }
+}

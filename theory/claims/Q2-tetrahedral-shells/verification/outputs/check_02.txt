@@ -1,0 +1,16 @@
+# Check: 02 — numerical cuboctahedral n=1..5
+# Claim: Q2-tetrahedral-shells
+# Run: 2026-04-24 02:37
+# Tool: python3 3.14.4
+# Script: verification/check_02_numerical_cuboctahedral.py
+# Status: PASS
+# ----
+  n   formula   geometric   published  status
+---------------------------------------------
+  1        12          12          12    PASS
+  2        42          42          42    PASS
+  3        92          92          92    PASS
+  4       162         162         162    PASS
+  5       252         252         252    PASS
+
+OVERALL: PASS (5/5)

@@ -1,0 +1,44 @@
+{
+  "_description": "Inputs for Q2 (shell populations for 12-coordinate close-packed graviton clusters). Pure integer combinatorics — no physical constants needed. This file captures the geometric decomposition counts and expected shell populations so scripts can read them rather than hardcoding.",
+  "_claim": "Q2-tetrahedral-shells",
+  "_formula": "P_n = 10*n^2 + 2",
+  "_valid_range": "n >= 1 (n=0 gives 2, a formula artifact with no geometric meaning)",
+
+  "formula_coefficients": {
+    "a": {"value": 10, "units": "dimensionless", "source": "derivation.md §3 (cuboctahedral expansion simplifies to 10n^2 + 2)"},
+    "b": {"value": 2, "units": "dimensionless", "source": "derivation.md §3"}
+  },
+
+  "cuboctahedron_geometry": {
+    "vertices": {"value": 12, "units": "count", "source": "Conway & Sloane 1999 §1.4; standard Archimedean solid"},
+    "edges": {"value": 24, "units": "count", "source": "Conway & Sloane 1999 §1.4"},
+    "triangular_faces": {"value": 8, "units": "count", "source": "Conway & Sloane 1999 §1.4"},
+    "square_faces": {"value": 6, "units": "count", "source": "Conway & Sloane 1999 §1.4"},
+    "_per_shell_n": {
+      "vertex_sites": "12 (always)",
+      "edge_interior_sites": "24 * (n-1)",
+      "triangular_face_interior_sites": "8 * (n-1)*(n-2)/2",
+      "square_face_interior_sites": "6 * (n-1)^2"
+    }
+  },
+
+  "mackay_icosahedron_geometry": {
+    "vertices": {"value": 12, "units": "count", "source": "Mackay 1962, Acta Crystallographica 15:916"},
+    "edges": {"value": 30, "units": "count", "source": "Mackay 1962"},
+    "triangular_faces": {"value": 20, "units": "count", "source": "Mackay 1962"},
+    "_per_shell_n": {
+      "vertex_sites": "12 (always)",
+      "edge_interior_sites": "30 * (n-1)",
+      "triangular_face_interior_sites": "20 * (n-1)*(n-2)/2"
+    }
+  },
+
+  "expected_shells_published": {
+    "_source": "gcm_v2.md H7 table; Conway & Sloane 1999; OEIS A005901",
+    "n_1": {"value": 12, "units": "sites"},
+    "n_2": {"value": 42, "units": "sites"},
+    "n_3": {"value": 92, "units": "sites"},
+    "n_4": {"value": 162, "units": "sites"},
+    "n_5": {"value": 252, "units": "sites"}
+  }
+}

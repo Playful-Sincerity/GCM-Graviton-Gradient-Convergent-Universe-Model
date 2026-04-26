@@ -1,0 +1,30 @@
+# Check: 01 — PBH count in Milky Way halo
+# Claim: D1-no-dark-matter
+# Run: 2026-04-24 03:52
+# Tool: Python 3.14.4 / stdlib decimal prec=50
+# Script: verification/check_01_pbh_count_milky_way.py
+# ----
+
+Inputs:
+  M_halo_total:     1E+12 M_sun = 1.989E+42 kg
+  M_visible:        6E+10 M_sun = 1.193E+41 kg
+  M_halo_dark:      9.400E+11 M_sun = 1.870E+42 kg
+  M_PBH:            1E+20 g = 1.000E+17 kg
+
+N_PBH = M_halo_dark / M_PBH = 1.8696E+25
+
+Claimed in claim.md:     ~1e25
+Claimed in chronicle summary: ~1e18
+
+Ratio computed/claim.md:      1.87
+Ratio computed/chronicle:     1.87E+7
+
+log10(N_PBH) = 25.2717
+
+FINDING:
+  claim.md's '~10^25 PBHs' is CORRECT (within 0.1 order).
+  The chronicle summary I wrote on 2026-04-23 saying '~10^18 PBHs'
+  was WRONG by ~7 orders of magnitude. claim.md is the authoritative one.
+
+STATUS: PASS (for claim.md's 10^25). FAIL (for chronicle summary's 10^18).
+        Chronicle needs correction.

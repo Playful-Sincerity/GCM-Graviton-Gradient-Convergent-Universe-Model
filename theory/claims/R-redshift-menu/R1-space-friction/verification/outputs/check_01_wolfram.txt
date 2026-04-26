@@ -1,0 +1,37 @@
+# Check: 01 â Wolfram independent cross-check
+# Claim: R1-space-friction
+# Run:   Fri 24 Apr 2026 02:37:42
+# Tool:  Wolfram Engine via wolframscript
+# Script: verification/check_01_hubble_radius_and_alpha.wls
+# ----
+H0 in SI (s^-1):  ScientificForm[2.2685455026110553*^-18]
+R_H = c/H0 (m):   ScientificForm[1.3215183810725606*^26]
+alpha = H0/c:     ScientificForm[7.567053279942937*^-27, 6]
+
+Claimed in plausibility.md:
+
+N::precsm: Requested precision 10 is smaller than $MinPrecision. Using $MinPrecision instead.
+  R_H = 4.4e26 m  -> ratio computed/claim = ScientificForm[0.3003450866074001]
+
+N::precsm: Requested precision 10 is smaller than $MinPrecision. Using $MinPrecision instead.
+  alpha = 2.3e-27 m^-1  -> ratio computed/claim = ScientificForm[3.2900231651925815]
+
+Cross-check ratio of claimed-R and claimed-alpha product:
+
+N::precsm: Requested precision 10 is smaller than $MinPrecision. Using $MinPrecision instead.
+
+General::stop: Further output of N::precsm will be suppressed during this calculation.
+  (4.4e26) * (2.3e-27) = 1.012 (should be 1 if self-consistent)
+  (c/H0) * (H0/c) identity = 1.  (exactly 1 by construction)
+
+H0 tension range:
+  H0=67.4 km/s/Mpc -> R_H=ScientificForm[1.3724968349418284*^26] m, alpha=ScientificForm[7.285991300973628*^-27] m^-1
+  H0=70. km/s/Mpc -> R_H=ScientificForm[1.3215183810725606*^26] m, alpha=ScientificForm[7.567053279942937*^-27] m^-1
+  H0=73. km/s/Mpc -> R_H=ScientificForm[1.2672094065079347*^26] m, alpha=ScientificForm[7.891355563369064*^-27] m^-1
+
+FINDING (Wolfram concurs with Python):
+  alpha = H0/c at H0=70 gives 7.57e-27 m^-1, NOT 2.3e-27 m^-1.
+  4.4e26 m is the observable-universe particle horizon, NOT the Hubble radius.
+  plausibility.md has a labelling/value inconsistency of factor ~3.3.
+
+STATUS: INCONCLUSIVE â same finding as Python check_01. Cross-tool agreement.

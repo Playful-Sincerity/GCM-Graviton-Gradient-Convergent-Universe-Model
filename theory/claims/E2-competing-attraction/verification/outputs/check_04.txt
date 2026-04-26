@@ -1,0 +1,22 @@
+# Check 04 — Analytical estimate of F_competing / F_Coulomb ratio
+# mpmath: 15 digits
+# Python: 3.14.4
+# ---
+Grav:EM coupling ratio (electron-electron): G m_e^2 / (k_C e^2) = 2.400709e-43
+  (textbook value ≈ 2.4e-43)
+
+Grav:EM coupling ratio (electron-proton): G m_e m_p / (k_C e^2) = 4.4092504e-40
+  Factor larger than ee ratio: 1836.65 ≈ m_p/m_e ≈ 1836
+
+Expected order of magnitude: ratio ~ 4.409e-40 × (O(1) geometric factor)
+  i.e., 10^-40 ± 1 order
+
+Measured ratio (Check 02):  1.65107e-40
+Order-of-magnitude agreement: measured/expected = 0.374455
+  (should be O(1), factor of at most ~10)
+
+Conclusion: the measured ratio agrees with the pure G m_e m_p / k_C e^2 scaling
+to within a geometric factor of O(1). The ~10^40 gap is therefore intrinsic to the
+gravity-vs-EM hierarchy, not an artifact of the specific toy geometry.
+
+# Status: PASS — numerical ratio matches fundamental-coupling estimate to O(1).

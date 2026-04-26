@@ -1,0 +1,24 @@
+# Check: 02 — Atomic mereology Atom theorem
+# Claim: S1-AX-1-F — Indivisibility Axiom — Formal Derivation
+# Run:   2026-04-24 02:37
+# Tool:  python3 3.14.4 + sympy 1.14.0
+# Script: verification/indivisibility-formal/check_02_mereology_atom.py
+# ----
+
+Premises:
+  defAtom (Atom(g) iff not Part(y,g)): Equivalent(Atom_g, ~Part_yg)
+  AM5    (Atom(g)):                    Atom_g
+  Reductio (Part(y,g)):                Part_yg
+Conjunction tested for SAT:            Atom_g & Part_yg & (Equivalent(Atom_g, ~Part_yg))
+
+Result:  UNSAT
+
+Interpretation:
+  Atom(g) is inconsistent with the existence of a proper part.
+  Theorem AM-T holds: Atom(g) -> not Part(y, g) for any y.
+
+Negative control (AM5 removed):
+  defAtom ∧ Part(y,g) satisfiable? {Part_yg: True, Atom_g: False}
+  Expected SAT — confirms AM5 is doing the UNSAT work above.
+
+STATUS: PASS

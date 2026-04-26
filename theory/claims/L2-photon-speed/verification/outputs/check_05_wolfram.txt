@@ -1,0 +1,38 @@
+# Check: 05 — Wolfram Language independent (re-run with SetPrecision fix)
+# Claim: L2-photon-speed
+# Run: 2026-04-24 04:07
+# Tool: wolframscript / 14.3.0 for Mac OS X ARM (64-bit) (July 31, 2025)
+# Script: verification/check_05_wolfram.wls
+# Note: Initial run (same date) hit a precision-propagation issue — N[...] did not
+#       carry precision through Sqrt[1-eps^2] when one operand was machine-precision.
+#       Fix: use SetPrecision[_, 60] on all constants before arithmetic. This run
+#       uses the fix and reproduces the mpmath result to all printed digits.
+# L2 Check 5 â Wolfram Language independent run
+# Convention: c = causality limit, v_photon < c strictly.
+# Precision: 60 decimal digits (enforced via SetPrecision).
+
+c (causality)     = 2.99792458`60.*^8 m/s
+m_gamma (GCM)     = 1.`60.*^-54 kg
+E (photon example)= 1 eV = 1.60217663399999989375623004522036406968037918582954367337917167546379459963646`60.*^-19 J
+
+epsilon           = 5.60958860380445230983429830967920434472928935749043114499202718515570538266667`59.39794000867204*^-19
+epsilon^2         = 3.146748430393278462745415275175499644153152903846922562613915689677100121315231`59.096910013008056*^-37
+
+v_photon (exact, high precision) = 2.997924579999999999999999999999999999528314276672378571487545263212195290113493573515`60.*^8 m/s
+Delta_v (direct)                 = 4.71685723327621428512454736787804709886506426485`22.895802032913767*^-29 m/s
+Delta_v (Taylor approx c*eps^2/2)= 4.71685723327621428512454736787804709849399518747053285390842344806531535840595654042243`59.045757490560675*^-29 m/s
+  rel diff direct vs Taylor      = 0``22.895802032913775
+
+Session brief Îv                 = 4.74*10^-29 m/s
+  rel error direct vs brief      = 0.00488244023708556
+
+Structural: v_photon < c_causality? True
+  (GCM REQUIRES v < c strictly; per L1 commitment m_gamma > 0)
+
+GCM m_gamma in eV/c^2  = 5.60958860578028820573996295207127943073261281794759224865463412860878940788286`59.69897000433602*^-19
+Wang 2023 FRB bound    = 2.099999999999999808193932391532953965167235385255728452591483801370486617088317871`60.*^-15 eV/c^2
+log10(FRB/GCM)         = 3.57328828246008071203576619080612183770672395396806069094839366178043471716857`60.438162489205794
+
+Symbolic Taylor expansion of sqrt(1-eps^2) around eps=0:
+  1 - eps^2/2 - eps^4/8 - eps^6/16
+# Exit: 0

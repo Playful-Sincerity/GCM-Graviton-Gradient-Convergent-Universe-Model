@@ -1,0 +1,26 @@
+# Check: 02 — Limit cases of (1+z) dilation (SymPy)
+# Claim: R6-photon-time-dilation
+# Run: 2026-04-24 04:20
+# Tool: Python 3.14.4 / SymPy 1.14.0 / mpmath 1.3.0
+# Script: verification/check_02_limit_cases_sympy.py
+# Status: PASS
+# ----
+
+R6 — Check 02: Limit cases of the dilation factor (1 + z)
+============================================================
+z → 0: dilation = 1 (no time dilation as expected)
+z → ∞: dilation = oo (unbounded, consistent with high-z observations)
+Small z expansion (to O(z^2)): dilation ≈ z + 1
+   Leading correction is linear in z — standard redshift limit behavior.
+
+Numerical table:
+  z       |  dilation factor (1+z)
+  --------+---------------------
+     0.00 |              1.000000
+     0.10 |              1.100000
+     1.00 |              2.000000
+    10.00 |             11.000000
+   100.00 |            101.000000
+
+All limits behave as expected.
+Status: PASS.

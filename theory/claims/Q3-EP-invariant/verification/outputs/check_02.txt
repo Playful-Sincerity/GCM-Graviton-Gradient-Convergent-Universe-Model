@@ -1,0 +1,24 @@
+# Check: 02 — large n convergence
+# Claim: Q3-EP-invariant
+# Run: 2026-04-24 03:48
+# Tool: python3 3.14.4 / mpmath 1.3.0
+# Script: verification/check_02_large_n_convergence.py
+# Q3 Check 2 — Large-n convergence
+
+Ry = 13.6 eV (session-brief convention)
+Expected asymptote: 136.0 eV
+Expected correction: 2*Ry/n^2 = 27.2/n^2 eV
+
+     n        |E_n|*P_n (eV)     deviation from 10Ry
+     1                 163.2                    27.2  (expected 27.2)
+     2                 142.8  6.80000000000000000000  (expected 6.8)
+     5               137.088  1.08800000000000000000  (expected 1.088)
+    10               136.272  0.27200000000000000000  (expected 0.272)
+   100             136.00272  0.00271999999999999999  (expected 0.00272)
+  1000           136.0000272  0.00002720000000000000  (expected 0.0000272)
+ 10000         136.000000272  0.00000027200000000000  (expected 0.000000272)
+
+At n=1000, relative error between computed and (10Ry + 2Ry/n^2) = 2.160834771550485961904161547885053801332e-41
+
+STATUS: PASS
+# Exit: 0

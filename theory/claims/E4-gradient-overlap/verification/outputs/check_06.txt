@@ -1,0 +1,16 @@
+# Check 06 — Numerical double integration (scipy) vs closed-form
+# scipy: check --version below
+# scipy: 1.17.1
+# numpy: 2.4.4
+# Python: 3.14.4
+# ---
+   R/sigma             U_numeric              U_closed        rel_error
+---------------------------------------------------------------------------
+       0.1     -5.6371976582e-01     -5.6371977797e-01       2.1556e-08
+       0.5     -5.5265276818e-01     -5.5265278034e-01       2.1988e-08
+       1.0     -5.2049986566e-01     -5.2049987781e-01       2.3346e-08
+       2.0     -4.2135038432e-01     -4.2135039647e-01       2.8840e-08
+       5.0     -1.9991859760e-01     -1.9991860960e-01       6.0020e-08
+
+Max relative error across sweep: 6.0020e-08
+# Status: PASS — closed-form matches scipy double integration to 5+ decimal places.

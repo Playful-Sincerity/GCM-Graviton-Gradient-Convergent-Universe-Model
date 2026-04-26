@@ -1,0 +1,26 @@
+# Check: 02 — Measurement-independence denial is coherent
+# Claim: S1-RL-1
+# Run:   2026-04-24 03:48
+# Tool:  python3 3.14.4 + sympy 1.14.0
+# Script: verification/realism-locality/check_02_measurement_independence.py
+# ----
+
+Premises: AX1 (¬MI → CH), AX2 (CH → ¬FTL), AX3 (Lo → ¬FTL)
+GCM commitment: Lo ∧ Re ∧ ¬MI ∧ CH
+
+Is this SAT? {Re: True, CH: True, Lo: True, MI: False, FTL: False}
+OK — the superdeterministic commitment is consistent with locality,
+realism, and common-history causation; no FTL is entailed.
+
+Negative control (Lo ∧ FTL): False
+OK — Lo is incompatible with FTL (expected).
+
+Can GCM have ¬MI and FTL simultaneously given AX1–AX3? False
+OK — from ¬MI and the axioms, FTL follows false. Conspiracy objection
+does not force GCM into faster-than-light signaling.
+
+Denying measurement independence is a consistent and locality-preserving
+move under the common-history causal reading. GCM's superdeterminism
+does not smuggle nonlocality through the back door.
+
+STATUS: PASS

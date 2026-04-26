@@ -1,0 +1,24 @@
+# Check: 02 — Cosmic mean inter-PBH spacing
+# Claim: D1-no-dark-matter
+# Run: 2026-04-24 03:53
+# Tool: Python 3.14.4 / stdlib decimal prec=50
+# Script: verification/check_02_cosmic_pbh_spacing.py
+# ----
+
+H0 in SI (s^-1):       2.2685E-18
+rho_crit = 3 H0^2 / (8 pi G): 9.204E-27 kg/m^3
+Omega_DM:               0.26
+rho_DM = Omega_DM * rho_crit: 2.393E-27 kg/m^3
+  plausibility.md claim: 2.4e-27 kg/m^3
+  ratio: 0.9971
+
+M_PBH = 1.000E+17 kg
+n_PBH = rho_DM / M_PBH = 2.393E-44 m^-3
+  plausibility.md claim: 2.4e-44 m^-3
+  ratio: 0.9971
+
+Mean spacing = n^(-1/3) = 3.470E+14 m = 2320 AU
+  plausibility.md claim: 2000 AU
+  ratio: 1.16
+
+Within 50% of claim. STATUS: PASS (order-of-magnitude).

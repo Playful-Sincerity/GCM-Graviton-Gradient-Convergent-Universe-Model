@@ -1,0 +1,26 @@
+# Check: 01 — Bell's theorem structural encoding
+# Claim: S1-RL-1 — Realism and Locality via Superdeterminism
+# Run:   2026-04-24 03:47
+# Tool:  python3 3.14.4 + sympy 1.14.0
+# Script: verification/realism-locality/check_01_bell_structure.py
+# ----
+
+Bell's theorem (Lo ∧ Re ∧ MI → BI): Implies(Lo & MI & Re, BI)
+Empirical fact (¬BI, Aspect 1982; Hensen 2015): ~BI
+
+GCM hypothesis (Lo ∧ Re ∧ ¬MI + Bell + ¬BI): Lo & Re & ~BI & ~MI & (Implies(Lo & MI & Re, BI))
+  satisfiable? {Re: True, Lo: True, MI: False, BI: False}
+  OK — GCM's superdeterministic choice is internally consistent.
+
+Naive local realism (Lo ∧ Re ∧ MI + Bell + ¬BI): Lo & MI & Re & ~BI & (Implies(Lo & MI & Re, BI))
+  satisfiable? False
+  OK — naive local realism is ruled out (expected).
+
+Bohmian (¬Lo ∧ Re ∧ MI): satisfiable? {Re: True, MI: True, Lo: False, BI: False} — expected SAT
+Copenhagen-ish (Lo ∧ ¬Re ∧ MI): satisfiable? {Lo: True, MI: True, BI: False, Re: False} — expected SAT
+
+Structural verification: GCM's choice of denying MI while retaining
+Lo ∧ Re is one of exactly three internally consistent escape routes
+from Bell's theorem given QM's experimental validation.
+
+STATUS: PASS

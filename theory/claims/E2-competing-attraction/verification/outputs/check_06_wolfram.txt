@@ -1,0 +1,24 @@
+# Check 06 -- Wolfram Engine cross-check of E2 toy model
+# Tool: 14.3.0 for Mac OS X ARM (64-bit) (July 31, 2025)
+# ---
+ddot(r) = a_E2 - a_E1 = -((G*(2*d^4*me + 4*d^3*me*r + 2*d^2*me*r^2 - 2*d*mp*r^3 - mp*r^4))/(d^2*r^2*(d + r)^2))
+Expected form         = (-2*G*me)/r^2 + G*mp*(d^(-2) - (d + r)^(-2))
+Match: True
+
+At d = r = a_0:  ddot(r) = (G*(-8*me + 3*mp))/(4*a0^2)
+
+Numerical at d=r=a_0 (SI):
+  a_E1         = -3.985137882354624*^-17  m/s^2   (expect ~-3.988e-17)
+  a_E2         = -9.98998188189767*^-18  m/s^2   (expect ~-9.997e-18)
+  ddot(r)      = 2.9861396941648566*^-17  m/s^2  (expect ~+2.988e-17, POSITIVE)
+  F_effective  = 1.3600373237073838*^-47  N       (expect ~+1.361e-47)
+  F_Coulomb(a_0) = 8.237317794485513*^-8  N  (expect ~+8.243e-08)
+  ratio        = 1.651068172479473*^-40     (expect ~1.65e-40)
+
+  SIGN CHECK PASS: ddot(r) > 0 -> apparent repulsion
+
+Fundamental ratio G m_e m_p / (k_C e^2) = 4.409250350591772*^-40
+Measured ratio (Wolfram):                1.651068172479473*^-40
+Geometric factor (measured / fundamental): 0.3744555289898385
+
+# Status: PASS -- Wolfram reproduces all three numerical values and the symbolic form.

@@ -1,0 +1,18 @@
+# Check: 02 (Python companion) — DES consistency
+# Claim: R6-photon-structure
+# Run: 2026-04-24 03:49
+# Tool: Python 3.14.4 / stdlib decimal prec=50
+# Script: verification/check_02_DES_consistency.py
+# ----
+
+DES 2024 measurement:     b = 1.003 ± 0.005 (stat) ± 0.010 (sys)
+R6 structural prediction: b = 1.000 (exact, from cascade)
+
+|b_obs - b_R6|:           0.003
+... / sigma_stat:         0.6000  sigma
+... / sigma_sys:          0.3000  sigma
+sigma_tot (quadrature):   0.011180
+... / sigma_tot:          0.2683  sigma
+
+Prediction within 2 sigma of measurement. PASS.
+STATUS: PASS

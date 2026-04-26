@@ -1,0 +1,114 @@
+{
+  "claim_id": "S1-RL-1",
+  "claim_name": "Realism and Locality — Superdeterministic Commitment",
+  "claim_file": "../../realism-locality.md",
+  "kind": "philosophical + citation",
+  "note": "No physical constants. 'Verification' for this claim is (a) structural consistency of GCM's Bell-escape choice, and (b) a machine-readable bibliography for every load-bearing citation in the markdown. Speed-of-Causality Principle not engaged here.",
+
+  "logical_variables": {
+    "Lo":  "Locality — no faster-than-light signaling between spacelike-separated events.",
+    "Re":  "Realism — hidden variables have definite values independent of measurement.",
+    "MI":  "Measurement Independence — experimenter's setting choice is uncorrelated with hidden-variable state λ; i.e. ρ(λ | a, b) = ρ(λ).",
+    "BI":  "Bell inequality satisfied (prediction of Lo ∧ Re ∧ MI).",
+    "QM":  "Quantum-mechanical correlations observed (experimentally confirmed; violate BI)."
+  },
+
+  "bell_theorem": {
+    "statement": "Lo ∧ Re ∧ MI → BI",
+    "empirical_fact": "¬BI (Aspect 1982; Hensen et al. 2015 loophole-free)",
+    "consequence": "¬(Lo ∧ Re ∧ MI) — at least one of {Lo, Re, MI} must fail."
+  },
+
+  "gcm_commitment": {
+    "Lo": "retained",
+    "Re": "retained",
+    "MI": "denied (superdeterministic reading)",
+    "justification": "GCM's minimal model is fully deterministic. Correlations between λ and measurement choices (a, b) are common-history correlations, not FTL signaling.",
+    "nearest_peer_reviewed_precedent": "'t Hooft 2016, Cellular Automaton Interpretation of Quantum Mechanics"
+  },
+
+  "citations": [
+    {
+      "id": "tHooft2016",
+      "cited_text": "Gerard 't Hooft's Cellular Automaton Interpretation of Quantum Mechanics (Springer, 2016)",
+      "author": ["'t Hooft, Gerard"],
+      "year": 2016,
+      "title": "The Cellular Automaton Interpretation of Quantum Mechanics",
+      "venue": "Springer, Fundamental Theories of Physics, Vol. 185",
+      "identifier_type": "DOI",
+      "identifier": "10.1007/978-3-319-41285-6",
+      "isbn": "978-3-319-41284-9",
+      "load_bearing_for": "Nearest-neighbor peer-reviewed precedent for GCM's superdeterministic commitment.",
+      "open_access": true
+    },
+    {
+      "id": "Bell1964",
+      "cited_text": "Bell's theorem (1964)",
+      "author": ["Bell, J. S."],
+      "year": 1964,
+      "title": "On the Einstein Podolsky Rosen paradox",
+      "venue": "Physics Physique Физика, 1(3), 195–200",
+      "identifier_type": "DOI",
+      "identifier": "10.1103/PhysicsPhysiqueFizika.1.195",
+      "load_bearing_for": "Original proof that no local-hidden-variable theory with measurement independence reproduces QM.",
+      "open_access": true
+    },
+    {
+      "id": "HossenfelderPalmer2020",
+      "cited_text": "Hossenfelder and Palmer, 'Rethinking Superdeterminism,' Frontiers in Physics, 2020",
+      "author": ["Hossenfelder, Sabine", "Palmer, Tim N."],
+      "year": 2020,
+      "title": "Rethinking Superdeterminism",
+      "venue": "Frontiers in Physics 8, 139",
+      "identifier_type": "DOI",
+      "identifier": "10.3389/fphy.2020.00139",
+      "load_bearing_for": "Modern defence of superdeterminism; treats testability and conspiracy objections.",
+      "open_access": true
+    },
+    {
+      "id": "Aspect1982",
+      "cited_text": "experiment has confirmed quantum mechanics on this point (Aspect 1982; Hensen et al. 2015 loophole-free)",
+      "author": ["Aspect, Alain", "Dalibard, Jean", "Roger, Gérard"],
+      "year": 1982,
+      "title": "Experimental Test of Bell's Inequalities Using Time-Varying Analyzers",
+      "venue": "Physical Review Letters 49(25), 1804–1807",
+      "identifier_type": "DOI",
+      "identifier": "10.1103/PhysRevLett.49.1804",
+      "load_bearing_for": "Standard experimental confirmation of Bell-inequality violation.",
+      "open_access": false
+    },
+    {
+      "id": "Hensen2015",
+      "cited_text": "Hensen et al. 2015 loophole-free",
+      "author": ["Hensen, B.", "Bernien, H.", "Dréau, A. E.", "Reiserer, A.", "Kalb, N.", "Blok, M. S.", "et al."],
+      "year": 2015,
+      "title": "Loophole-free Bell inequality violation using electron spins separated by 1.3 kilometres",
+      "venue": "Nature 526, 682–686",
+      "identifier_type": "DOI",
+      "identifier": "10.1038/nature15759",
+      "load_bearing_for": "Loophole-free confirmation — closes both locality and detection loopholes simultaneously.",
+      "open_access": false
+    },
+    {
+      "id": "Bell1987",
+      "cited_text": "Bell 1987 Speakable and Unspeakable in QM",
+      "author": ["Bell, J. S."],
+      "year": 1987,
+      "title": "Speakable and Unspeakable in Quantum Mechanics",
+      "venue": "Cambridge University Press",
+      "identifier_type": "ISBN",
+      "identifier": "978-0-521-36869-8",
+      "load_bearing_for": "Canonical statement of the measurement-independence assumption.",
+      "open_access": false
+    }
+  ],
+
+  "tools_available_in_session": {
+    "python3": "3.14.4",
+    "sympy":  "1.14.0 (via /tmp/gcm-verify-venv)",
+    "wolfram_mcp": "UNAVAILABLE — see check_05_wolfram_todo.wls",
+    "network": "not assumed; citation checks are local/structural only"
+  },
+
+  "last_updated": "2026-04-24"
+}

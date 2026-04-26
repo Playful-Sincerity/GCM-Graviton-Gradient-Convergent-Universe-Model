@@ -1,0 +1,31 @@
+{
+  "_about": "Inputs for E1 (charge as graviton-flow-asymmetry). E1 is a yellow-tier hypothesis scaffold — it states a flow equation and a sign mapping, with no quantitative prediction. Verification is therefore structural: dimensional consistency of J_g = -D grad(rho_g) + v_g * rho_g, sign-consistency with electron/proton/neutron phenomenology, and a symbolic divergence computation showing that steady-state continuity does not contradict nonzero enclosing-surface flux.",
+  "_last_updated": "2026-04-24",
+  "phenomenology_sign_table": {
+    "electron":  {"charge_sign": "-", "expected_div_J_g": ">0",  "interpretation": "net outward graviton flux (outflow)"},
+    "proton":    {"charge_sign": "+", "expected_div_J_g": "<0",  "interpretation": "net inward graviton flux (inflow)"},
+    "neutron":   {"charge_sign": "0", "expected_div_J_g": "=0",  "interpretation": "balanced, no net flux"},
+    "positron":  {"charge_sign": "+", "expected_div_J_g": "<0",  "interpretation": "antiparticle of electron; flow reversed"},
+    "antiproton":{"charge_sign": "-", "expected_div_J_g": ">0",  "interpretation": "antiparticle of proton; flow reversed"}
+  },
+  "flow_equation_form": {
+    "_about": "The minimal Fokker-Planck-type form; see caveats.md for the discussion of whether GCM's deterministic substrate requires reduction to Vlasov (D=0, pure drift).",
+    "J_g":  "= -D grad(rho_g) + v_g * rho_g",
+    "continuity": "d rho_g / dt + div(J_g) = 0"
+  },
+  "expected_units": {
+    "rho_g":   {"units": "kg m^-3",      "description": "graviton mass density"},
+    "J_g":     {"units": "kg m^-2 s^-1", "description": "graviton mass flux"},
+    "D":       {"units": "m^2 s^-1",     "description": "diffusion coefficient"},
+    "v_g":     {"units": "m s^-1",       "description": "drift velocity field"},
+    "Phi_g":   {"units": "kg s^-1",      "description": "surface-integrated graviton flux (oriented outward)"},
+    "div_J_g": {"units": "kg m^-3 s^-1", "description": "volumetric rate of graviton mass change"}
+  },
+  "test_configuration_steady_state_monopole": {
+    "_about": "For verification purposes: consider a spherically symmetric outward radial flow v_g = A/r^2 * r_hat with constant density rho_g = rho_0. This is the simplest test case where div(J_g) = 0 in the bulk but the surface integral over a sphere is positive (A * 4 pi * rho_0). Such a 'test electron' demonstrates the formal shape of the hypothesis.",
+    "v_g": "A / r^2 * r_hat",
+    "rho_g": "rho_0 (constant)",
+    "expected_div_J_g": "0 (bulk)",
+    "expected_flux_Phi_g_over_sphere_radius_R": "4 pi R^2 * rho_0 * A / R^2 = 4 pi rho_0 A (independent of R — source-like)"
+  }
+}

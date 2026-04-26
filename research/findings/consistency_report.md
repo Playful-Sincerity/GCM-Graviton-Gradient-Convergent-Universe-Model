@@ -1,4 +1,4 @@
-# GDGM Consistency Audit Report
+# GCM Consistency Audit Report
 **Completed**: 2026-03-21
 **Scope**: Hypotheses H1–H8 against the four core axioms.
 **Purpose**: Internal logical coherence and dimensional consistency only — not evaluating empirical truth.
@@ -92,7 +92,7 @@ Kinetic theory predicts CV = (3/2)kT for monatomic ideal gas, confirmed experime
 Tenet 3 is axiomatic but has no specified physical mechanism for:
 1. **Redshift** — If not Doppler expansion, what causes wavelength increase? Options must pass the tired light tests (time dilation of SNe Ia light curves, surface brightness scaling, CMB blackbody spectrum).
 2. **CMB** — What produced the 2.725 K blackbody field in a converging universe?
-3. **Type Ia SNe** — What makes distant supernovae appear dimmer than expected in a GDGM universe?
+3. **Type Ia SNe** — What makes distant supernovae appear dimmer than expected in a GCM universe?
 
 Without one stated mechanism (even rough), Tenet 3 is unfalsifiable and not yet a scientific hypothesis.
 
@@ -102,7 +102,7 @@ Planck density is ~5 × 10⁹⁶ kg/m³ — 78 orders of magnitude above neutron
 
 ### OQ-3: H3 — Spin-Statistics Theorem Connection
 
-In QFT, Pauli exclusion follows from Lorentz invariance + locality + causality. GDGM must state: does it derive Pauli exclusion from graviton dynamics alone? Does Lorentz invariance emerge? What is GDGM's position on the spin-statistics theorem?
+In QFT, Pauli exclusion follows from Lorentz invariance + locality + causality. GCM must state: does it derive Pauli exclusion from graviton dynamics alone? Does Lorentz invariance emerge? What is GCM's position on the spin-statistics theorem?
 
 ### OQ-4: Vacuum Ground State of the Graviton Field (Most Foundational)
 

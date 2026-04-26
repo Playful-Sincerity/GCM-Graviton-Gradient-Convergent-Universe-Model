@@ -1,0 +1,26 @@
+# Check: 03 — fcc crosscheck
+# Claim: Q3-EP-invariant
+# Run: 2026-04-24 03:48
+# Tool: python3 3.14.4
+# Script: verification/check_03_fcc_crosscheck.py
+# Q3 Check 3 — P_n = 10n^2 + 2 vs OEIS A005901
+
+OEIS A005901 (first 10 terms):  [1, 12, 42, 92, 162, 252, 362, 492, 642, 812]
+
+  n    OEIS A005901     10n^2 + 2   match
+  1              12            12     YES
+  2              42            42     YES
+  3              92            92     YES
+  4             162           162     YES
+  5             252           252     YES
+  6             362           362     YES
+  7             492           492     YES
+  8             642           642     YES
+  9             812           812     YES
+
+Standard FCC nearest-neighbor count: 12
+Our P_1 = 10*1^2 + 2 = 12
+Match: True
+
+STATUS: PASS
+# Exit: 0

@@ -1,0 +1,59 @@
+{
+  "_comment": "Inputs for S5.5 (Classical and Relativistic Limits) verification. All numerical values used in check scripts live here.",
+  "_claim": "S5_5-classical-limits",
+  "_last_updated": "2026-04-24",
+
+  "G_newton": {
+    "value": 6.67430e-11,
+    "units": "m^3 / (kg * s^2)",
+    "source": "CODATA 2018 recommended value"
+  },
+  "M_earth": {
+    "value": 5.9722e24,
+    "units": "kg",
+    "source": "IAU 2015 nominal value (NASA fact sheet 2024)"
+  },
+  "M_moon": {
+    "value": 7.342e22,
+    "units": "kg",
+    "source": "NASA Moon fact sheet 2024"
+  },
+  "r_earth_moon": {
+    "value": 3.844e8,
+    "units": "m",
+    "source": "NASA Moon fact sheet — mean distance (semi-major axis 384,400 km)"
+  },
+  "earth_moon_force_reference": {
+    "value": 1.98e20,
+    "units": "N",
+    "source": "standard textbook value (Serway & Jewett, Physics for Scientists and Engineers)"
+  },
+
+  "m_g_provisional": {
+    "value": 1.69e-87,
+    "units": "kg",
+    "source": "GCM v2 H1 estimate using neutron-density packing proxy; see theory/versions/gcm_v2.md"
+  },
+  "rho_neutron": {
+    "value": 4.0e17,
+    "units": "kg / m^3",
+    "source": "standard neutron-star interior density estimate"
+  },
+  "l_planck": {
+    "value": 1.616255e-35,
+    "units": "m",
+    "source": "CODATA 2018"
+  },
+
+  "c_causality": {
+    "value": 2.99792458e8,
+    "units": "m/s",
+    "source": "SI defined exact value",
+    "_note": "Per speed-of-causality-principle.md, c is the causality limit (graviton-substrate signal speed), NOT the photon speed. Photon speed v = c - 0_x < c."
+  },
+  "m_gamma": {
+    "value": 5.6e-19,
+    "units": "eV / c^2",
+    "source": "GCM L1 claim; well below FRB dispersion bound ~2.1e-15 eV/c^2"
+  }
+}

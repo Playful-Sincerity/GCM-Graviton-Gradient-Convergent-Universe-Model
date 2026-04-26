@@ -1,0 +1,17 @@
+# Check: 01 — dimensional
+# Claim: M3-planck-cell-count
+# Run: 2026-04-24 04:16
+# Tool: python3 3.14.4 / SymPy 1.14.0
+# Script: verification/check_01_dimensional.py
+# M3 Check 1 — Dimensional analysis
+
+R_H * meter         = 4.4e+26*meter
+ell_P * meter       = 1.616e-35*meter
+
+V_universe          = 1.13578666666667e+80*pi*meter**3
+V_P                 = 4.220112896e-105*meter**3
+N = V_universe/V_P  = 2.69136559769103e+184*pi
+
+STATUS: PASS — N is dimensionless (count).
+  numerical value  ≈ 8.4552e+184
+# Exit: 0

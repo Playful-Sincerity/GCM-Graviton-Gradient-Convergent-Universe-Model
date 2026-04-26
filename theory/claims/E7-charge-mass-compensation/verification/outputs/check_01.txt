@@ -1,0 +1,24 @@
+# Check: 01 — sympy symbolic
+# Claim: E7-charge-mass-compensation
+# Run: 2026-04-24 03:21
+# Tool: python3 3.14.4 / SymPy 1.14.0
+# Script: verification/check_01_sympy_symbolic.py
+# E7 Check 1 — SymPy symbolic derivation
+
+E_1              = -e**4*k**2*m_e/(2*hbar**2)
+dE_1/de          = -2*e**3*k**2*m_e/hbar**2
+dE_1/dm_e        = -e**4*k**2/(2*hbar**2)
+
+Expected: dE_1/de = 4*E_1/e = -2*e**3*k**2*m_e/hbar**2
+Expected: dE_1/dm_e = E_1/m_e = -e**4*k**2/(2*hbar**2)
+
+diff (dE/de - 4E1/e) simplified     = 0
+diff (dE/dm_e - E1/m_e) simplified  = 0
+
+Solve dE1/de * Delta_e + dE1/dm_e * Delta_m = 0 for Delta_m:
+  Delta_m = -4*Delta_e*m_e/e
+
+Ratio (Delta_m/m_e) / (Delta_e/e) = -4
+
+STATUS: PASS
+# Exit: 0

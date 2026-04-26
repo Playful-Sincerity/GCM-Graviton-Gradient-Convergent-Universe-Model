@@ -1,4 +1,4 @@
-# Graviton Density Gradient Mechanics (GDGM)
+# Graviton Gradient Convergent Universe Model (GCM)
 **Version**: 2.0 — Quick-Win Revision
 **Date**: 2026-03-21
 **Status**: Pre-formal theoretical document. Math is exploratory; all underspecified mechanisms flagged explicitly.
@@ -124,7 +124,7 @@ Key properties from source notes:
 
 > ⚠️ **UNSPEC-3**: No wave equation for toroidal oscillations yet. Need ρ_g(r,θ,φ,t) in toroidal coordinates with self-interaction term to formally define "same quantum state."
 
-> ⚠️ **OQ-3**: Does GDGM derive Pauli exclusion from graviton dynamics alone? Must state position on Lorentz invariance (does it emerge from the graviton substrate?) before claiming compatibility with spin-statistics theorem.
+> ⚠️ **OQ-3**: Does GCM derive Pauli exclusion from graviton dynamics alone? Must state position on Lorentz invariance (does it emerge from the graviton substrate?) before claiming compatibility with spin-statistics theorem.
 
 ---
 
@@ -137,7 +137,7 @@ Key properties from source notes:
 - "A magnetic monopole is an electric field. E and M are the same force — E is either in or out; M is out and in."
 - Permanent magnets sustain the force with ambient light; electromagnets generate it directly from current.
 
-> ⚠️ **UNSPEC-4 (Urgent)**: The Lorentz force law F = q(E + v×B) is verified to extraordinary precision. GDGM must reproduce the **identical numerical result** from toroidal alignment dynamics — not just describe the analogy.
+> ⚠️ **UNSPEC-4 (Urgent)**: The Lorentz force law F = q(E + v×B) is verified to extraordinary precision. GCM must reproduce the **identical numerical result** from toroidal alignment dynamics — not just describe the analogy.
 
 ---
 
@@ -239,20 +239,20 @@ The asymptotic value as n → ∞: E_n → 0, P_n → ∞, but E_n · P_n → ~1
 
 **Structural advantage over tired light — time dilation**:
 
-The classical objection to tired light is that SNe Ia light curves show time dilation (events appear stretched in time at high redshift). This killed tired light. But GDGM's source notes anticipate this:
+The classical objection to tired light is that SNe Ia light curves show time dilation (events appear stretched in time at high redshift). This killed tired light. But GCM's source notes anticipate this:
 
 > "All redshifting forces must also result in time dilation. As light redshifts, the distance between the nuclei of the photons increases, thus increasing the delay of information, making it seem like time dilation."
 
-In GDGM, as a photon loses energy (wavelength increases), the distance between successive graviton clusters comprising that photon increases — which directly produces time dilation as a geometric consequence. This is not a coincidence; it is built into the mechanism. GDGM is not classical tired light.
+In GCM, as a photon loses energy (wavelength increases), the distance between successive graviton clusters comprising that photon increases — which directly produces time dilation as a geometric consequence. This is not a coincidence; it is built into the mechanism. GCM is not classical tired light.
 
 **Supporting cosmological context**:
-- **Timescape cosmology** (Wiltshire 2024): Peer-reviewed claim that apparent acceleration is a misidentification of average expansion rate vs. local clocks in underdense regions. Direct GDGM ally.
+- **Timescape cosmology** (Wiltshire 2024): Peer-reviewed claim that apparent acceleration is a misidentification of average expansion rate vs. local clocks in underdense regions. Direct GCM ally.
 - **DESI DR2** (March 2025): 4.2σ evidence for evolving/weakening dark energy — supports future convergence.
-- **Hubble tension**: H₀ = 67.4 km/s/Mpc (CMB) vs. 73 km/s/Mpc (local) — systematic in distance ladder; may be reinterpretable under GDGM void decompression model.
+- **Hubble tension**: H₀ = 67.4 km/s/Mpc (CMB) vs. 73 km/s/Mpc (local) — systematic in distance ladder; may be reinterpretable under GCM void decompression model.
 
 > ⚠️ **OQ-1 (Largest Gap)**: One mechanism must be formalized into a quantitative redshift law that simultaneously matches:
 > 1. The observed z vs. comoving distance relationship
-> 2. SNe Ia light curve time dilation (GDGM's photon-nuclei separation mechanism is the candidate)
+> 2. SNe Ia light curve time dilation (GCM's photon-nuclei separation mechanism is the candidate)
 > 3. CMB blackbody spectrum at 2.725 K
 > 4. Distance modulus dimming of SNe Ia
 >

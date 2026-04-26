@@ -1,0 +1,44 @@
+{
+  "m_gamma_kg": {
+    "value": 1.0e-54,
+    "units": "kg",
+    "source": "GCM estimate, source_notes.md and derivation.md §1. Provisional; not derived from first principles.",
+    "notes": "L1's central claim. See L1/caveats.md for why the specific value is a free parameter."
+  },
+  "c": {
+    "value": 2.99792458e8,
+    "units": "m/s",
+    "source": "Exact, SI 2019 definition. Speed-of-causality limit (see theory/speed-of-causality-principle.md). Photon speed v < c strictly.",
+    "notes": "In GCM, c is the causality limit. Photons travel at v = c - 0_x (IVNA indexed infinitesimal), not at c exactly."
+  },
+  "eV_to_J": {
+    "value": 1.602176634e-19,
+    "units": "J/eV",
+    "source": "Exact, SI 2019 redefinition.",
+    "notes": "1 eV = 1.602176634e-19 J by definition since 2019."
+  },
+  "wang_bound_eV_per_c2": {
+    "value": 2.1e-15,
+    "units": "eV/c^2",
+    "source": "Wang et al. 2023, JCAP — fast radio burst (FRB) dispersion measure analysis.",
+    "notes": "Cited in plan-coherence-case.md as the primary photon-mass bound for GCM comparison."
+  },
+  "pdg_bound_eV_per_c2_approx": {
+    "value": 1.0e-18,
+    "units": "eV/c^2",
+    "source": "Particle Data Group 2022 combined bound (approximate, recalled from training). NEEDS VERIFICATION against current PDG review.",
+    "notes": "HONESTY FLAG: this bound is from training-data memory, not a live source check. Listed for structural comparison; should be verified against PDG online."
+  },
+  "ligo_graviton_bound_eV_per_c2": {
+    "value": 1.0e-23,
+    "units": "eV/c^2",
+    "source": "LIGO gravitational-wave dispersion constraint on the graviton mass.",
+    "notes": "Different particle (graviton, not photon). Included for context only — GCM's graviton mass (~10^-87 kg) is far below this."
+  },
+  "E_visible_photon_eV": {
+    "value": 1.0,
+    "units": "eV",
+    "source": "Order-of-magnitude reference for a visible-light photon.",
+    "notes": "Used to estimate (m_gamma c^2 / E)^2 ≈ 3e-37 for the speed-deviation check."
+  }
+}

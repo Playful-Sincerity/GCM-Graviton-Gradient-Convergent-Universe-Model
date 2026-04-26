@@ -1,0 +1,34 @@
+# Check: 05 — Symbolic redshift cascade (SymPy)
+# Claim: R6-photon-time-dilation
+# Run: 2026-04-24 04:20
+# Tool: Python 3.14.4 / SymPy 1.14.0 / mpmath 1.3.0
+# Script: verification/check_05_redshift_cascade_sympy.py
+# Status: PASS
+# ----
+
+R6 — Check 05: Symbolic redshift-cascade derivation
+============================================================
+Inter-cluster times:
+  Δt_emit = d_emit / v_emit = lambda_emit/(N*v_emit)
+  Δt_obs  = d_obs  / v_obs  = lambda_emit*(z + 1)/(N*v_obs)
+
+Δt_obs / Δt_emit = v_emit*(z + 1)/v_obs
+
+Set v_emit = v_obs (massless-photon or leading approximation):
+  Result: z + 1
+
+Massive-photon correction (symbolic):
+  v_emit / v_obs = sqrt((1 - x^2) / (1 - (1+z)^2 x^2))
+  where x = m_gamma c^2 / E_emit
+
+  Expansion around x = 0: x**2*z*(z + 2)/2 + 1
+  Leading correction term is O(x^2) = O((m c^2/E)^2)
+
+Conclusion:
+  Δt_obs / Δt_emit = (1 + z) · [1 + O((m c^2/E)^2)]
+  For GCM's m_gamma ≈ 5.6e-19 eV/c^2 and E ≈ 1 eV:
+    (m c^2/E)^2 ≈ 3e-37
+  So the leading non-linear correction is ~3e-37 times negligible.
+  R6 produces (1 + z)^1.000 to staggering precision.
+
+Status: PASS.

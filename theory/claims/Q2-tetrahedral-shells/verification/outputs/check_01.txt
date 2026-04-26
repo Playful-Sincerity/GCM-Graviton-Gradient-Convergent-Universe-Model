@@ -1,0 +1,12 @@
+# Check: 01 — algebraic SymPy expansion
+# Claim: Q2-tetrahedral-shells
+# Run: 2026-04-24 02:37
+# Tool: python3 3.14.4 / SymPy 1.14.0
+# Script: verification/check_01_algebraic_sympy.py
+# Status: PASS
+# ----
+Geometric sum: 24*n + (n - 2)*(4*n - 4) + 6*(n - 1)**2 - 12
+Simplified:    10*n**2 + 2
+Expected:      10*n**2 + 2
+Difference:    0
+PASS

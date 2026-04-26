@@ -1,0 +1,24 @@
+# Check 02 — SymPy symbolic derivation of U(R), F(R)
+# SymPy: 1.14.0
+# Python: 3.14.4
+# ---
+Phi(r) = -G*m*erf(sqrt(2)*r/(2*sigma))/r
+  lim r->0    = -sqrt(2)*G*m/(sqrt(pi)*sigma)
+  lim r->inf  = 0
+
+U(R) = -G*m**2*erf(R/(2*sigma))/R
+  series U(R, R->0, O(4)) = G*m**2*(R**2 - 12*sigma**2)/(12*sqrt(pi)*sigma**3)
+  U(R=0) = -G*m**2/(sqrt(pi)*sigma)    (expect: -G m^2 / (sigma sqrt(pi)))
+  U(R=0) expected = -G*m**2/(sqrt(pi)*sigma)
+  MATCH: True
+
+  lim_{R->inf} R*U(R) = -G*m**2   (expect: -G m^2)
+  MATCH: True
+
+F(R) = -dU/dR = G*m**2*exp(-R**2/(4*sigma**2))/(sqrt(pi)*R*sigma) - G*m**2*erf(R/(2*sigma))/R**2
+  series F(R, R->0, O(5)) = G*R*m**2*(3*R**2 - 20*sigma**2)/(120*sqrt(pi)*sigma**5)
+  F(R=0) = 0   (expect: 0)
+
+Ratio F/F_point = R*exp(-R**2/(4*sigma**2))/(sqrt(pi)*sigma) - erf(R/(2*sigma))
+
+# Status: PASS — U(0) and lim R*U at infinity match expected closed forms

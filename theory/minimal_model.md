@@ -1,6 +1,6 @@
-# GDGM Minimal Mathematical Model
+# GCM Minimal Mathematical Model
 **Date**: 2026-03-21
-**Purpose**: The simplest complete mathematical statement of GDGM. Everything else is built on top of this.
+**Purpose**: The simplest complete mathematical statement of GCM. Everything else is built on top of this.
 
 ---
 
@@ -40,7 +40,7 @@ Divide both sides by mg:
 ẍᵢ = Σⱼ≠ᵢ  (G·mg) / r_ij²  ·  r̂_ij
 ```
 
-**This is the equation of motion. One line. Everything in GDGM follows from it.**
+**This is the equation of motion. One line. Everything in GCM follows from it.**
 
 Note: the acceleration depends on G·mg — the product of Newton's constant and graviton mass. This is the single fundamental coupling constant of the theory. It has units m³/s².
 
@@ -84,7 +84,7 @@ L = mg · Σᵢ xᵢ × ẋᵢ  =  constant
 
 ## Initial Conditions
 
-GDGM says the universe started with gravitons separated (for reasons not yet specified) and has been collapsing ever since. The simplest starting state:
+GCM says the universe started with gravitons separated (for reasons not yet specified) and has been collapsing ever since. The simplest starting state:
 
 ```
 xᵢ(0) ~ uniform distribution over a large volume V₀
@@ -134,7 +134,7 @@ d²ξᵢ/ds² = Σⱼ≠ᵢ  (ξⱼ − ξᵢ) / max(|ξⱼ − ξᵢ|, 1)³
 
 **There are no free parameters in this equation.**
 
-G, mg, and ℓ_min only set the physical scale of the solution — they don't change its shape. Whatever patterns form in the dimensionless simulation are universal: they describe the geometry of GDGM particles regardless of the specific values of the fundamental constants.
+G, mg, and ℓ_min only set the physical scale of the solution — they don't change its shape. Whatever patterns form in the dimensionless simulation are universal: they describe the geometry of GCM particles regardless of the specific values of the fundamental constants.
 
 This means: we can run the simulation now, before knowing mg or ℓ_min, and the pattern geometry will already be meaningful.
 
@@ -155,7 +155,7 @@ Everything else — particle sizes, masses, force strengths — follows from the
 
 ## What the Simulation Will Answer
 
-1. **Do bound clusters spontaneously form?** (Does GDGM produce particles at all?)
+1. **Do bound clusters spontaneously form?** (Does GCM produce particles at all?)
 2. **What geometries are stable?** (Spherical? Toroidal? Filamentary?)
 3. **Are there discrete stable sizes?** (Quantization of mass?)
 4. **What is the force law between two nearby clusters?** (Does it look like Coulomb at short range?)
@@ -173,4 +173,4 @@ The entire theory reduces to:
 
 with N gravitons, random initial positions, zero initial velocity.
 
-That's GDGM. Everything else is interpretation of what this equation does.
+That's GCM. Everything else is interpretation of what this equation does.

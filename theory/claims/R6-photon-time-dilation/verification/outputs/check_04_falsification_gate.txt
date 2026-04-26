@@ -1,0 +1,23 @@
+# Check: 04 — Falsification gate (mpmath)
+# Claim: R6-photon-time-dilation
+# Run: 2026-04-24 04:25
+# Tool: Python 3.14.4 / SymPy 1.14.0 / mpmath 1.3.0
+# Script: verification/check_04_falsification_gate.py
+# Status: PASS — verdict label fixed after first run surfaced binary-precision threshold bug (see below)
+# ----
+
+R6 — Check 04: Falsification gate (forward-looking)
+============================================================
+Current (DES 2024):          α = 1.003 ± 0.005
+  R6 σ-distance: 0.6σ — PASS
+
+Hypothetical future (LSST):  α = 1.01 ± 0.002
+  R6 σ-distance: 5.0σ
+
+  Verdict: R6 EXCLUDED at 5σ in that hypothetical
+
+Interpretation: the hypothetical input is illustrative — it shows the
+precision at which R6's α=1.000 structural prediction would fail.
+This names the falsification condition quantitatively.
+
+Status (current R6 vs current DES): PASS.

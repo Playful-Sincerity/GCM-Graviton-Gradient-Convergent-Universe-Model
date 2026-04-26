@@ -1,0 +1,54 @@
+{
+  "_metadata": {
+    "claim": "R6-photon-structure",
+    "created": "2026-04-24",
+    "created_by": "Session G verification retrofit (Claude Opus 4.7, 1M context)",
+    "honesty_note": "R6 brief in this folder was written 2026-04-23 from the plan-coherence-case.md S5 specification (Session E never ran). Most of its content is structural/plausibility argument with few numerical claims. The main numerical claim is the photon-mass-vs-FRB-bound comparison. Wang 2023 bound verified 2026-04-24 via Python + Wolfram. Session E when it runs will enrich this folder; for now, this verification only covers R6's internal claims (NOT the full Session E treatment of L1/L2/L3)."
+  },
+
+  "c": {
+    "value": "2.99792458e8",
+    "units": "m/s",
+    "source": "SI 2019 exact"
+  },
+  "eV_in_J": {
+    "value": "1.602176634e-19",
+    "units": "J per eV",
+    "source": "SI 2019 exact (elementary charge definition)"
+  },
+  "m_photon_GCM_kg_claim": {
+    "value": "1e-54",
+    "units": "kg",
+    "source": "GCM claim referenced in research/sources/2026-04-23-adjacent-programs.md and plan-coherence-case.md S5"
+  },
+  "m_photon_GCM_eV_claim": {
+    "value": "5.6e-19",
+    "units": "eV/c^2",
+    "source": "plausibility.md restatement; claimed equivalent of 1e-54 kg"
+  },
+  "FRB_bound_Wang2023_eV": {
+    "value": "2.1e-15",
+    "units": "eV/c^2",
+    "source": "Wang, Ran, Zhang 2023 JCAP (arXiv:2304.14784) — FRB dispersion-measure photon-mass upper bound"
+  },
+  "orders_below_bound_claim": {
+    "value": "4",
+    "units": "orders of magnitude",
+    "source": "R6/plausibility.md claims GCM value is ~4 orders below Wang bound"
+  },
+  "DES_time_dilation_exponent_claim": {
+    "value": "1.003",
+    "units": "dimensionless",
+    "source": "DES Supernova Program 2024 (arXiv:2406.05050), measured (1+z)^b with b = 1.003 ± 0.005 (stat) ± 0.010 (sys), 1,504 SNe Ia, z ~ 0.1–1.2"
+  },
+  "DES_time_dilation_stat_err": {
+    "value": "0.005",
+    "units": "dimensionless",
+    "source": "DES 2024"
+  },
+  "R6_prediction_exponent": {
+    "value": "1.000",
+    "units": "dimensionless",
+    "source": "R6 structural cascade claim: z ∝ λ ∝ d_internal ∝ τ so observed exponent is exactly 1"
+  }
+}

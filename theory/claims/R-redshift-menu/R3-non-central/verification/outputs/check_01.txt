@@ -1,0 +1,23 @@
+# Check: 01 — required potential gradient
+# Claim: R3-non-central
+# Run: 2026-04-24 04:06
+# Tool: Python 3.14.4 / stdlib decimal prec=50
+# Script: verification/check_01_gradient_magnitude.py
+# ----
+
+For z ~ H_0 d / c at low z via gravitational redshift z ~ Delta Phi / c^2:
+  Delta Phi = c H_0 d  =>  dPhi/dr = c H_0
+
+H_0 (SI):    2.2685E-18 s^-1
+c:           299792458 m/s
+c * H_0:     6.8009E-10 m/s^2
+
+plausibility.md claim: 2E-8 m/s^2 = 2e-8 m/s^2
+ratio computed/claim:  0.03400
+
+Off by 97%. STATUS: PARTIAL.
+
+Note: this computation checks the magnitude of the required gradient.
+It does NOT check whether such a gradient exists in the observed universe.
+R3 remains red because the required gradient has not been measured; that is
+a theory-vs-observation gap, not an arithmetic issue.

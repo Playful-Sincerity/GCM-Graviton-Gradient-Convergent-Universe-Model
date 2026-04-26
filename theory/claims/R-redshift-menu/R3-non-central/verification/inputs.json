@@ -1,0 +1,18 @@
+{
+  "_metadata": {
+    "claim": "R3-non-central",
+    "created": "2026-04-24",
+    "honesty_note": "R3 is tier red in plausibility.md. The only quantitative claim is 'required potential gradient ~ c H_0 ~ 2e-8 m/s^2'. The CMB dipole (3.36 mK) and peculiar velocity (369 km/s) are quoted from standard cosmology. This verification checks the gradient claim and the self-consistency of the dipole / velocity pair."
+  },
+
+  "c": {"value": "2.99792458e8", "units": "m/s", "source": "SI 2019 exact"},
+  "Mpc_m": {"value": "3.0856775814913673e22", "units": "m per Mpc", "source": "IAU 2015"},
+  "H0_km_per_s_per_Mpc": {"value": "70.0", "units": "km s^-1 Mpc^-1", "source": "round central"},
+
+  "CMB_dipole_mK": {"value": "3.36", "units": "mK", "source": "Planck 2018; standard CMB dipole amplitude (kinematic interpretation)"},
+  "CMB_T_K": {"value": "2.7255", "units": "K", "source": "Fixsen 2009 (COBE/FIRAS)"},
+  "peculiar_velocity_km_s": {"value": "369", "units": "km/s", "source": "Planck 2018 Table 9; solar-barycentric velocity relative to CMB rest frame"},
+
+  "potential_gradient_claim_m_s2": {"value": "2e-8", "units": "m/s^2", "source": "R3 plausibility.md; claimed value of d Phi/dr needed to give observed H0 at Hubble scale"},
+  "Secrest_2021_quasar_dipole_sigma": {"value": "4.9", "units": "sigma", "source": "Secrest et al. 2021, ApJL 908, L51; quasar/galaxy-count dipole vs CMB dipole misalignment"}
+}

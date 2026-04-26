@@ -1,0 +1,20 @@
+# Check: 04 — Limit cases (SymPy symbolic limits)
+# Claim: L3-wavelength-spacing
+# Run: 2026-04-24 04:19
+# Tool: Python 3.14.4 / SymPy 1.14.0 / mpmath 1.3.0
+# Script: verification/check_04_limit_cases.py
+# Status: PASS
+# ----
+
+L3 — Check 04: Limit cases
+============================================================
+d(λ) = λ / N
+  lim (λ -> 0+) d = 0
+  lim (λ -> ∞)  d = oo
+
+Physical reading:
+  λ -> 0 (gamma rays): cluster spacing shrinks to zero — localized interactions.
+  λ -> ∞ (radio):      cluster spacing grows without bound — delocalized waves.
+Both limits match known EM phenomenology.
+
+Status: PASS.

@@ -1,0 +1,35 @@
+# Check: 02 — Symbolic redshift cascade (SymPy)
+# Claim: L3-wavelength-spacing
+# Run: 2026-04-24 04:19
+# Tool: Python 3.14.4 / SymPy 1.14.0 / mpmath 1.3.0
+# Script: verification/check_02_redshift_scaling_sympy.py
+# Status: PASS
+# ----
+
+L3 — Check 02: Symbolic redshift scaling (N constant)
+============================================================
+Premises:
+  (1) λ_obs = (1 + z) · λ_emit  [definition of redshift z]
+  (2) λ = N · d  [L3 identification]
+  (3) N_emit = N_obs = N  [L3 Case A commitment]
+
+Step 1: λ_obs / λ_emit = (N_obs · d_obs) / (N_emit · d_emit)
+  Symbolic: N_obs*d_obs/(N_emit*d_emit)
+Step 2: Apply N_obs = N_emit (N constant)
+  Simplified: d_obs/d_emit
+
+Step 3: Set λ_obs / λ_emit = z + 1
+  Therefore d_obs / d_emit = z + 1
+
+Worked example:
+  z = 1.0
+  λ_emit = 5.000000e-07 m (500 nm)
+  N = 1
+  λ_obs = (1+z)·λ_emit = 1.000000e-06 m
+  d_emit = λ_emit / N = 5.000000e-07 m
+  d_obs = λ_obs / N = 1.000000e-06 m
+  d_obs / d_emit = 2.0
+  (1 + z) = 2.0
+  Match? True
+
+Status: PASS — redshift scaling is symbolically and numerically confirmed.

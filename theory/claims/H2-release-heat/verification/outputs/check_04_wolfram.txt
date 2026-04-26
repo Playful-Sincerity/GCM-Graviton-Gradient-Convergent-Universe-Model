@@ -1,0 +1,21 @@
+# Check: 04 — Wolfram Engine independent cross-check
+# Claim: H2-release-heat
+# Run: 2026-04-24 03:47
+# Tool: Wolfram Language Engine 14.3.0 (wolframscript)
+# Script: verification/check_04_wolfram.wls
+# ----
+--- ODE: dÏ/dt = -Î»(Ï - Ï_0) ---
+Solution: {{rho[t] -> (-rho0 + E^(lambda*t)*rho0 + rhoInit)/E^(lambda*t)}}
+Difference (Wolfram sol - claimed exponential) simplified: 0
+lim t->â (Ï - Ï_0) under Î»>0, Ï_0 & Ï_init real = 0
+
+--- Fourier PDE from continuity + J = -D_coef âÏ ---
+Continuity RHS -âÂ·J = Dcoef*Derivative[0, 0, 2, 0][rhoF][x, y, z, tt] + Dcoef*Derivative[0, 2, 0, 0][rhoF][x, y, z, tt] + Dcoef*Derivative[2, 0, 0, 0][rhoF][x, y, z, tt]
+Expected DâÂ²Ï      = Dcoef*(Derivative[0, 0, 2, 0][rhoF][x, y, z, tt] + Derivative[0, 2, 0, 0][rhoF][x, y, z, tt] + Derivative[2, 0, 0, 0][rhoF][x, y, z, tt])
+Difference: 0
+
+ODE form matches claimed exponential: PASS
+Asymptotic equilibrium (Ï -> Ï_0):     PASS
+Fourier PDE derivation:                PASS
+
+Status: PASS

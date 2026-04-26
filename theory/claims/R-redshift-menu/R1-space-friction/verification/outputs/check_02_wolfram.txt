@@ -1,0 +1,28 @@
+# Check: 02 â Wolfram independent cross-check
+# Claim: R1-space-friction
+# Run:   Fri 24 Apr 2026 02:39:09
+# Tool:  Wolfram Engine via wolframscript
+# ----
+V_obs = (4/3) pi R^3 (m^3):   ScientificForm[3.5681790480452396*^80]
+N_Planck_cells (V_obs/V_P):   ScientificForm[8.451173048483412*^184]
+n_g from 10^185/V_obs:        ScientificForm[2.8025499464434985*^104]
+n_g from Planck filling (1/V_P): ScientificForm[2.3684834574411927*^104]
+
+Cross-check numerics against plausibility.md claims:
+
+N::precsm: Requested precision 6 is smaller than $MinPrecision. Using $MinPrecision instead.
+
+N::precsm: Requested precision 6 is smaller than $MinPrecision. Using $MinPrecision instead.
+  claimed n_g = 1e106; computed = ScientificForm[2.8025499464434985*^104] => ratio computed/claim = 0.028025499464434982
+
+N::precsm: Requested precision 6 is smaller than $MinPrecision. Using $MinPrecision instead.
+
+General::stop: Further output of N::precsm will be suppressed during this calculation.
+  claimed sigma = 1e-133; self-consistent alpha=H0/c, n_g=N/V_obs gives sigma = ScientificForm[2.70006009689344*^-131]
+
+FINDING (Wolfram concurs with Python):
+  * N_Planck_cells ~ 8.5e184, consistent with M3's 10^185 claim.
+  * n_g ~ 2.8e104 m^-3 (10^104), NOT 10^106 as plausibility.md states.
+  * Self-consistent sigma_g ~ 2.7e-131 m^2 (10^-131), NOT 10^-133.
+
+STATUS: INCONCLUSIVE â same as Python check_02. Cross-tool agreement.

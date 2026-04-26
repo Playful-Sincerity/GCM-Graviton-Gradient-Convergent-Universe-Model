@@ -1,0 +1,27 @@
+# Check: 01 — Dimensional analysis (SymPy units)
+# Claim: L1-photon-mass
+# Run: 2026-04-24 04:19
+# Tool: Python 3.14.4 / SymPy 1.14.0 / mpmath 1.3.0
+# Script: verification/check_01_dimensional.py
+# Status: PASS
+# ----
+
+L1 — Check 01: Dimensional analysis of kg -> eV/c^2
+============================================================
+Input: m_gamma = 1.000000e-54 kg (GCM estimate)
+
+Step 1: m_gamma * c^2
+  Raw expression:   1.0e-54*speed_of_light**2*kilogram
+  In joules:        8.98755178736818e-38*joule
+  In electronvolts: 5.60958860380445e-19*electronvolt
+
+Step 2: Interpret as mass in eV/c^2
+  Dividing the eV value by c^2 gives mass units of eV/c^2.
+  (In particle physics, the 'eV/c^2' is the conventional mass unit.)
+
+Dimensional chain:
+  [kg] * [m^2/s^2] = [kg * m^2 / s^2] = [J] (definition of joule)
+  [J] / [J/eV]     = [eV]
+  Treat as mass:     [eV]/[c^2] = eV/c^2  (mass unit)
+
+Result: PASS — units close consistently.

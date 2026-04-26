@@ -1,0 +1,22 @@
+# Check: 02 — Fourier heat equation structure via SymPy vector calculus
+# Claim: H2-release-heat
+# Run: 2026-04-24 03:19
+# Tool: python3 3.14.4 / SymPy 1.14.0 (vector calculus)
+# Script: verification/check_02_fourier_pde_sympy.py
+# ----
+∇ρ_g (SymPy): (Derivative(rho_g(N.x, N.y, N.z, t), N.x))*N.i + (Derivative(rho_g(N.x, N.y, N.z, t), N.y))*N.j + (Derivative(rho_g(N.x, N.y, N.z, t), N.z))*N.k
+
+J_g = -D ∇ρ_g: (-D*Derivative(rho_g(N.x, N.y, N.z, t), N.x))*N.i + (-D*Derivative(rho_g(N.x, N.y, N.z, t), N.y))*N.j + (-D*Derivative(rho_g(N.x, N.y, N.z, t), N.z))*N.k
+
+∇·J_g = -D*Derivative(rho_g(N.x, N.y, N.z, t), (N.x, 2)) - D*Derivative(rho_g(N.x, N.y, N.z, t), (N.y, 2)) - D*Derivative(rho_g(N.x, N.y, N.z, t), (N.z, 2))
+
+Continuity: ∂ρ_g/∂t = Derivative(rho_g(N.x, N.y, N.z, t), t)
+           -∇·J_g = D*Derivative(rho_g(N.x, N.y, N.z, t), (N.x, 2)) + D*Derivative(rho_g(N.x, N.y, N.z, t), (N.y, 2)) + D*Derivative(rho_g(N.x, N.y, N.z, t), (N.z, 2))
+
+Expected RHS = D ∇²ρ_g = D·(Derivative(rho_g(N.x, N.y, N.z, t), (N.x, 2)) + Derivative(rho_g(N.x, N.y, N.z, t), (N.y, 2)) + Derivative(rho_g(N.x, N.y, N.z, t), (N.z, 2)))
+
+Difference (actual RHS - expected): 0
+
+Fourier PDE ∂ρ/∂t = D ∇²ρ derived correctly: PASS
+
+# Status: PASS

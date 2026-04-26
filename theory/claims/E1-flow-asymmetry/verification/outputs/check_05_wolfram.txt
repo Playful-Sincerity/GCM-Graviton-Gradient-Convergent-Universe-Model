@@ -1,0 +1,24 @@
+# Check 05 -- Wolfram Engine cross-check of E1 flow identities
+# Tool: 14.3.0 for Mac OS X ARM (64-bit) (July 31, 2025)
+# ---
+
+div(J_g) identity check:
+  div(J_g) - [-Dg Lap(rho) + rho div(v) + v.grad(rho)] = 0
+  Match: True
+
+Toy model: v = (A/r^2) r_hat, rho = rho0 (constant)
+  div(J_g) = 0  (expect 0 for r > 0)
+  Match zero: True
+  Surface flux Phi_g(R) = 4*A*Pi*rho0
+  Expected              = 4*A*Pi*rho0
+  Match: True
+
+Vlasov divergence identity:
+  div(J_V) - [rho div(v) + v.grad(rho)] = 0
+  Match: True
+
+F-P minus Vlasov = -(Dg*(Derivative[0, 0, 2][ρ][x, y, z] + Derivative[0, 2, 0][ρ][x, y, z] + Derivative[2, 0, 0][ρ][x, y, z]))
+  Should equal -Dg Lap(rho): 0
+  Match zero: True
+
+# Status: PASS -- Wolfram reproduces all E1 flow-equation identities.

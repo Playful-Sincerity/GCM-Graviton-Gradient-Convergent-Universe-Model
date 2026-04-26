@@ -1,0 +1,27 @@
+# Check: 05 — Wolfram Language independent
+# Claim: M1-graviton-mass
+# Run: 2026-04-24 02:38
+# Tool: wolframscript / 14.3.0 for Mac OS X ARM (64-bit) (July 31, 2025)
+# Script: verification/check_05_wolfram.wls
+# M1 Check 5 â Wolfram Language independent run
+
+ell_P              = 1.61625502392855*^-35 m
+V_P                = 4.222111162622018*^-105 m^3
+m_g (nuclear rho)  = 4.2221111626220185*^-87 kg
+N_g per neutron    = 3.96703789532589*^59
+
+LIGO bound         = 1.7826619209999998*^-59 kg
+margin LIGO/m_g    = 4.2222050825704217*^27
+log10 margin       = 27.625539324202702
+
+rho_Planck          = 5.154848506403408*^96 kg/m^3
+m_g(rho_Planck)     = 2.1764343420511266*^-8 kg
+sqrt(hbar*c/G)      = 2.176434342051127*^-8 kg  (Planck mass, standard)
+relative agreement = 1.5202491461763496*^-16
+
+rho_bound <= LIGO constraint: 4.222205082570422*^45 kg/m^3
+nuclear rho = 1.0e18 kg/m^3 -> margin 27.625539324202702 orders of magnitude
+
+Expected claim value m_g = 4.22e-87 kg
+Relative error           = 0.0005002755028479601
+# Exit: 0

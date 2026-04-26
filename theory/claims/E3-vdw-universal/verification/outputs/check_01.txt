@@ -1,0 +1,16 @@
+# Check 01 — Dimensional analysis of gradient-gradient correlation C(R)
+# Python: 3.14.4
+# Tool: Pint 0.25.3
+# ---
+C(R) dimensionality = [mass] ** 2 / [length] ** 5
+Target (kg^2/m^5)   = [mass] ** 2 / [length] ** 5
+  PASS — C(R) has units [rho]^2 * length = kg^2/m^5.
+
+VdW coefficient C_6 dimensionality = [mass] * [length] ** 8 / [time] ** 2  (J m^6)
+E3's C(R) dimensionality            = [mass] ** 2 / [length] ** 5          (kg^2/m^5)
+These are DIFFERENT dimensional objects.
+  A direct 'C(R) ~ 1/R^6' comparison is a SHAPE comparison, not a dimensional match.
+  To derive VdW from graviton fluctuations, you need polarizability + fluctuation-
+  spectrum factors that carry the remaining units (see caveats.md).
+
+# Status: PASS — C(R) dimensions consistent; VdW comparison is shape-only (as claimed).

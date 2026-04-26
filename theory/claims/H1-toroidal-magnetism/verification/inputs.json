@@ -1,0 +1,35 @@
+{
+  "_comment": "Inputs for H1 (Toroidal Magnetism) verification. H1 is a plausibility sketch — the only genuinely runnable checks are dimensional. Other 'qualitative passes' (right-hand rule, monopole absence) are topological/geometric arguments, not computations.",
+  "_claim": "H1-toroidal-magnetism",
+  "_last_updated": "2026-04-24",
+
+  "gcm_quantities": {
+    "J_g_units": {
+      "value": "kg / (m^2 * s)",
+      "source": "graviton current density — mass flux per area per time; defined in theory/versions/gcm_v2.md H2"
+    },
+    "div_J_g_units": {
+      "value": "kg / (m^3 * s)",
+      "source": "divergence of J_g; charge-proxy in GCM"
+    },
+    "velocity_units": {
+      "value": "m / s",
+      "source": "standard kinematics"
+    },
+    "product_units": {
+      "value": "kg / (m^2 * s^2)",
+      "source": "(div J_g) * v — force per unit volume; derived in claim.md/derivation.md"
+    }
+  },
+
+  "em_reference": {
+    "tesla_units": {
+      "value": "kg / (A * s^2)",
+      "source": "SI definition of magnetic field; derivation via F = qvB"
+    },
+    "required_coupling_units": {
+      "value": "m^2 / A",
+      "source": "algebraic necessity: [kg/(m^2*s^2)] * [m^2/A] = [kg/(A*s^2)] = T"
+    }
+  }
+}
